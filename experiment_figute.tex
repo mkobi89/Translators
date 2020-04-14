@@ -1,0 +1,73 @@
+% This is the first part of my homework
+
+\documentclass[margin=40pt]{standalone}
+
+\usepackage{tikz}
+\usepackage{upgreek}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{arrows,decorations.markings}
+
+
+\begin{document}
+\begin{tikzpicture}
+
+\tikzset{
+rect/.style={rectangle, draw=black!100, fill=black!15, rounded corners = 10 pt},
+rect_task/.style={rectangle, draw=black!100, fill=blue!40, rounded corners = 10 pt, minimum width = 30 mm, minimum height = 7.25 mm},
+rect_condition/.style={rectangle, draw=black!100, fill=black!0, rounded corners = 10 pt, minimum width = 15 mm, minimum height = 7.25 mm},
+}
+
+\sffamily{Sans text}
+\sansmath{Sans math}
+
+
+%Coordinate Grid way
+%\draw[draw = black!20, step = .5] (-4,0) grid (4,10); 
+
+% Title
+\draw[rect, thick, fill = black!30] (-4,10) rectangle (4,9); 
+\node (title) at (center,9.5)  {CLINT Translation Experiment};
+
+% Resting State
+\draw[rect] (-4,8.5) rectangle (4,7.75); 
+\node (rs) at (center,8.125) {Resting State - Eyes Open $\&$ Eyes Closed};
+
+% Task
+\draw[rect] (-4,7.5) rectangle (-0.5,2.5); 
+\draw[rect] (0.5,7.5) rectangle (4,2.5); 
+\node (a1) at (-2.25 ,7) {Abstract 1};
+\node (a2) at (2.25 ,7) {Abstract 2};
+\draw[latex-latex] (a1) -- (a2);
+
+% Abstract 1
+\node[rect_task] (R) at (-2.25,6.25) {Reading Task}; 
+\node[rect_task] (C) at (-2.25,5.25) {Copying Task}; 
+\node[rect_task] (T) at (-2.25,4.25) {Translation Task}; 
+\draw[latex-latex] (C.east)  .. controls (-0.55,4.75)  ..  (T.east);
+
+% Abstract 2
+\node[rect_task] (R) at (2.25,6.25) {Reading Task}; 
+\node[rect_task] (C) at (2.25,5.25) {Copying Task}; 
+\node[rect_task] (T) at (2.25,4.25) {Translation Task}; 
+\draw[latex-latex] (C.west)  .. controls (0.55,4.75)  ..  (T.west);
+
+% Conditions
+\node[rect_condition] (Cond1) at (-2.25,3.25) {ELF}; 
+\node[rect_condition] (Cond2) at (2.25,3.25) {EdE}; 
+\draw[latex-latex] (Cond1) -- (Cond2);
+
+% Lexical Decision Task
+\draw[rect] (-4,2.25) rectangle (4,1.5); 
+\node (rs) at (center,1.875) {Lexical Decision Task};
+
+% Reading Post
+\draw[rect] (-4,1.25) rectangle (-0.5,-.5); 
+\draw[rect] (0.5,1.25) rectangle (4,-.5); 
+\node (rp1) at (-2.25 ,0.85) {Abstract 2 - ELF};
+\node (rp2) at (2.25 ,0.85) {Abstract 1 - EdE};
+\node[rect_task] (R) at (-2.25,0.125) {Reading Task}; 
+\node[rect_task] (R) at (2.25,0.125) {Reading Task}; 
+
+
+\end{tikzpicture}
+\end{document}
