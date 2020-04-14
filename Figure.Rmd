@@ -21,4 +21,17 @@ options(tinytex.verbose = TRUE)
 
 Here is a TikZ picture
 
+```{tikz, fig.cap = "Funky tikz", fig.ext = 'png'}
+\usetikzlibrary{arrows}
+\usetikzlibrary{patterns}
+\definecolor{zzffzz}{rgb}{0.6,1,0.6}
+\definecolor{ffcctt}{rgb}{1,0.8,0.2}
+\definecolor{yqyqdz}{rgb}{0.5019607843137255,0.5019607843137255,0.8509803921568627}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\clip(-4.505289256198347,-6.316528925619829) rectangle (21.02198347107439,13.083471074380155);
+\draw [line width=2pt,pattern color=yqyqdz,fill=yqyqdz,fill opacity=0.25] (2,0) circle (3cm);
+\draw [line width=2pt,pattern color=ffcctt,fill=ffcctt,fill opacity=0.25] (6,0) circle (3cm);
+\draw [line width=2pt,pattern color=zzffzz,fill=zzffzz,fill opacity=0.25] (4,3.46415) circle (3cm);
+\end{tikzpicture}
+```
 
