@@ -1,0 +1,345 @@
+---
+title: "Behavoural Data of Translators CLINT"
+author: "Matthias Kobi"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output: html_notebook
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+#library(plyr)
+set.seed(1234321)
+
+
+```
+
+
+
+# Data Preprocessing
+
+Prepare data for further analysis.
+
+```{r load_data, echo=FALSE, warning=FALSE}
+
+## get the file names 
+current_wd <- getwd()
+fileNames <- list.files(paste(current_wd,"input", sep="/"), full.names = TRUE)
+
+## read in files
+
+controlQuestions <- read.csv(fileNames[1],header = TRUE, sep = ";")
+expControl <- read.csv(fileNames[2],header = TRUE, sep = ";")
+perceivedDifficulty <- read.csv(fileNames[3], header = TRUE, sep = ";")
+readingDuration <- read.csv(fileNames[4], header = TRUE, sep = ";")
+textOutput <- read.csv(fileNames[5], header = TRUE, sep = ";")
+
+
+## Clean up workspace
+
+remove(fileNames)
+```
+
+# Experiment Controlling
+
+```{r, message=FALSE}
+hist(expControl$order_index)
+hist(expControl$order_index_task)
+hist(expControl$order_index_LDT, breaks = 7)
+```
+
+
+# Describing Datasets
+## Control Questions
+
+```{r, message=FALSE}
+library("tidyverse")
+controlQuestions <- controlQuestions %>%
+  filter(group != "Pilot") %>% 
+  as_tibble()         # transform into tibble
+str(controlQuestions) # structure of the data
+```
+
+The columns in the data are:
+
+- `id`: participant id, `factor`
+- `group`: `factor` with seven levels indicating which group participant was in: `"Multilinguals (Mul)"` or `"Translators (Tra)"`
+- `text`: `factor` indicating if `"Text 1"` or `"Text 2"` was processed
+- `condition`: `factor` indicating whether text was `"English as lingua franca (ELF)"` or `"Standard English (SE)"`
+- `time`: `factor` indicating if text was presented `"First"` or `"Second"`
+- `question`: `factor` indicating number of question
+- `correct`: indicates, if question was answered correclty
+
+### Plots
+
+```{r}
+CQRes <- controlQuestions %>% 
+  group_by(id, group, condition) %>% 
+  summarise(percCQRes = sum(correct)/5) %>% 
+  ungroup() %>% 
+  group_by(group, condition) %>% 
+  summarise(meanCQRes = mean(percCQRes))
+
+save(CQRes, file = "CQRes.RData")
+save(controlQuestions, file = "controlQuestions.RData")
+```
+
+
+
+## Perceived Difficulty
+
+```{r, message=FALSE}
+library("tidyverse")
+perceivedDifficulty <- perceivedDifficulty %>% 
+  as_tibble()         # transform into tibble
+str(perceivedDifficulty) # structure of the data
+```
+
+The columns in the data are:
+
+- `id`: participant id, `factor`
+- `group`: `factor` with seven levels indicating which group participant was in: `"Multilinguals (Mul)"` or `"Translators (Tra)"`
+- `task`: `factor` with levels `"Reading"` or `"Translating"`
+- `text`: `factor` indicating if `"Text 1"` or `"Text 2"` was processed
+- `condition`: `factor` indicating whether text was `"English as lingua franca (ELF)"` or `"Standard English (SE)"`
+- `time`: `factor` indicating if text was presented `"First"` or `"Second"`
+- `timeTra`: `factor` indicating if translation task was `"TraFirst"` or `"TraSecond"`
+- `perceivedDifficulty`: dependent variable how difficulty of task was perceived in 0-10 (cm).
+
+
+## Text Output
+
+```{r, message=FALSE}
+library("tidyverse")
+textOutput <- textOutput %>% 
+  as_tibble()         # transform into tibble
+str(textOutput) # structure of the data
+```
+
+The columns in the data are:
+
+- `id`: participant id, `factor`
+- `group`: `factor` with seven levels indicating which group participant was in: `"Multilinguals (Mul)"` or `"Translators (Tra)"`
+- `task`: `factor` indicating whether text output was generated during `"Copying Task"` or `"Translating Task"`
+- `timeTra`: `factor` indicating if translation task was `"TraFirst"` or `"TraSecond"`
+- `text`: `factor` indicating if `"Text 1"` or `"Text 2"` was processed
+- `condition`: `factor` indicating whether text was `"English as lingua franca (ELF)"` or `"Standard English (SE)"`
+- `time`: `factor` indicating if text was presented `"First"` or `"Second"`
+- `sentences`: number of processed sentences
+- `chars`: number of produced chars without error corrections
+- `charsTotal`: number of produced chars in total.
+- `charsErrors`: number of char errors (e.g. pressing "BackSpace")
+
+
+
+## Reading Duration
+
+```{r, message=FALSE}
+library("tidyverse")
+readingDuration <- readingDuration %>% 
+  as_tibble()         # transform into tibble
+str(readingDuration) # structure of the data
+```
+
+- `id`: participant id, `factor`
+- `group`: `factor` with seven levels indicating which group participant was in: `"Multilinguals (Mul)"` or `"Translators (Tra)"`
+- `text`: `factor` indicating if `"Text 1"` or `"Text 2"` was processed
+- `condition`: `factor` indicating whether text was `"English as lingua franca (ELF)"` or `"Standard English (SE)"`
+- `time`: `factor` indicating if text was presented `"First"` or `"Second"`
+- `sumReadingDuration`: time for reading text in seconds
+- `avgReadingDuration`: time for reading text per sentence in seconds
+
+
+
+```{r, Erster Grafik Versuch}
+comp.test(clint$,g2)
+```
+```{r, Mögliche CLINT Grafiken Magdalena Versuche}
+data(clint)
+attach(clint)
+
+#############avgReadingDuration~group######################
+
+library(ggplot2)
+####GGPLOT 1: Average reading Duration per Group ######
+ggplot(data=clint,aes(x=group,y=avgReadingDuration, shape=group, color=group))+geom_jitter(width = 0.1, height = 0)+labs(title='Average reading Duration per Group')
+
+#####GGPLT 2&3: Average reading Duration per Group in Violin shape + boxplot########
+ggplot(data=clint,aes(x=group,y=avgReadingDuration, fill=group))+geom_violin(draw_quantiles =0.5)
+
+ggplot(data=clint,aes(x=group,y=avgReadingDuration, fill=group))+geom_violin()+geom_boxplot(width = 0.05, outlier.shape = 4)
+
+#####Average reading Duration per Group: Mean und errorbars######
+ggplot(data=clint,aes(x=group,y=avgReadingDuration))+stat_summary()
+
+#####Average reading Duration per Group in Violin shape: Mean und Median vergleich######
+ggplot(data=clint,aes(x=group,y=avgReadingDuration,))+
+ geom_violin(aes(fill = group)) +
+  stat_summary(fun.y = "mean", geom = "point", 
+               shape = 15, color = "blue") +
+  stat_summary(fun.y = "median", geom = "point", 
+               shape = 18, color = "red") +
+  stat_summary(fun.y = "mean", geom = "line", 
+               color = "blue", aes(group = 1)) +
+  stat_summary(fun.y = "median", geom = "line", 
+               color = "red", aes(group = 1))+
+  theme_set(theme_classic(base_size = 15)) 
+
+
+#################avgReadingDuration~group mit subgruppe vergleich ELF oder SE############
+ 
+clint_subgroup <- subset(clint, group=='Pilot')
+
+ggplot(data=clint_subgroup,aes(x=group,y=avgReadingDuration,color=group))+
+  geom_boxplot() +
+          facet_wrap(~condition) +
+          theme_set(theme_classic())
+#################avgReadingDuration~group aufgeteilt in task und condition############
+        
+ggplot(data=clint,aes(x=group,y=avgReadingDuration,color=group))+
+  geom_boxplot() + facet_wrap(~condition) + theme_set(theme_classic())
+
+#################charsErrors############
+ggplot(data=clint,aes(x=charsErrors,y=condition,color=condition))+geom_violin(trim = FALSE, draw_quantiles = c(0.5),adjust = .5)+ facet_wrap(.~group) + theme_set(theme_classic())+ coord_flip()
+
+
+#################CharsErrors Vergleich pro Gruppe im Density Plot#####
+install.packages("ggridges")
+library(ggridges)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(forcats)
+
+ggplot(data=clint,aes(x=charsErrors,y=group, fill=group))+ geom_density_ridges()+ theme_ridges()+theme(legend.position = "none")
+
+install.packages("ggridges")
+library(ggridges)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(forcats)
+
+#########group, sentences and tasks#######
+ggplot(data=clint,aes(x=group,y=sentences, color=group))+geom_jitter()+labs(title='Sentences per Group and Task')+facet_wrap(~task)
+
+############group, charsTotal and tasks ############
+ggplot(data=clint,aes(x=group,y=charsTotal, color=group))+geom_jitter()+labs(title='charsTotal per Group and Task')+facet_wrap(~task)
+
+```
+```{r, Mögliche control Question Grafiken Magdalena Versuche}
+attach(controlQuestions)
+ggplot(controlQuestions, aes(x=question,y=correct))+geom_col()
+
+cQ2 = controlQuestions %>% 
+  select(question, correct)
+group_by_at(cQ2, vars(question))
+
+cQ3 <- cQ2 %>% group_by(question,correct) %>% tally() 
+
+
+cQ4 = controlQuestions %>% 
+  select(question,correct,T1_is_ELF)
+group_by_at(cQ4, vars(question))
+cQ5 <- cQ4 %>% group_by(question,correct,T1_is_ELF) %>% tally() 
+cQ6 = cQ5 %>% 
+  filter(correct !="0")
+
+ggplot(cQ6,aes(x=question,y=n))+geom_jitter()+facet_wrap(.~T1_is_ELF)
+
+```
+
+```{r}
+
+###### Mosaic Graph: Vergelich von Aanzahl richtig/falsch beantworteter Fragen pro Gruppe####
+controlQuestions$correct <- as.numeric(controlQuestions$correct)
+controlQ <- aggregate(correct~question, data=controlQuestions, FUN=sum) 
+
+ggplot(data=controlQuestions, aes(x=question, y=correct)) +
+  geom_bar(stat="identity")
+
+
+controlQuestions$correct <- as.factor(controlQuestions$correct)
+ggplot(data=controlQuestions, aes_string(x = "question", y = sum('correct')))+
+  geom_bar()+labs(x = "Wrong VS Correct Answer", title='Comparison of correct Answered control question per Group')+theme(
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank())
+
+install.packages("ggmosaic")
+library(ggmosaic)
+controlQuestions$correct <- as.factor(controlQuestions$correct)
+ggplot(data=controlQuestions)+
+  geom_mosaic(aes(x = product(question, correct), fill=group))+labs(x = "Wrong VS Correct Answer", title='Comparison of correct Answered control question per Group')+theme(
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank())
+
+########eine Übersicht, welche Items eher gelöst wurden und welche eher nicht####
+controlQuestions$correct <- as.factor(controlQuestions$correct)
+
+
+#####difficulty per text and condition in Violin####
+ggplot(data=perceivedDifficulty,aes(x=group,y=perceivedDifficulty,))+geom_violin(aes(fill= group))+facet_wrap(text~condition)+labs(title='Comparison of perceived Difficulty per text and condition')+theme(
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank())
+#####difficulty per text and condition####
+
+ggplot(data=perceivedDifficulty,aes(x=group,y=perceivedDifficulty,color=group))+
+  geom_boxplot()+facet_wrap(text~condition)+theme_set(theme_classic())+labs(title='Comparison of perceived Difficulty per text and condition')+theme(
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank())
+
+####same as above with only reading#####
+perceivedD1 = perceivedDifficulty %>%
+  subset(task=='Translating',select=c(group, task, text, condition, perceivedDifficulty))
+
+ggplot(data=perceivedD1,aes(x=group,y=perceivedDifficulty,color=group))+
+  geom_boxplot()+facet_wrap(text~condition)+theme_set(theme_classic())+labs(title='Comparison of perceived Difficulty per text and condition for Translating Task')+theme(
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank())
+
+####same as above with only Translating#####
+perceivedD2 = perceivedDifficulty %>%
+  subset(task=='Reading',select=c(group, task, text, condition, perceivedDifficulty))
+
+ggplot(data=perceivedD2,aes(x=group,y=perceivedDifficulty,color=group))+
+  geom_boxplot()+facet_wrap(text~condition)+theme_set(theme_classic())+labs(title='Comparison of perceived Difficulty per text and condition for Reading Task')+theme(
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank())
+
+####difficulty per task and condition#####
+ggplot(data=perceivedDifficulty,aes(x=group,y=perceivedDifficulty,color=group))+
+  geom_boxplot()+facet_wrap(task~condition)+theme_set(theme_classic())+labs(title='Comparison of perceived Difficulty per task and condition')+theme(
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank())
+
+###############Gender & HAWIE & group#####
+Abszisse <- "Master" # Bezeichnung des Faktors auf der Abszisse 
+Linientyp <- "Geschlecht" # Bezeichnung des Faktors für den Linientyp 
+AV <- "wiss_den"  # Bezeichnung der abhängigen Variablen 
+CI <- .95   # gewünschtes Konfidenzintervall eingeben. Kein Konfidenzintervall: 
+CI  <- 0 
+library(plyr)
+library(ggplot2) 
+data2 <- na.omit(data[,c(Abszisse, Linientyp, AV)]) 
+KIB.halbe <- function(x) sd(x)/sqrt(length(x))*qt((1+CI)/2, length(x)-1) 
+data.aggr <- ddply(data2, c(Abszisse, Linientyp), with, each(Mean=mean, KIB.halbe)(eval(parse(text=AV)))) 
+limits <- aes(ymax = Mean + KIB.halbe, ymin = Mean - KIB.halbe) 
+ggplot(data.aggr, aes_string(linetype=Linientyp, y="Mean", x=Abszisse)) + scale_linetype_discrete(name=Linientyp) + geom_line(aes_string(group=Linientyp), size=1.5) + geom_errorbar(limits, position=position_dodge(width=0.25), width=0.25) + ylab(AV) + theme_bw()  + theme(axis.text.x = element_text(angle=90, hjust=1))
+
+########## HAWIE
+Name <- "HAWIE_T_Value" # Name der Variable eingeben
+library(ggplot2) 
+data2 <- na.omit(vpdata[, Name, drop=FALSE])
+b <- 2*IQR(data2[,Name])/length(data2[,Name])^(1/3) # Binweite 
+ggplot(data2, aes_string(x=Name)) + geom_histogram(binwidth=b, colour="black", fill="gray") + ylab("Häufigkeit ") + theme_bw()
+```
+```{rMögliche preceived Difficulty Grafiken Magdalena Versuche}
+####violin von Schwierigkeit Text1/1 und SE/ELF####
+attach(perceivedDifficulty)
+ggplot(data=perceivedDifficulty,aes(x=group,y=perceivedDifficulty,))+geom_violin(aes(fill= group))+facet_wrap(text~condition)
+
+####group und sentences####
+```
+
