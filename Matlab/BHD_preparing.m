@@ -5,7 +5,7 @@ clearvars
 allDataPath = 'F:\All_Data\';
 savePath = 'C:\Users\matth\Documents\Translators\data\rawdata\';
 
-savePathLDT = 'F:\Auswertung\LDT\';
+savePathLDT = 'C:\Users\matth\Documents\LDT\data\rawdata\';
 
 savePathMatlab = strjoin([savePath,{'matlab_rawdata'}],'');
 savePathTask = strjoin([savePath,{'task'}],'');
