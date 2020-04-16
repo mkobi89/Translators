@@ -1,0 +1,33 @@
+Text 1, Satz 5
+In our paper, we hypothesize that an important source of the heterogeneous effects observed in the Opower peer comparison might be consumers' environmental values. 
+
+Text 1, Satz 6
+While the conservation behaviour of people with high biospheric values has been well- documented in the literature, little is known about these consumers' responses to peer comparison. 
+
+Text 1, Satz 7
+In this paper, we tet whether there is an effect of social comparison on energy conservation and whether this effect depends on the extent to which individuals endorse high environmental  values. 
+
+Text 1, Satz 8
+Another imprtant gap in resarch is the understandig of the mechanisms behind individuals' reactions to Opower's HER with regard to their energy use. 
+
+Text 1, Satz 9
+The HER contains different elements, including a static neighbour comparison of energy consumption levels (a descriptive norm), feedback on individual performance (an injunctive norm), as well as enery saving tips. 
+
+Text 1, Satz 10
+A furhter objective of this paper is to assess possible mechanisms to make the HER mor effective. 
+
+Text 1, Satz 11
+First, we test whether the HER shapes individuals'" perceptions of norms in the domain on
+
+Text 4, Satz 1
+Energy Poverty is one of the main social, technical and legislative issues of the present time in Europe, with an estimated number of affected people ranging from  50 to 125 million.
+
+Text 4, Satz 2
+The European Commission (EC) has put a lot of effort to solve this issue, as shown, for example, by the recent launch of the EU Energy Poverty Observatory in January 2018.
+
+Text 4, Satz 3
+One the points stressed by the EC is the importance to learn from the experiences and best practices carried out in the different Members states (MS). 
+
+Text 4, Satz 4
+With this in mind, the project (funded by EU Commission under Grant Agreement n. 12345), of which Energy Consumption Research Institute is a partner, aims to find some best practices and recommendations to address Energy Poverty from the implementation of a series of pilot 
+

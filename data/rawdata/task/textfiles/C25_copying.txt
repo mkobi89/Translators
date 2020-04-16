@@ -1,0 +1,30 @@
+Text 2, Satz 5
+In our Paper we speculate that environmental values represent an important sources of heterogenity in the effect of the Opower peer comparison.
+
+Text 2, Satz 6
+While the conversation behavior of people with high biospheric values has been largely studied in the literature, little is known about the response of the individuals to peer comparison.
+
+Text 2, Satz 7
+in this paper we test the effect of sociaö comparison on energy conversation and wheter this depends on the extent to whcih individuals endorse high environmental values.
+
+Text 2, Satz 8
+Another important gap in research is the understanding of the mechanisms behind individuals' reaction to the Opower Home Energy Report (HER) in the field of energy use.
+
+Text 2, Satz 9
+The HER delivers different elements, from a static neighbour comparison on energy consumption (descriptive norm), to feedback
+
+Text 3, Satz 5
+It does so by implementing a series of pilot actions with a group of advisors called HEAs (Home Energy Advisors).
+
+Text 3, Satz 6
+These advisors have been specifically trained to implement the pilot actions by educating vulnerable consumers to optimize, and possibly reduce, their energy consumption, mostly through behavioral changes-
+
+Text 3, Satz 8
+This paper presents the initial results of these two tasks,
+
+Text 3, Satz 9
+The first part of the paper summarizes the results of a statistical analysis performed in order to definde "energy-poor" or "energy-vulnerbale" consumers, as a common European definition does not exist.
+
+Text 3, Satz 10
+The main obstacle in performing this analysis is that the data often used for standard indicators (e.g. Low 
+
