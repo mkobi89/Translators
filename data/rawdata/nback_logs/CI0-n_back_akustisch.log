@@ -1,0 +1,78 @@
+Scenario - 
+Logfile written - 12/16/2019 09:43:28
+
+Subject	Trial	Event Type	Code	Time	TTime	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur	Stim Type	Pair Index
+
+CI0	1	Picture	Start	167	0	1	39333	1	0	next	false_alarm	2
+CI0	1	Response	1	39382	39215	0
+CI0	3	Sound	F56	44013	13	815			0		other	0
+CI0	5	Sound	L58	70000	0	2			0		other	0
+CI0	7	Sound	F56	94500	0	2			0		other	0
+CI0	9	Sound	F56	119000	0	2			0		hit	7
+CI0	9	Response	2	137922	18922	0
+CI0	11	Sound	F56	146167	0	2			0		other	0
+CI0	13	Sound	U54	173167	0	2			0		other	0
+CI0	15	Sound	U54	198334	1	2			0		other	0
+CI0	17	Sound	U54	225500	0	2			0		other	0
+CI0	19	Sound	O53	252667	0	2			0		other	0
+CI0	21	Sound	A50	277334	0	2			0		other	0
+CI0	23	Sound	U54	303167	0	2			0		hit	15
+CI0	23	Response	2	310288	7121	0
+CI0	25	Sound	U54	328334	0	2			0		other	0
+CI0	27	Sound	L58	355167	0	2			0		other	0
+CI0	29	Sound	M59	381334	0	2			0		other	0
+CI0	31	Sound	B55	407334	0	2			0		other	0
+CI0	33	Sound	E51	433000	0	2			0		other	0
+CI0	35	Sound	O53	460001	0	3			0		other	0
+CI0	37	Sound	B55	484834	0	2			0		miss	0
+CI0	39	Sound	A50	510001	0	2			0		other	0
+CI0	41	Sound	B55	537334	0	2			0		other	0
+CI0	43	Sound	B55	564167	0	2			0		hit	26
+CI0	43	Response	2	572123	7956	0
+CI0	45	Sound	M59	589167	0	2			0		other	0
+CI0	47	Sound	B55	616167	0	2			0		miss	0
+CI0	49	Sound	H57	643334	0	2			0		other	0
+CI0	51	Sound	O53	668834	0	2			0		other	0
+CI0	53	Sound	U54	695501	0	2			0		other	0
+CI0	55	Sound	H57	720167	0	2			0		hit	33
+CI0	55	Response	2	736938	16771	0
+CI0	57	Sound	B55	744667	0	2			0		other	0
+CI0	59	Sound	B55	769834	1	2			0		other	0
+CI0	61	Sound	I52	794501	0	2			0		other	0
+CI0	63	Sound	O53	819501	0	2			0		other	0
+CI0	65	Sound	U54	845667	0	2			0		other	0
+CI0	67	Sound	L58	870001	0	2			0		other	0
+CI0	69	Sound	M59	895334	0	2			0		other	0
+CI0	71	Sound	A50	921667	0	2			0		other	0
+CI0	73	Sound	U54	946001	0	2			0		other	0
+CI0	75	Sound	M59	971334	0	2			0		hit	44
+CI0	75	Response	2	986777	15444	0
+CI0	77	Sound	A50	996667	0	2			0		miss	0
+CI0	79	Sound	A50	1022167	0	2			0		other	0
+CI0	80	Response	1	1042820	486	0
+CI0	81	Sound	O53	1048334	0	2			0		other	0
+CI0	83	Sound	A50	1073001	0	2			0		hit	50
+CI0	83	Response	2	1086186	13186	0
+CI0	85	Sound	U54	1098667	0	2			0		other	0
+CI0	87	Sound	O53	1123501	0	2			0		hit	53
+CI0	87	Response	2	1134186	10686	0
+CI0	89	Sound	A50	1150834	0	2			0		hit	55
+CI0	89	Response	2	1166262	15428	0
+CI0	91	Sound	M59	1176334	0	2			0		other	0
+CI0	93	Sound	U54	1201834	0	2			0		other	0
+CI0	95	Sound	E51	1229001	0	2			0		other	0
+CI0	97	Sound	H57	1253334	0	2			0		other	0
+CI0	99	Sound	U54	1280167	0	2			0		miss	0
+CI0	101	Sound	E51	1306334	0	2			0		miss	0
+CI0	103	Sound	H57	1330834	0	2			0		miss	0
+CI0	105	Sound	U54	1356834	0	2			0		miss	0
+CI0	107	Sound	F56	1383668	0	2			0		other	0
+CI0	109	Sound	A50	1410668	0	2			0		other	0
+CI0	111	Sound	F56	1436168	0	2			0		other	0
+CI0	113	Sound	F56	1462501	0	2			0		hit	68
+CI0	113	Response	2	1477375	14875	0
+CI0	115	Sound	A50	1489501	0	2			0		hit	70
+CI0	115	Response	2	1499021	9520	0
+CI0	117	Sound	F56	1515501	0	2			0		miss	0
+CI0	119	Sound	F56	1541001	0	2			0		miss	0
+CI0	121	Sound	B55	1566501	0	2			0		other	0

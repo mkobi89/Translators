@@ -1,0 +1,76 @@
+Scenario - 
+Logfile written - 08/21/2019 13:51:05
+
+Subject	Trial	Event Type	Code	Time	TTime	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur	Stim Type	Pair Index
+
+ÜMA_CE0	1	Picture	Start	5000	0	1	856500	1	0	next	false_alarm	2
+ÜMA_CE0	1	Response	1	860951	855952	0
+ÜMA_CE0	3	Sound	M59	868515	15	959			0		other	0
+ÜMA_CE0	5	Sound	M59	895167	0	2			0		other	0
+ÜMA_CE0	7	Sound	I52	920834	0	2			0		other	0
+ÜMA_CE0	9	Sound	I52	947334	0	2			0		other	0
+ÜMA_CE0	11	Sound	M59	974334	0	2			0		hit	8
+ÜMA_CE0	11	Response	2	991679	17345	0
+ÜMA_CE0	13	Sound	I52	998667	0	2			0		miss	0
+ÜMA_CE0	15	Sound	I52	1024667	0	2			0		miss	0
+ÜMA_CE0	17	Sound	M59	1050167	1	2			0		hit	12
+ÜMA_CE0	17	Response	2	1059577	9411	0
+ÜMA_CE0	19	Sound	I52	1074501	1	1			0		miss	0
+ÜMA_CE0	21	Sound	U54	1100501	0	2			0		other	0
+ÜMA_CE0	23	Sound	E51	1125334	0	2			0		other	0
+ÜMA_CE0	25	Sound	I52	1150668	1	2			0		hit	17
+ÜMA_CE0	25	Response	2	1162068	11402	0
+ÜMA_CE0	27	Sound	I52	1176667	0	2			0		other	0
+ÜMA_CE0	29	Sound	O53	1201501	0	2			0		other	0
+ÜMA_CE0	31	Sound	U54	1225834	0	2			0		other	0
+ÜMA_CE0	33	Sound	O53	1251167	0	2			0		other	0
+ÜMA_CE0	35	Sound	O53	1276834	1	2			0		miss	0
+ÜMA_CE0	37	Sound	I52	1302834	0	2			0		other	0
+ÜMA_CE0	39	Sound	O53	1327667	0	2			0		miss	0
+ÜMA_CE0	41	Sound	O53	1352001	0	2			0		miss	0
+ÜMA_CE0	43	Sound	A50	1377167	0	2			0		other	0
+ÜMA_CE0	45	Sound	O53	1403001	0	2			0		hit	28
+ÜMA_CE0	45	Response	2	1416252	13252	0
+ÜMA_CE0	47	Sound	O53	1427834	0	2			0		miss	0
+ÜMA_CE0	49	Sound	B55	1453834	0	2			0		other	0
+ÜMA_CE0	51	Sound	E51	1478334	0	2			0		other	0
+ÜMA_CE0	53	Sound	M59	1505001	1	2			0		other	0
+ÜMA_CE0	55	Sound	O53	1530167	0	2			0		other	0
+ÜMA_CE0	57	Sound	O53	1556834	0	2			0		other	0
+ÜMA_CE0	59	Sound	M59	1583001	0	2			0		hit	36
+ÜMA_CE0	59	Response	2	1590287	7287	0
+ÜMA_CE0	61	Sound	F56	1609001	0	2			0		other	0
+ÜMA_CE0	63	Sound	O53	1634667	0	2			0		miss	0
+ÜMA_CE0	65	Sound	A50	1659667	0	2			0		other	0
+ÜMA_CE0	67	Sound	M59	1685501	0	2			0		other	0
+ÜMA_CE0	69	Sound	O53	1711334	0	2			0		miss	0
+ÜMA_CE0	71	Sound	F56	1737668	1	2			0		other	0
+ÜMA_CE0	73	Sound	U54	1762834	0	2			0		other	0
+ÜMA_CE0	75	Sound	O53	1789167	0	2			0		hit	45
+ÜMA_CE0	75	Response	2	1803542	14375	0
+ÜMA_CE0	77	Sound	I52	1814001	0	2			0		other	0
+ÜMA_CE0	79	Sound	U54	1840168	0	2			0		miss	0
+ÜMA_CE0	81	Sound	A50	1866001	0	2			0		other	0
+ÜMA_CE0	83	Sound	U54	1891001	0	2			0		other	0
+ÜMA_CE0	85	Sound	I52	1917168	0	2			0		other	0
+ÜMA_CE0	87	Sound	F56	1943668	0	2			0		other	0
+ÜMA_CE0	89	Sound	B55	1969834	0	2			0		other	0
+ÜMA_CE0	91	Sound	E51	1996001	0	2			0		other	0
+ÜMA_CE0	93	Sound	F56	2021668	0	2			0		hit	55
+ÜMA_CE0	93	Response	2	2038034	16367	0
+ÜMA_CE0	95	Sound	B55	2048501	0	2			0		miss	0
+ÜMA_CE0	97	Sound	I52	2075668	0	2			0		other	0
+ÜMA_CE0	99	Sound	F56	2100501	0	2			0		hit	59
+ÜMA_CE0	99	Response	2	2106766	6266	0
+ÜMA_CE0	101	Sound	L58	2126334	0	2			0		other	0
+ÜMA_CE0	103	Sound	O53	2152834	0	2			0		other	0
+ÜMA_CE0	105	Sound	F56	2180168	0	2			0		hit	63
+ÜMA_CE0	105	Response	2	2185765	5597	0
+ÜMA_CE0	107	Sound	B55	2206001	0	2			0		other	0
+ÜMA_CE0	109	Sound	U54	2230834	0	2			0		other	0
+ÜMA_CE0	111	Sound	U54	2256835	1	2			0		other	0
+ÜMA_CE0	113	Sound	O53	2282501	0	2			0		other	0
+ÜMA_CE0	115	Sound	M59	2309334	0	2			0		other	0
+ÜMA_CE0	117	Sound	B55	2336168	1	2			0		other	0
+ÜMA_CE0	119	Sound	H57	2361168	1	2			0		other	0
+ÜMA_CE0	121	Sound	E51	2385834	0	2			0		other	0
