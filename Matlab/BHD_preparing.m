@@ -7,7 +7,7 @@ savePath = 'C:\Users\matth\Documents\Translators\data\rawdata\';
 
 savePathLDT = 'F:\Auswertung\LDT\';
 
-savePathMatlab = strjoin([savePath,{'matlab'}],'');
+savePathMatlab = strjoin([savePath,{'matlab_rawdata'}],'');
 savePathTask = strjoin([savePath,{'task'}],'');
 
 
