@@ -2,51 +2,41 @@
 clearvars
 
 %% Define Paths
-allDataPath = 'F:\All_Data\';
-savePath = 'C:\Users\matth\Documents\Translators\data\rawdata\';
+cd('..');
+transWD = pwd;
 
-savePathLDT = 'C:\Users\matth\Documents\LDT\data\rawdata\';
+allDataPath = '//130.60.235.123/Users/neuro/Desktop/CLINT/All_Data/';
 
+
+savePath = strjoin([transWD,{'/data/rawdata/'}],'');
 savePathMatlab = strjoin([savePath,{'matlab_rawdata'}],'');
 savePathTask = strjoin([savePath,{'task'}],'');
 
-
-% if exist('F:\Auswertung\LDT')~=7 %#ok<*EXIST> %Check wheter Directory exists
-%     mkdir F:\Auswertung\LDT;
-% end
-% if exist('F:\Auswertung\Matlab')~=7 %Check wheter Directory exists
-%     mkdir F:\Auswertung\Matlab;
-% end
-% if exist('F:\Auswertung\Translation')~=7
-%     mkdir F:\Auswertung\Translation;
-% end
-% if exist('F:\Auswertung\Behavioral_Data')~=7
-%     mkdir F:\Auswertung\Behavioral_Data;
-% end
+if exist(savePath)~=7 %#ok<*EXIST> %Check wheter Directory exists
+   mkdir savePath;
+end
+if exist(savePathMatlab)~=7 %#ok<*EXIST> %Check wheter Directory exists
+   mkdir savePathMatlab;
+end
+if exist(savePathTask)~=7 %#ok<*EXIST> %Check wheter Directory exists
+   mkdir savePathTask;
+end
 
 
 %% Copy Answerfiles to Matlab Folder
 cd(allDataPath);
-vp_list = dir('C*');
 
-for i = 1:length(vp_list)
-    vp_name = vp_list(i);
-    vpNames{i} = vp_name.name;
-end
+vplist = dir('C*');
+vpNames = {vplist.name};
 
 for zz = 1:length(vpNames)
     
     cd(strjoin([allDataPath {vpNames{zz}}],'')) %#ok<*CCAT1>
     
-    filePattern = fullfile('*Fullresults*.mat');
-    files = dir(filePattern);
+    files = dir('Fullresults*.mat');
+    fileNames = {files.name};
     
-    for i = 1:length(files)
-        filename = files(i);
-        fileNames{i} = filename.name;
-    end
-    
-    if exist(strjoin([savePathMatlab fileNames],''))~=7 %Check wheter Directory exists
+    if exist(strjoin([savePathMatlab fileNames],'/'))~=7 %Check wheter Directory exists
         copyfile(char(fileNames),savePathMatlab);
     end
 end
@@ -55,14 +45,10 @@ end
 
 cd(savePathMatlab);
 
-filePattern = fullfile('*Fullresults*.mat');
-files = dir(filePattern);
+files = dir('Fullresults*.mat');
+fileNames = {files.name};
 
-for i = 1:length(files)
-    filename = files(i);
-    fileNames{i} = filename.name;
-end
-
+%% Preallocation
 text_output = []; %#ok<*NASGU>
 ueb_saetze = zeros(length(fileNames),4);
 ueb_chars = zeros(length(fileNames),4);
@@ -75,16 +61,11 @@ ab_chars_errors = zeros(length(fileNames),4);
 
 exp_control = {};
 
+%% Process Files
+
 for zz = 1:length(fileNames)
     load(fileNames{zz})
-    
-    %% LDT
-    % Read answer tables from LDT and write them to .csv
-    
-    writetable(answers_task_1,[savePathLDT, fileNames{zz}(17:19),'_answers_task_1.csv'],'FileType','text')
-    writetable(answers_task_2,[savePathLDT, fileNames{zz}(17:19),'_answers_task_2.csv'],'FileType','text')
-    writetable(answers_task_3,[savePathLDT, fileNames{zz}(17:19),'_answers_task_3.csv'],'FileType','text')
-    
+        
     %% Task Order
     
     if par.order(1) == 2 || par.order(2) == 2
@@ -1104,3 +1085,5 @@ writetable(readingDuration,[savePath, 'readingDuration.csv'],'FileType','spreads
 
 sentences_copying = table(sentences(:,1),sentences(:,2),sentences(:,3),sentences(:,4), 'VariableNames', {'T1_SE_copy_stimulus','T1_ELF_copy_stimulus','T2_SE_copy_stimulus','T2_ELF_copy_stimulus'});
 %writetable(sentences_copying,[savePathTask,'copying_stimulus.csv'],'FileType','spreadsheet')
+
+cd(strjoin([transWD,{'/Matlab/'}],''));
