@@ -1,0 +1,253 @@
+---
+title: "Cognitive Load in Interpreting and Translating"
+subtitle: "DoKo Presentation"
+author: "Matthias Kobi"
+date: "`r format(Sys.time(), '%d %b %Y')`"
+output:
+  xaringan::moon_reader:
+    css: [default, metropolis, metropolis-fonts]
+    yolo: true
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: 16:9
+      countdown: 60000
+
+---
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+if (!"xaringan" %in% installed.packages()[, "Package"]) {
+  install.packages("xaringan")
+}
+
+library(xaringan)
+library(tikzDevice)
+library(tidyverse)
+library(tinytex)
+
+options(htmltools.dir.version = FALSE)
+# see: https://github.com/yihui/xaringan
+# install.packages("xaringan")
+# see: 
+# https://github.com/yihui/xaringan/wiki
+# https://github.com/gnab/remark/wiki/Markdown
+options(width=110)
+options(digits = 4)
+```
+
+# Overview
+
+--
+
+1. The Project
+
+--
+
+2. Experiment with Translators
+
+--
+
+3. Tools used to organise my PhD
+
+--
+
+4. Psychtoolbox
+
+.footnote[Style of slides by Metropolis Theme in Xaringan]
+---
+```{tikz, fig.cap = "Funky tikz", fig.ext = 'png'}
+
+\usetikzlibrary{arrows}
+\usetikzlibrary{patterns}
+\definecolor{zzffzz}{rgb}{0.6,1,0.6}
+\definecolor{ffcctt}{rgb}{1,0.8,0.2}
+\definecolor{yqyqdz}{rgb}{0.5019607843137255,0.5019607843137255,0.8509803921568627}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\clip(-4.505289256198347,-6.316528925619829) rectangle (21.02198347107439,13.083471074380155);
+\draw [line width=2pt,pattern color=yqyqdz,fill=yqyqdz,fill opacity=0.25] (2,0) circle (3cm);
+\draw [line width=2pt,pattern color=ffcctt,fill=ffcctt,fill opacity=0.25] (6,0) circle (3cm);
+\draw [line width=2pt,pattern color=zzffzz,fill=zzffzz,fill opacity=0.25] (4,3.46415) circle (3cm);
+\end{tikzpicture}
+```
+
+---
+
+class: inverse, mline, center, middle
+
+# The Project
+
+---
+
+# UZH Website
+![](figures/doko_presentation/clint_ch_project.png)
+
+.footnote[https://psy-klipsy-web01.uzh.ch/anmeldung-clint-u/about-clint-u/]
+---
+# ZHAW Website
+
+```{r fig.width=12, fig.height=6.5,echo=FALSE}
+library(png)
+library(grid)
+img <- readPNG(file.path("figures/doko_presentation/zhaw_project.png"))
+ grid.raster(img)
+```
+
+.footnote[https://www.zhaw.ch/de/linguistik/institute-zentren/iued/forschung/clint/]
+---
+# Research Question
+
+- English as Lingua Franca (ELF)
+
+???
+Communication between two non-native speakers in English
+--
+
+- More text and speeches in non-native English
+
+--
+
+-  Challenging for translators
+
+???
+ELF is more time and work demanding
+--
+
+- Enhanced cognitive load while translating
+---
+
+# Research Question
+
+Mixed method approach that addresses:
+
+--
+
+- Problems reading and translating ELF text vs. EdE text (Edited English)
+
+--
+
+- Language proficiency depending differences while reading and translating ELF text vs. EdE text
+
+--
+
+- Cognitive load while reading and translating ELF text vs. EdE text
+
+--
+
+
+
+<t>using:</t>
+
+
+--
+
+- EEG
+
+- Eyetracking
+
+- Inputs from Translating and ELF science
+---
+class: inverse, mline, center, middle
+
+# Experiment with Translators
+
+---
+# Participants
+
+L1: German
+
+L2: English (Level C1)
+--
+
+.pull-left[
+#### Translators (measured / recruited)
+
+- 30 Professionals (5 / 12) 
+
+- 30 Masters (7 / 6)
+
+- 30 Bachelors (0 / 0)]
+--
+.pull-right[
+#### Multilinguals (measured / recruited)
+
+- 30 Professionals (5 / 1) 
+
+- 30 Masters (1 / 1)
+
+- 30 Bachelors (1 / 6)]
+---
+# Methods
+
+.left-column[
+## EEG
+### Eyetracking
+### Psychometrics
+### LDT
+]
+.right-column[
+EGI 128-channel Geodesic Sensor Net<sup>1</sup>
+
+![](figures/doko_presentation/geodesic.png)
+]
+
+.footnote[
+1) https://blricrex.hypotheses.org/files/2015/05/geodesic-sensor-net.pdf]
+
+---
+# Methods
+.left-column[
+### EEG
+## Eyetracking
+### Psychometrics
+### LDT
+]
+.right-column[
+EyeLink 1000 Plus, SR Research<sup>2</sup>
+![](figures/doko_presentation/eyelink.png)
+]
+
+.footnote[
+1) https://blricrex.hypotheses.org/files/2015/05/geodesic-sensor-net.pdf  
+2) https://twitter.com/SRResearchLtd/status/993860152867590144/photo/1]
+
+???
+infrared video-based eye tracker
+---
+# Methods
+.left-column[
+### EEG
+### Eyetracking
+## Psychometrics
+### LDT
+] 
+.right-column[
+* HAWIE (short form)
+
+* TMT
+
+* N-Back (visual/auditory)
+]
+
+---
+# Methods
+.left-column[
+### EEG
+### Eyetracking
+### Psychometrics
+## LDT
+] 
+.right-column[
+Visual Lexical Decision Task
+
+* German
+
+* English
+
+* Switch
+]
+---
+
