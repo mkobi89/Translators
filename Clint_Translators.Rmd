@@ -2,7 +2,7 @@
 title: "Behavoural Data of Translators CLINT"
 author: "Matthias Kobi"
 date: "`r format(Sys.time(), '%d %B %Y')`"
-output: html_notebook
+output: pdf_output
 ---
 
 ```{r setup, include=FALSE}
