@@ -302,16 +302,18 @@ colnames(hgf_raw) <-
 
 ## Recode Group Variable ----
 hgf_raw$group <- gsub("\\(|)", "", hgf_raw$group)
+#hgf_raw$group <- gsub("ü", "ue", hgf_raw$group)
+#hgf_raw$group <- gsub("Ü", "Ue", hgf_raw$group)
 
 hgf_raw$group <- gsub("...als Konferenzdolmetscher/in arbeite", "IntPro", hgf_raw$group)
 hgf_raw$group <- gsub("...im Master Konferenzdolmetschen studiere", "IntMA", hgf_raw$group)
 hgf_raw$group <- gsub("...im Bachelor Angewandte Sprachen Vertiefungsrichtung MSK studiere", "IntBA", hgf_raw$group)
 
-hgf_raw$group <- gsub("...als ?bersetzer/in arbeite", "TraPro", hgf_raw$group)
-hgf_raw$group <- gsub("...im Master Fach?bersetzen studiere", "TraMA", hgf_raw$group)
+hgf_raw$group <- gsub("...als Übersetzer/in arbeite", "TraPro", hgf_raw$group)
+hgf_raw$group <- gsub("...im Master Fachübersetzen studiere", "TraMA", hgf_raw$group)
 hgf_raw$group <- gsub("...im Bachelor Angewandte Sprachen Vertiefungsrichtung MMK studiere", "TraBA", hgf_raw$group)
 
-hgf_raw$group <- gsub("...Deutsch und Englisch gut beherrsche, aber ?ber keine Ausbildung/Erfahrung im Bereich ?bersetzen/Dolmetschen verf?ge", "Mul", hgf_raw$group)
+hgf_raw$group <- gsub("...Deutsch und Englisch gut beherrsche, aber über keine Ausbildung/Erfahrung im Bereich Übersetzen/Dolmetschen verfüge", "Mul", hgf_raw$group)
 
 ## Set Variables to Factors, Numbers and Chars ----
 as_factors <- c(1,4,	9,	10,	11,	14,	15,	16,	17,	18,	19,	20,	21,	22,	23,	24,	25,	27,	29,	34,	45,	64,	65,	66,	67,	68,	69,	70,	72,	74,	76,	78,	80,	82,	84,	86,	88,	90,	92,	95,	96,	97,	98	,99,	100,	101,	102,	103,	104, 105,	106,	108,	109,	110,	111,	112,	119,	120,	121,	122,	123,	124,	125,	126,	127,	128,	129,	130,	132, 133,	134,	135,	136,	143, 144,	145,146,	147,	148,	149,	150,	151,	152,	153,	154,	156,	157,	158,	159,	160,	167,	168,	169,	170,	171,	172,	173,	174,	175,	176,	177,	178,	180,	181,	182,	183,	184,	191,	192,	193,	194,	195,	196,	197,	198,	199,	200,	201,	202,	204,	205,	206,	207,	208,	214,	215,	216,	217,	218,	219,	221,	224,	225,	226,	228,	252,	254)
@@ -663,4 +665,7 @@ hgf_incomplete <- hgf_incomplete %>%
 save(hgf, file = file.path(dataFolder,"hgf.RData"))
 save(hgf_incomplete, file = file.path(dataFolder,"hgf_incomplete.RData"))
 save(doubles_df, file = file.path(dataFolder,"hgf_doubles.RData"))
+
+remove(doubles, hgf_incomplete, hgf_raw, dataFolder, dataFolderRaw, cum_train_h_Musik, cum_train_h_Dol)
+
 

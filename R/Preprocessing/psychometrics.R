@@ -49,4 +49,4 @@ save(vpdata, file = file.path(dataFolder,"vpdata.RData"))
 
 ## Clean up workspace
 
-remove(pilot_vpdata,vpdata_all)
+remove(pilot_vpdata, dataFolder, dataFolderRaw)
