@@ -959,7 +959,7 @@ Magnitude decreases with workload
 
 2) Frontal theta as indication<sup>1</sup>
 
-3) **Holm et al. (2009):** Fz-theta / Pz-alpha - Ratio<sup>2</sup>
+3) **Holm et al. (2009):** Fz-theta / Pz-alpha - Ratio
 
 .footnote[
   1) Cavanagh & Frank (2014), Doppelmayr, Finkenzeller & Sauseng (2008),  
@@ -973,14 +973,14 @@ Magnitude decreases with workload
 - Event related potentials
 - Starting and ending with fixations
 - Challenges: 
-  - Coregistrate EEG and Eyetracking<sup>3</sup>
+  - Coregistrate EEG and Eyetracking<sup>2</sup>
   - Eye movement artifacts
   - Differential overlap
   - Parafovea-on-fovea effects
   - Where is ELF in the text?
   
 .footnote[
-  3)Dimigen et al. (2011)]
+  2)Dimigen et al. (2011)]
  
 ]
 ???
@@ -1116,8 +1116,8 @@ https://bookdown.org/yihui/rmarkdown/basics.html
 
 ![](figures/doko_presentation/version_controlling.png)
 
---- 
-# GitHub
+---
+#GitHub
 
 * https://aberdeenstudygroup.github.io/studyGroup/lessons/SG-T1-GitHubVersionControl/VersionControl/
 
