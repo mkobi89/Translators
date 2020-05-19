@@ -10,10 +10,11 @@ if (!"tidyverse" %in% installed.packages()[, "Package"]) {
 
 library(tidyverse)
 
+source(file.path("R/Preprocessing/nback.R"))
 
 dataFolder   <- file.path("data")
 load(file.path(dataFolder,"res_nback.RData"))
-
+res_nback$Subject <- gsub("ÃœMA_CE0", "CE0", res_nback$Subject)
 
 ###########################################################
 ##                         RT                            ##
@@ -99,53 +100,53 @@ mean_rate_nback <- indices_nback %>%
 ##                       Plotting                        ##
 ###########################################################
 
-library(ggplot2) 
-nback_graph = full_join(indices_nback,res_nback_RT)
-nback_graphs = full_join(nback_graph,res_nback)
+#library(ggplot2)
+#nback_graph = full_join(indices_nback,res_nback_RT)
+#nback_graphs = full_join(nback_graph,res_nback)
 # RT
 
-pRT <- ggplot(res_nback_RT, aes(Response, meanRT, fill=Response))
-pRT + 
-  geom_bar(stat="identity")+
-  geom_text(aes(label=meanRT), vjust=1.6, color="white", size=3.5)+
-  theme_bw()
+#pRT <- ggplot(res_nback_RT, aes(Response, meanRT, fill=Response))
+#pRT + 
+#  geom_bar(stat="identity")+
+#  geom_text(aes(label=meanRT), vjust=1.6, color="white", size=3.5)+
+#  theme_bw()
 
 #### Verteilung dprime
-ggplot(indices_nback,aes(x = dprime)) + 
-  facet_wrap(~Task,scales = "free_x") + 
-  geom_histogram()+ labs(y="Haeufigkeit", title="dprime distribution per task")+ theme_classic()
+#ggplot(indices_nback,aes(x = dprime)) + 
+#  facet_wrap(~Task,scales = "free_x") + 
+#  geom_histogram()+ labs(y="Haeufigkeit", title="dprime distribution per task")+ theme_classic()
 
 #### Verteilung c
-ggplot(indices_nback,aes(x = c)) + 
-  facet_wrap(~Task,scales = "free_x") + 
-  geom_histogram()+ labs(y="Haeufigkeit", title="c distribution per task")+ theme_classic()
+#ggplot(indices_nback,aes(x = c)) + 
+#  facet_wrap(~Task,scales = "free_x") + 
+#  geom_histogram()+ labs(y="Haeufigkeit", title="c distribution per task")+ theme_classic()
 
 #### RT und dprime
-ggplot(nback_graphs,aes(x = RT, y=dprime)) + 
-  geom_histogram()+ labs(y="Haeufigkeit", title="c distribution per task")+ theme_classic()  
+#ggplot(nback_graphs,aes(x = RT, y=dprime)) + 
+#  geom_histogram()+ labs(y="Haeufigkeit", title="c distribution per task")+ theme_classic()  
 
 
 
 #### dprime und Stimulus
 #wichtigen variablen selektieren
-nback_graphs_s = nback_graphs %>% 
-  select(Subject, Task, RT, Stimulus)
+#nback_graphs_s = nback_graphs %>% 
+#  select(Subject, Task, RT, Stimulus)
 
 #Mittelwert ausrechnen
-nback_graphs_s_aggreg <- aggregate(nback_graphs_s[, 3], list(nback_graphs_s$Stimulus), mean, na.rm=TRUE)
+#nback_graphs_s_aggreg <- aggregate(nback_graphs_s[, 3], list(nback_graphs_s$Stimulus), mean, na.rm=TRUE)
 
 #Grafik: dprime pro stimulus
-ggplot(nback_graphs_s_aggreg, aes(x = Group.1, y = RT, linetype = Group.1))+geom_point()+labs(x="Stimulus",title="dprime per Stimulus")
+#ggplot(nback_graphs_s_aggreg, aes(x = Group.1, y = RT, linetype = Group.1))+geom_point()+labs(x="Stimulus",title="dprime per Stimulus")
 
 
 
 ####HIT und FA
 #wichtigen variablen selektieren
-nback_graphs_s = nback_graphs %>% 
-  select(Subject, Task, FP, TP)
+#nback_graphs_s = nback_graphs %>% 
+#  select(Subject, Task, FP, TP)
 
 #Mittelwert ausrechnen
-nback_graphs_s_sum <- aggregate(nback_graphs_s[, 3:4], list(nback_graphs_s$Task), sum, na.rm=TRUE)
+#nback_graphs_s_sum <- aggregate(nback_graphs_s[, 3:4], list(nback_graphs_s$Task), sum, na.rm=TRUE)
 
 #Grafik: dprime pro stimulus
 #library(reshape2)
@@ -157,17 +158,17 @@ nback_graphs_s_sum <- aggregate(nback_graphs_s[, 3:4], list(nback_graphs_s$Task)
 
 
 ####dprime und task
-nback_graphs_d = nback_graphs %>% 
-  select(Subject, Task, dprime)
+#nback_graphs_d = nback_graphs %>% 
+#  select(Subject, Task, dprime)
 
 #Mittelwert ausrechnen
-nback_graphs_s_sum <- aggregate(nback_graphs_d[, 3], list(nback_graphs_s$Task), sum, na.rm=TRUE)
+#nback_graphs_s_sum <- aggregate(nback_graphs_d[, 3], list(nback_graphs_s$Task), sum, na.rm=TRUE)
 
 #Grafik: dprime pro stimulus
-df.long3<-melt(nback_graphs_s_sum)
-ggplot(df.long,aes(Group.1,value,fill=variable))+
-  geom_bar(stat="identity",position="dodge")+ geom_errorbar(aes(x=Group.1, ymin=value-sd, ymax=value+sd), width=0.25)+
-  labs(x="Task",y="n", title="Performance")
+#df.long3<-melt(nback_graphs_s_sum)
+#ggplot(df.long,aes(Group.1,value,fill=variable))+
+#  geom_bar(stat="identity",position="dodge")+ geom_errorbar(aes(x=Group.1, ymin=value-sd, ymax=value+sd), width=0.25)+
+#  labs(x="Task",y="n", title="Performance")
 
 
 #save(res_nback_RT, file = file.path(dataFolder,"res_nback_RT.RData"))

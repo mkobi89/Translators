@@ -91,8 +91,7 @@ remove(a_response, nBack, v_response, f, file_list, i)
 
 
 # Renaming Participants
-
-res_nback$Subject <- gsub("?oMA_CE0", "CE0", res_nback$Subject)
+res_nback$Subject <- gsub("ÃœMA_CE0", "CE0", res_nback$Subject)
 res_nback$Subject <- gsub("MPR_AUA0310", "CU3", res_nback$Subject)
 res_nback$Subject <- gsub("MBA_CEG0921", "CM0", res_nback$Subject)
 res_nback$Subject <- gsub("CUO", "CU0", res_nback$Subject)
@@ -109,9 +108,6 @@ res_nback[,1:3] <- lapply(res_nback[,1:3], factor)
 res_nback <- res_nback %>%
   as_tibble()
 
-#res_nback
-
-
 
 
 ## Save Dataframes ----
@@ -119,3 +115,5 @@ res_nback <- res_nback %>%
 
 save(res_nback, file = file.path(dataFolder,"res_nback.RData"))
 
+
+remove(res_nback, dataFolder, dataFolderRaw)

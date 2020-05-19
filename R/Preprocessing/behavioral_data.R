@@ -29,3 +29,5 @@ save(expControl, file = file.path(dataFolder,"expControl.RData"))
 save(perceivedDifficulty, file = file.path(dataFolder,"perceivedDifficulty.RData"))
 save(readingDuration, file = file.path(dataFolder,"readingDuration.RData"))
 save(textOutput, file = file.path(dataFolder,"textOutput.RData"))
+
+remove(dataFolder, dataFolderRaw)

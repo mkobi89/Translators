@@ -35,7 +35,7 @@ stimulus[, as_char] <- lapply(stimulus[, as_char], as.character)
 res_copy <- matrix(nrow = length(file_list), ncol = 5, byrow = FALSE, dimnames = NULL)
 
 for (f in 1:length(file_list)){
-  print(file_list[f])
+#  print(file_list[f])
   copy <- read.csv(file=file.path(dataFolderRaw,"/copying",file_list[f]), header = TRUE, sep=";",na.strings = c("", "NA"))
   
   copy = copy[2:nrow(copy),]
@@ -84,7 +84,16 @@ res_copy[,1] <- substr(file_list,1,3)
 
 colnames(res_copy) <- c("id", "T1_SE_copy", "T1_ELF_copy", "T2_SE_copy", "T2_ELF_copy")
 
+res_copy <- res_copy %>% 
+  as_tibble()
+
+as_numeric<- c(2,3,4,5)
+res_copy[, as_numeric] <- lapply(res_copy[, as_numeric], as.numeric)
+res_copy[, 1] <- lapply(res_copy[, 1], factor)
+
 ## Save Dataframes ----
 
 
 save(res_copy, file = file.path(dataFolder,"res_copy.RData"))
+
+remove(copy, max_row, res_copy_sub, stimulus, as_char, as_numeric, dataFolder, dataFolderRaw, f, file_list, s, t)
