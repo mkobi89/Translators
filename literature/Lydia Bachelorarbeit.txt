@@ -1,0 +1,110 @@
+Literaturarbeit Lydia
+
+Rayner, 1998, 2009 for
+
+Die Blickbewegungsforschung mit ihrer eye-tracking-Technik liefert Daten bezüglich Positionen und Timing von Augenfixierungen mit einer hohen räumlichen und zeitlichen Genauigkeit (Baccino, 2012). 
+
+Die Dauer, Position und Abfolge der Augenfixierungen werden genutzt, um Rück-schlüsse auf zugrunde liegende kognitive Prozesse zu ziehen (Dimigen et al., 2011). 
+
+
+Während einige Modelle serielles Lesen von Wörtern annehmen, beruhen andere An-sichten auf einer Hypothese von parallelem Lesen (Niefind & Dimigen, 2016)
+
+
+parafovea-on-fovea (POF) Effekte
+Parafoveale Informationen, welche während des Lesens aufgenommen werden, können die Verarbeitung des aktuell fixierten Wortes beeinflussen
+
+preview benefit Effekt
+verkürzte Verarbeitungszeiten aufgrund der parafovealen Vorverarbeitung während der vorangegangenen Fixierung, sobald das Wort n+ fixiert wird
+
+
+Typische Vorteile der parafovealen Vorschau können zu einer Verkürzung der Fixierungszeit eines Wortes von 5% bis zu 25% führen. 
+
+Der preview benefit Effekt ist in der eye-tracking-Literatur gut etabliert, während die POF-Effekte noch umstritten sind 
+
+Bisherige Auswertungen von Augenbewegungsanalysen deuten darauf hin, dass die orthographische Form kommender Wörter parafoveal zugänglich ist, ein vollständiger lexikalischer Zugriff, einschliesslich semantischer Verarbeitung, jedoch eine foveale Fixierung erfordert
+
+Wenn Wörter in sinnvollen Sätzen eingebettet sind, sind Lesezeiten im Durchschnitt kürzer, als wenn sie sich in Wortlisten befinden. 
+
+
+
+Welcome to the real world: Validating fixation-related brain potentials for ecologically valid settings von Hutzler et al. (2007)
+keine EF_ST
+
+Ziel der Studie war, den FRP-Ansatz mit Hilfe einer Kreuzvalidierung eines in konventionellen EKP-Untersuchungen gut dokumentierten alt/neu Effekts bei visueller Worterkennung zu validieren
+
+Sowohl für EKP als auch für FRP waren die Potentiale im Zeitfenster von 250 bis 600ms positiver für alte Wörter. Der alt/neu Effekt wurde sowohl in FRP als auch in EKP gefunden. In beiden Settings war die Grösse des Effekts in der rechten Hemi-sphäre ausgeprägter als in der linken. Diese Lateralisierung wurde bei EKP und FRP in anterioren und zentralen, nicht aber in posterioren Regionen gefunden. Die ähnli-chen Resultate für beide Settings validieren den FRP-Ansatz und deuten darauf hin, dass FRP genauso reliabel sind wie EKP (Hutzler et al., 2007)
+
+
+
+Coregistration of eye movements and EEG in natural reading: Analyses and review von Dimigen et al. (2011)
+
+Effekte von Wortvorhersagbarkeit auf Augenbewegungen und FRP während des natürlichen Lesens von Sätzen untersucht
+
+Die Vorhersagbarkeit eines Wortes in einem bestimmten Satz wurde definiert als die Wahrscheinlichkeit, das Zielwort richtig zu erraten, wenn man alle vorhergehenden Wörter des Satzes kennt und wird auch als Lückenwahrscheinlichkeit bezeichnet.
+
+Die Ergebnisse der Studie zeigten, dass mit Hilfe der FRP robuste Effekte der Wortvorhersagbarkeit auf Blickbewegungen und die N400-Komponente repliziert werden konnten. Dabei riefen Wörter mit einer niedrigen Vorhersehbarkeitswahrscheinlichkeit negativere Spannungen an zentroparietalen Kopfhautbereichen hervor. 
+
+---
+
+Parafoveal versus foveal N400s dissociate spreading activation from contextual fit 
+Kretzschmar et al. (2009) 
+keine EF_ST
+
+Hypothese, dass sich lexikalische Voraktivierung durch Wortverwandtschaft von lexikalischer Voraktivierung durch auf Vorhersehbarkeit basierender semantischer Integration trennen lässt.
+
+Untersuchung von Antonym-Beziehungen in Sätzen
+
+Summarisch zeigen die Resultate einen parafoveal induzierten N400-Effekt und un-terstützen die Hypothese, dass N400-Modulationen aufgrund von lexikalischer Akti-vierungsausbreitung, beziehungsweise Wort-Vverwandtschaft, und semantischer Vorhersagbarkeit voneinander gelöst werden können.
+
+Die zwei Arten von N400-Modulationen können voneinander getrennt werden, da nur die Verwandtschaft der Wörter in der Lage zu sein scheint, parafoveal induzierte Effekte zu beeinflussen. Kontextuelle Integration aufgrund der Vorhersagbarkeit hingegen benötigt eine foveale Verarbeitung. Daraus lässt sich ziehen, dass es in die-ser Studie Beweise für die parafoveale Aufnahme von orthographischen, nicht aber von semantischen Informationen gibt
+
+
+Parafoveal previews and lexical frequency in natural reading: Evidence from eye movements and fixation-related potentials von Degno et al. (2019) 
+keine EF_ST
+
+den zeitlichen Ablauf von Sprachverarbeitung unter natürlichen Lesebedingungen zu untersuchen. Ziel der Studie war es herauszufinden, wie die neuronalen Korrelate von visuellen, orthographischen und lexikalischen POF-Effekten beim natürlichen Lesen aussehen. Es sollte zusätzlich demonstriert werden, inwiefern die neuronalen Korrelate davon abhängen, wie das Vorschau- und das Zielwort aufeinander bezogen sind. Die zusätzlichen Untersuchungen der frequency Effekte werden nicht beschrieben, da der Fokus dieser Literaturarbeit auf anderen Bereichen des Lesens liegt (Degno et al., 2019).  
+
+Zusammenfassend kann gesagt werden, dass die parafoveale Verarbeitung der Buch-stabenfolge der parafovealen Verarbeitung von Wörtern viel ähnlicher ist als der von X-Zeichenfolgen. Die beschriebenen unterschiedlichen Aktivierungszustände deuten darauf hin, dass die X-Bedingung eine nützliche Verarbeitung des parafovealen Stimu-lus kaum zulässt und die visuelle Verarbeitung erst mit der Fixierung des Zielwortes beginnt. Die nachgewiesenen POF-Effekte waren jedoch nicht semantischer Art (Degno et al., 2019). 
+
+
+Trans-saccadic parafoveal preview benefits in fluent reading: A study with fixation-related brain potentials von Dimigen et al. (2012) 
+
+Es wurden FRP verwendet, um die Auswirkungen von identity previews und se-mantic previews auf die Worterkennung beim fliessenden Lesen zu untersuchen. Die Effekte wurden mit Hilfe von zwei unterschiedlichen experimentellen Ansätzen ge-prüft. Zum einen wurden die preview benefits in boundary trials untersucht, zum an-deren die POF-Effekte 
+
+Die an Wort n+1 ausgerichteten FRP unterschieden sich in boundary trials in Abhän-gigkeit der Vorschau, die während der Fixierung von n gezeigt wurde. Während die Wellenformen in den drei Bedingungen (identisch, semantisch verwandt und nicht verwandt) bis etwa 170ms nach Beginn der Fixierung ähnlich verliefen, begannen die FRP bei der Identitätsvorschau nach dem N1-Peak signifikant von den anderen ab-zuweichen. Die Amplitude hielt bis etwa 280ms an und war weniger negativ als in den anderen Bedingungen. Dieser Effekt wird auch preview positivity Effekt ge-nannt. Eine identische parafoveale Vorschau Information während der vorherigen Fixation führte also folglich zu einer Modulierung der FRP-Amplitude. Dagegen wurden keine Effekte von semantischer Vorschau gefunden, die Amplituden unter-schieden sich nach verwandten oder nicht verwandten Vorschauwörtern nicht signi-fikant 
+
+In POF-Durchgängen konnte mit an n gebundenen FRP weder ein POF-Effekt noch ein semantischer Effekt gefunden werden. Wenn die FRP an n+1 gebunden waren, fand man klare priming Effekte der fovealen Verarbeitung, welche auch semantischer Art waren. Die N400-Komponente war am negativsten für nicht verwandte, mittel-mässig negativ für semantisch verwandte und am positivsten für identische Wörter. Der N400-Effekt trat sehr kurz nach Fixationsbeginn auf (Dimigen et al., 2012). 
+Die Ergebnisse dieser Studie zeigen auf, dass die parafoveale Vorverarbeitung unter normalen Lesebedingungen die neuronalen Reaktionen auf Wörter wesentlich verän-dern kann (Dimigen et al., 2012). 
+
+
+
+Dissociating parafoveal preview benefit and parafovea-on-fovea effects during rea-ding: A combined eye tracking and EEG study von Niefind und Dimigen (2016)
+keine EF_ST
+
+sowohl einen preview benefit als auch POF-Effekte zu untersuchen und diese vonei-nander zu trennen. Eine zentrale Annahme war, dass die POF-Effekte zwar existie-ren, jedoch einen verspäteten Einfluss auf die Sakkadenplanung haben und daher mit dem preview benefit zusammenfallen. Um verspätete POF-Effekte von preview be-nefit Effekten zu trennen, wurde eine Ko-Registrierung von Augenbewegungen und EKP vorgenommen. Die Effekte der Vorschaugültigkeit (preview validity), welche für den preview benefit Relevanz haben, und die lexikalischen Vorschauschwierigkei-ten (preview difficulty), welche für die verzögerten POF-Effekte wichtig sind, sollten geprüft werden. Die ebenfalls untersuchten frequency Effekte und die damit zusam-menhängenden Manipulationen werden hier nicht weiter behandelt 
+
+Bei der Untersuchung der FRP wurden sowohl konfirmatorische als auch explorative Analysen durchgeführt. Bei der Untersuchung von preview validity zeigten sich in der konfirmatorischen Analyse zwischen 200 und 300ms (N1-Komponente) signifi-kant negativere Amplituden bei einer invaliden als bei einer validen Vorschau. Der Effekt war auch im Zeitfenster von 140 bis 200ms signifikant. Mit den an n zeitge-bundenen Analysen in explorativen Untersuchungen konnten zwischen 130 und 140ms positivere Amplituden für schwierigere parafoveale Vorschauwörter gefunden werden als für einfache. Dies deutet auf einen sofortigen, frühen POF-Effekt hin. Zwischen 630 und 640ms waren ebendiese Amplituden negativer für eine schwierige Vorschau, was wiederum einen verspäteten elektrophysiologischen POF-Effekt nahe-legt. Die an n+1 gebundenen FRP zeigten keine signifikanten Effekte von preview difficulty (Niefind & Dimigen, 2016).
+Zusammenfassend konnten sowohl unmittelbare als auch verspätete POF-Effekte auf neurophysiologische Korrelate bei der Worterkennung gefunden werden. Der pre-view benefit Effekt wurde ebenfalls repliziert (Niefind & Dimigen, 2016). 
+
+
+
+Eye-Fixation-Related Potentials: Insight into Parafoveal Processing, Baccino und Manunta (2005)
+keine EF_ST
+
+FRP-Technik zur Beschreibung von POF-Effekten beim Lesen von Wortpaaren ge-nutzt. Die Hauptfragen der Studie waren, ob zwei aufeinanderfolgende Wörter paral-lel oder sequenziell verarbeitet werden und ob eine semantische Verarbeitung im pa-rafovealen Feld möglich ist. Ausserdem sollte festgestellt werden, wie der zeitliche Verlauf von Aufmerksamkeits- und Lexikal-Prozessen des POF-Effektes aussieht
+
+Die Resultate zeigten, dass sowohl die N1- als auch die P2-Komponente sensitiv auf frühe lexikalische Verarbeitungsprozesse reagierten. Diese frühen EKP-Komponenten reagierten empfindlich auf illegale Wortformen (Nicht-Wörter), die in der Parafovea auftauchten, und den semantischen Zugriff und somit auch den Aktivierungsprozess verhinderten 
+
+
+Semantic parafoveal-on-foveal effects and preview benefits in reading: Evidence from Fixation Related Potentials, López-Peréz et al. (2016) 
+
+semantisch verwandte oder nicht verwandte Wortpaare lasen. Das Experiment zielte darauf ab, POF- und semantische preview benefit Effekte zu finden und zu dissoziie-ren
+
+Zusammenfassend fanden sich sowohl POF- als auch semantische preview benefit Effekte 
+
+
+Right visual field advantage in parafoveal processing: Evidence from eye-fixation-related potentials von Simola et al. (2009) 
+
+Annahme, dass Wörter, die im rechten visuellen Feld (RVF) präsentiert werden, schneller und präziser verarbeitet werden als im linken visuellen Feld (LVF) präsentierte Wörter.
+
+Aus den FRP-Analysen kann gezogen werden, dass bei parafovealer Informationsex-traktion ein RVF-Vorteil besteht, während ein zentrales prime-Wort fixiert wird. Die Informationen über die orthographische Wortform wurde während der fovealen Ver-arbeitung aus der Parafovea entnommen 
