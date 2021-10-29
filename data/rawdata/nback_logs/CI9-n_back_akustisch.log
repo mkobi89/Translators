@@ -1,0 +1,76 @@
+Scenario - 
+Logfile written - 06/18/2021 09:53:26
+
+Subject	Trial	Event Type	Code	Time	TTime	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur	Stim Type	Pair Index
+
+CI9	1	Picture	Start	167	0	1	106167	1	0	next	false_alarm	2
+CI9	1	Response	1	106267	106101	0
+CI9	3	Sound	I52	112514	14	2615			0		other	0
+CI9	5	Sound	F56	137834	0	2			0		other	0
+CI9	7	Sound	E51	163667	0	2			0		other	0
+CI9	9	Sound	E51	188501	0	2			0		other	0
+CI9	11	Sound	L58	214501	0	2			0		other	0
+CI9	13	Sound	O53	240001	0	2			0		other	0
+CI9	15	Sound	O53	264834	0	2			0		other	0
+CI9	17	Sound	E51	291001	0	2			0		other	0
+CI9	19	Sound	F56	316167	0	2			0		other	0
+CI9	21	Sound	E51	340667	0	2			0		other	0
+CI9	23	Sound	U54	365001	0	2			0		other	0
+CI9	25	Sound	O53	391501	0	2			0		other	0
+CI9	27	Sound	E51	418334	0	2			0		miss	0
+CI9	29	Sound	E51	442667	0	2			0		other	0
+CI9	31	Sound	H57	467501	0	2			0		other	0
+CI9	33	Sound	A50	494501	0	2			0		other	0
+CI9	35	Sound	E51	519001	0	2			0		miss	0
+CI9	37	Sound	E51	545167	0	2			0		other	0
+CI9	39	Sound	A50	569667	0	2			0		miss	0
+CI9	40	Response	1	592989	3155	0
+CI9	41	Sound	E51	596334	0	2			0		miss	0
+CI9	43	Sound	E51	621668	0	2			0		hit	25
+CI9	43	Response	2	639313	17646	0
+CI9	45	Sound	A50	646501	0	2			0		miss	0
+CI9	47	Sound	E51	673334	0	2			0		miss	0
+CI9	49	Sound	E51	700168	0	2			0		miss	0
+CI9	51	Sound	H57	725501	0	2			0		other	0
+CI9	53	Sound	U54	749835	1	2			0		other	0
+CI9	55	Sound	A50	776335	1	1			0		other	0
+CI9	57	Sound	H57	802334	0	2			0		hit	33
+CI9	57	Response	2	818798	16464	0
+CI9	59	Sound	F56	828001	0	2			0		other	0
+CI9	61	Sound	A50	853501	0	2			0		miss	0
+CI9	62	Response	1	878615	4948	0
+CI9	63	Sound	I52	879168	0	2			0		other	0
+CI9	65	Sound	U54	904668	1	2			0		false_alarm	39
+CI9	65	Response	1	923864	19196	0
+CI9	67	Sound	B55	929334	0	2			0		other	0
+CI9	69	Sound	B55	955334	0	2			0		other	0
+CI9	71	Sound	U54	980501	0	2			0		miss	0
+CI9	73	Sound	F56	1006335	0	2			0		other	0
+CI9	75	Sound	E51	1031501	0	2			0		other	0
+CI9	77	Sound	U54	1057668	0	2			0		miss	0
+CI9	78	Response	1	1078593	759	0
+CI9	79	Sound	A50	1082335	0	2			0		other	0
+CI9	81	Sound	E51	1108835	0	2			0		miss	0
+CI9	83	Sound	M59	1133835	0	2			0		other	0
+CI9	85	Sound	H57	1159001	0	2			0		other	0
+CI9	87	Sound	I52	1185168	0	2			0		other	0
+CI9	89	Sound	M59	1212001	0	2			0		hit	53
+CI9	89	Response	2	1229254	17253	0
+CI9	91	Sound	L58	1238335	1	2			0		other	0
+CI9	93	Sound	M59	1263335	0	2			0		other	0
+CI9	95	Sound	M59	1289002	1	2			0		hit	57
+CI9	95	Response	2	1307032	18031	0
+CI9	97	Sound	L58	1315835	0	2			0		miss	0
+CI9	99	Sound	H57	1343001	0	2			0		other	0
+CI9	101	Sound	F56	1367668	0	2			0		other	0
+CI9	103	Sound	B55	1392835	1	2			0		other	0
+CI9	105	Sound	F56	1419502	0	2			0		other	0
+CI9	106	Response	1	1441065	1397	0
+CI9	107	Sound	F56	1445335	0	2			0		miss	0
+CI9	109	Sound	B55	1471002	0	2			0		miss	0
+CI9	111	Sound	F56	1495502	0	2			0		miss	0
+CI9	113	Sound	F56	1520668	0	2			0		miss	0
+CI9	115	Sound	M59	1545168	0	2			0		other	0
+CI9	117	Sound	B55	1571502	1	2			0		other	0
+CI9	119	Sound	M59	1595835	0	2			0		other	0
+CI9	121	Sound	A50	1621335	0	2			0		other	0

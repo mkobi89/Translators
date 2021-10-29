@@ -1,0 +1,83 @@
+Scenario - 
+Logfile written - 09/11/2020 14:14:35
+
+Subject	Trial	Event Type	Code	Time	TTime	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur	Stim Type	Pair Index
+
+CM6	1	Picture	Start	167	0	1	20333	1	0	next	false_alarm	2
+CM6	1	Response	1	20324	20158	0
+CM6	3	Sound	H57	25514	14	1612			0		other	0
+CM6	5	Sound	E51	52334	0	2			0		other	0
+CM6	7	Sound	L58	77834	0	2			0		other	0
+CM6	9	Sound	H57	105000	0	2			0		hit	7
+CM6	9	Response	2	110797	5797	0
+CM6	11	Sound	A50	130167	0	2			0		other	0
+CM6	13	Sound	A50	156834	0	2			0		other	0
+CM6	15	Sound	E51	182667	0	2			0		other	0
+CM6	17	Sound	A50	209001	2	2			0		hit	12
+CM6	17	Response	2	216231	7231	0
+CM6	19	Sound	H57	236001	0	2			0		other	0
+CM6	21	Sound	E51	261667	0	2			0		hit	15
+CM6	21	Response	2	278158	16491	0
+CM6	23	Sound	A50	287667	0	2			0		miss	0
+CM6	25	Sound	H57	313667	0	2			0		miss	0
+CM6	27	Sound	H57	339001	0	2			0		false_alarm	19
+CM6	27	Response	1	349898	10898	0
+CM6	29	Sound	F56	364334	0	2			0		other	0
+CM6	31	Sound	B55	390001	0	2			0		other	0
+CM6	33	Sound	A50	417167	0	2			0		other	0
+CM6	35	Sound	F56	443834	0	2			0		hit	24
+CM6	35	Response	2	454395	10561	0
+CM6	37	Sound	B55	470834	0	2			0		hit	26
+CM6	37	Response	2	481021	10187	0
+CM6	39	Sound	F56	497001	0	2			0		other	0
+CM6	41	Sound	U54	521334	0	2			0		other	0
+CM6	43	Sound	B55	545834	0	2			0		hit	30
+CM6	43	Response	2	555139	9305	0
+CM6	45	Sound	B55	571834	0	2			0		other	0
+CM6	47	Sound	H57	599001	0	2			0		other	0
+CM6	49	Sound	O53	623501	1	2			0		other	0
+CM6	51	Sound	L58	648168	0	2			0		other	0
+CM6	53	Sound	E51	672834	0	2			0		other	0
+CM6	55	Sound	O53	699834	0	2			0		hit	37
+CM6	55	Response	2	708540	8706	0
+CM6	57	Sound	U54	724834	0	2			0		other	0
+CM6	59	Sound	M59	751168	0	2			0		other	0
+CM6	61	Sound	O53	775668	0	2			0		hit	41
+CM6	61	Response	2	784889	9222	0
+CM6	63	Sound	U54	801334	0	2			0		miss	0
+CM6	65	Sound	B55	826834	0	2			0		other	0
+CM6	67	Sound	B55	853001	0	2			0		other	0
+CM6	69	Sound	F56	879668	0	2			0		other	0
+CM6	71	Sound	A50	906834	0	2			0		other	0
+CM6	73	Sound	B55	932502	1	2			0		hit	48
+CM6	73	Response	2	937769	5268	0
+CM6	75	Sound	M59	957501	0	2			0		other	0
+CM6	77	Sound	A50	981835	0	2			0		miss	0
+CM6	79	Sound	M59	1008001	0	2			0		false_alarm	52
+CM6	79	Response	1	1018463	10462	0
+CM6	81	Sound	B55	1032501	0	2			0		other	0
+CM6	83	Sound	H57	1059168	0	2			0		other	0
+CM6	85	Sound	M59	1086168	0	2			0		hit	56
+CM6	85	Response	2	1098802	12635	0
+CM6	87	Sound	B55	1110668	0	2			0		miss	0
+CM6	89	Sound	M59	1137001	0	2			0		false_alarm	59
+CM6	89	Response	1	1156046	19045	0
+CM6	91	Sound	O53	1164168	0	2			0		other	0
+CM6	93	Sound	B55	1189668	0	2			0		miss	0
+CM6	95	Sound	M59	1215335	0	2			0		hit	63
+CM6	95	Response	2	1223148	7814	0
+CM6	97	Sound	O53	1242001	0	2			0		hit	65
+CM6	97	Response	2	1253484	11483	0
+CM6	99	Sound	M59	1268501	0	2			0		other	0
+CM6	101	Sound	B55	1294501	0	2			0		other	0
+CM6	103	Sound	O53	1319335	1	2			0		hit	69
+CM6	103	Response	2	1333464	14130	0
+CM6	105	Sound	H57	1345001	0	2			0		other	0
+CM6	107	Sound	B55	1372168	0	2			0		miss	0
+CM6	109	Sound	A50	1396502	0	2			0		other	0
+CM6	111	Sound	M59	1423002	0	2			0		other	0
+CM6	113	Sound	E51	1448168	0	2			0		other	0
+CM6	115	Sound	F56	1473168	0	2			0		other	0
+CM6	117	Sound	U54	1498668	0	2			0		other	0
+CM6	119	Sound	U54	1523335	0	2			0		other	0
+CM6	121	Sound	H57	1548502	0	2			0		other	0
