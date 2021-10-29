@@ -1,102 +1,102 @@
 ﻿code;orderLDT;orderExp;id;firstNBack;secondNBack;tra_mul;experiance;group;date;experimenter;birthdate;gender;Studienfach;Stufe_Beruf;SpT_Reading;SpT_Listening;SpT_Vocabulary;SpT_Label;SpT_Score;ZST_roh;ZST_Wertpunkt;GF_roh;GF_Wertpunkt;MT_roh;MT_Wertpunkt;ZN_roh;ZN_Wertpunkt;Durchschnitt_Wertpunkt;HAWIE_T_Value;t_TMT_A_in_s;F_TMT_A;t_TMT_B_in_s;F_TMT_B;fam_LH;Erziehung;immer noch;sonstiges;Anz_li_Annett;Anz_re_Annett;Anz_L_Bryden;Anz_l_Bryden;Anz_B_Bryden;Anz_r_Bryden;Anz_R_Bryden;gesund;Tinnitus;Synästhesie;Kommentar_Syn;Epilepsie;Kopfverletzung;Kommentar_Kopfverletzung;Medikamente;Kommentar_Medi;Brille;Kontaktlinsen;kurz-/weitsichtig;Alkohol;Drogen;Kommentare
-;;;CA0;aud;visu;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CA1;visu;aud;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CA2;aud;visu;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CA3;visu;aud;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CA4;aud;visu;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CA5;visu;aud;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CA6;aud;visu;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CA7;visu;aud;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CA8;aud;visu;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CA9;visu;aud;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CB0;aud;visu;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CB1;visu;aud;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CB2;aud;visu;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CB3;visu;aud;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CB4;aud;visu;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CB5;visu;aud;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CB6;aud;visu;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CB7;visu;aud;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CB8;aud;visu;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CB9;visu;aud;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CC0;aud;visu;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CC1;visu;aud;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CC2;aud;visu;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CC3;visu;aud;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CC4;aud;visu;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CC5;visu;aud;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CC6;aud;visu;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CC7;visu;aud;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CC8;aud;visu;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CC9;visu;aud;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CD0;aud;visu;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CD1;visu;aud;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CD2;aud;visu;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CD3;visu;aud;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CD4;aud;visu;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CD5;visu;aud;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CD6;aud;visu;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CD7;visu;aud;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CD8;aud;visu;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CD9;visu;aud;Tra;BA;TraBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-SSR0555;[3 2 1];[2 3 4 1], [2 1 1 2];CE0;aud;visu;Tra;MA;TraMa;21.08.2019;Amy;24.05.1987;female;Angewandte Linguistik;Master;4;7;26;B2;37;89;12;29;11;61;13;17;10;11.5;55;18.07;0;51.57;4;nein;nein;-;-;4;8;0;0;0;0;8;ja;nein;nein;-;nein;nein;-;nein;-;ja;ja;kurzsichtig;vor 1 Woche;nie;Eyetracker: Punkt unten und oben links hatten sehr grosse Abweichungen ~2°. EEG war sehr unruhig
-LBH1136;[2 3 1];[3 2 1 4], [2 1 1 2];CE1;visu;aud;Tra;MA;TraMa;04.11.2019;Nina/Cindy;05.11.1994;female;Angewandte Linguistik;Master;4;7;28;C1;39;88;12;29;11;68;17;23;15;13.75;62.5;18.03;0;39.65;1;nein;nein;-;-;3;9;1;0;1;1;5;ja;nein;nein;-;nein;nein;-;nein;-;ja;nein;kurzsichtig;vor mehr als 1 Woche;nie;Eyetracker: Konnte teilweise Pupille nicht finden beim Validieren (Enter konnte nicht gedrückt werden), EEG sehr unruhig 
-AWS0158;;;CE2;aud;visu;Tra;MA;TraMa;12.12.2019;Matthias;21.01.1991;male;Fachübersetzer;Master;4;7;26;B2;37;108;16;29;11;67;16;19;11;13.5;61.66666667;20;1;25;2;nein;nein;-;-;0;12;0;0;0;0;8;nein;ja;nein;-;nein;nein;-;ja;metformin;nein;nein;-;Gestern;nie;
-RBK0125;;;CE3;visu;aud;Tra;MA;TraMa;16.12.2019;Matthias;08.01.1992;female;Fachübersetzer;Master;4;6;22;B1;32;102;15;25;9;62;13;16;9;11.5;55;26;1;42;0;ja;nein;-;-;0;12;0;0;0;0;8;ja;nein;nein;-;nein;nein;-;nein;-;nein;ja;(nicht angegeben);vor 1 Woche;nie;
-OSW1027;;;CE4;aud;visu;Tra;MA;TraMa;16.01.2020;Nina/ Matthias;10.10.1991;female;Fachübersetzer;Master;4;7;28;C1;39;93;13;28;10;62;13;18;11;11.75;55.83333333;22.15;0;44.47;0;nein;nein;-;-;0;12;0;0;0;1;7;nein;nein;nein;-;nein;nein;-;ja;ACE-Hemmer (Blutdrucksenker);ja;nein;kurzsichtig;vor mehr als 1 Woche;nie;"Impedanzen am Anfang 2x gespeichert; Eyetracker vor LDT neu kalibriert und validiert"
-ABA0516;;;CE5;visu;aud;Tra;MA;TraMa;29.01.2020;Basil/Matthias;13.05.1995;male;Fachübersetzer;Master;4;7;27;C1;38;97;14;28;11;66;15;16;9;12.25;57.5;23.05;1;44.4;2;nein;nein;-;-;2;10;0;0;0;0;8;ja;nein;nein;-;nein;nein;-;nein;-;ja;nein;(nicht angegeben);vor 1 Woche;vor mehr als 1 Wo.;EEG bei lexical decision task erst ab der Hälfte angemacht
-MBN0898;;;CE6;aud;visu;Tra;MA;TraMa;04.03.2020;Magdalena/ Matthias;21.08.1990;female;Translation;Master;4;7;25;B2;36;52;5;27;10;48;9;21;13;9.25;47.5;29.11;1;55.25;0;ja;ja;ja;-;0;12;0;0;0;0;8;ja;nein;nein;-;nein;nein;-;nein;-;ja;ja;kurzsichtig;vor 1 Woche;nie;Bei Aufgabe 3 wurde die Kinnstütze nicht benutzt 
-MDG1232;;;CE7;visu;aud;Tra;MA;TraMa;09.03.2020;Amy;08.12.1998;female;Translation;Master;3;7;27;B2;37;93;13;26;10;45;8;14;8;9.75;49.16666667;15.4;0;29.81;0;ja;nein;-;-;0;12;0;0;0;1;7;ja;nein;nein;-;nein;nein;-;nein;-;nein;nein;-;vor mehr als 1 Woche;nie;
-RLI0393;;;CE8;aud;visu;Tra;MA;TraMa;12.03.2020;Matthias / Michi;02.03.1989;male;Fachübersetzer;Master;;;;;0;88;12;31;13;36;6;16;9;10;50;34.51;1;88.2;2;nein;nein;;;0;12;0;0;0;0;12;ja;nein;nein;Farbenblindheit;nein;nein;-;nein;;nein;nein;;vor 1 Woche;nie;EC - Augen kurz offen
-;;;CE9;visu;aud;Tra;MA;TraMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CF0;aud;visu;Tra;MA;TraMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CF1;visu;aud;Tra;MA;TraMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CF2;aud;visu;Tra;MA;TraMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CF3;visu;aud;Tra;MA;TraMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CF4;aud;visu;Tra;MA;TraMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CF5;visu;aud;Tra;MA;TraMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CF6;aud;visu;Tra;MA;TraMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CF7;visu;aud;Tra;MA;TraMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CF8;aud;visu;Tra;MA;TraMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CF9;visu;aud;Tra;MA;TraMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CG0;aud;visu;Tra;MA;TraMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CG1;visu;aud;Tra;MA;TraMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CG2;aud;visu;Tra;MA;TraMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CG3;visu;aud;Tra;MA;TraMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CG4;aud;visu;Tra;MA;TraMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CG5;visu;aud;Tra;MA;TraMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CG6;aud;visu;Tra;MA;TraMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CG7;visu;aud;Tra;MA;TraMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CG8;aud;visu;Tra;MA;TraMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CG9;visu;aud;Tra;MA;TraMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CH0;aud;visu;Tra;MA;TraMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CH1;visu;aud;Tra;MA;TraMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CH2;aud;visu;Tra;MA;TraMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CH3;visu;aud;Tra;MA;TraMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CH4;aud;visu;Tra;MA;TraMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CH5;visu;aud;Tra;MA;TraMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CH6;aud;visu;Tra;MA;TraMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CH7;visu;aud;Tra;MA;TraMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CH8;aud;visu;Tra;MA;TraMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CH9;visu;aud;Tra;MA;TraMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+MSV0291;;;CA0;aud;visu;Tra;BA;TraStu;05.03.2021;Mathis, Nina;27.02.1996;female;BA AS ;Bachelor;3;7;21;B1;31;98;14;25;9;58;12;20;12;11.75;55.83333333;17.11;1;49.48;2;ja;nein;-;-;0;12;0;0;0;3;5;ja;nein;nein;-;nein;nein;-;nein;-;nein;nein;-;Gestern;vor 1 Woche;sehr schnell ausgetrocknete Elektroden 
+CAS0431;;;CA1;visu;aud;Tra;BA;TraStu;05.03.2021;Lydia, Nina;28.04.1996;female;Angewandte Sprachen;Bachelor;4;7;25;B2;36;86;11;28;11;63;14;18;11;11.75;55.83333333;20.03;2;38.48;0;ja;nein;-;-;1;11;0;0;0;1;7;nein;nein;nein;-;nein;nein;-;ja;Insulin, Elyfem 20 ;ja/nein;nein;-;nie;nie;"familiäre Linkshändigkeit: Vater, Schwester; Diabetes Mellitus T1; extrem ausgeprägte Blinzler; sehr schnell ausgetrocknete Elektroden und deswegen unsauberes Signal gegen Schluss des Durchgangs; beim LDT fast eingeschlafen; Eyetracker 2x neu kalibriert"
+SWE0103;;;CA2;aud;visu;Tra;BA;TraStu;17.03.2021;Mathis, Lydia;04.01.1997;female;Angewandte Sprache;Bachelor;4;7;23;B2;34;88;12;29;12;55;11;18;11;11.5;55;30.64;4;50.92;1;nein;nein;-;-;2;12;0;0;0;0;8;ja;nein;nein;-;nein;nein;-;nein;-;nein;ja;k;vor 1 Woche;nie;Bei Lesen 1 Eyetracker nicht souverän hinbekommen.
+;;;CA3;visu;aud;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CA4;aud;visu;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CA5;visu;aud;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CA6;aud;visu;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CA7;visu;aud;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CA8;aud;visu;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CA9;visu;aud;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CB0;aud;visu;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CB1;visu;aud;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CB2;aud;visu;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CB3;visu;aud;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CB4;aud;visu;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CB5;visu;aud;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CB6;aud;visu;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CB7;visu;aud;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CB8;aud;visu;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CB9;visu;aud;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CC0;aud;visu;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CC1;visu;aud;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CC2;aud;visu;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CC3;visu;aud;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CC4;aud;visu;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CC5;visu;aud;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CC6;aud;visu;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CC7;visu;aud;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CC8;aud;visu;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CC9;visu;aud;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CD0;aud;visu;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CD1;visu;aud;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CD2;aud;visu;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CD3;visu;aud;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CD4;aud;visu;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CD5;visu;aud;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CD6;aud;visu;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CD7;visu;aud;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CD8;aud;visu;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CD9;visu;aud;Tra;BA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+SSR0555;[3 2 1];[2 3 4 1], [2 1 1 2];CE0;aud;visu;Tra;MA;TraStu;21.08.2019;Amy;24.05.1987;female;Angewandte Linguistik;Master;4;7;26;B2;37;89;12;29;11;61;13;17;10;11.5;55;18.07;0;51.57;4;nein;nein;-;-;4;8;0;0;0;0;8;ja;nein;nein;-;nein;nein;-;nein;-;ja;ja;kurzsichtig;vor 1 Woche;nie;Eyetracker: Punkt unten und oben links hatten sehr grosse Abweichungen ~2°. EEG war sehr unruhig
+LBH1136;[2 3 1];[3 2 1 4], [2 1 1 2];CE1;visu;aud;Tra;MA;TraStu;04.11.2019;Nina/Cindy;05.11.1994;female;Angewandte Linguistik;Master;4;7;28;C1;39;88;12;29;11;63;14;23;15;13;60;18.03;0;39.65;1;nein;nein;-;-;3;9;1;0;1;1;5;ja;nein;nein;-;nein;nein;-;nein;-;ja;nein;kurzsichtig;vor mehr als 1 Woche;nie;Eyetracker: Konnte teilweise Pupille nicht finden beim Validieren (Enter konnte nicht gedrückt werden), EEG sehr unruhig 
+AWS0158;;;CE2;aud;visu;Tra;MA;TraStu;12.12.2019;Matthias;21.01.1991;male;Fachübersetzer;Master;4;7;26;B2;37;108;16;29;11;67;16;19;11;13.5;61.66666667;20;1;25;2;nein;nein;-;-;0;12;0;0;0;0;8;nein;ja;nein;-;nein;nein;-;ja;metformin;nein;nein;-;Gestern;nie;
+RBK0125;;;CE3;visu;aud;Tra;MA;TraStu;16.12.2019;Matthias;08.01.1992;female;Fachübersetzer;Master;4;6;22;B1;32;102;15;25;9;62;13;16;9;11.5;55;26;1;42;0;ja;nein;-;-;0;12;0;0;0;0;8;ja;nein;nein;-;nein;nein;-;nein;-;nein;ja;(nicht angegeben);vor 1 Woche;nie;
+OSW1027;;;CE4;aud;visu;Tra;MA;TraStu;16.01.2020;Nina/ Matthias;10.10.1991;female;Fachübersetzer;Master;4;7;28;C1;39;93;13;28;10;62;13;18;11;11.75;55.83333333;22.15;0;44.47;0;nein;nein;-;-;0;12;0;0;0;1;7;nein;nein;nein;-;nein;nein;-;ja;ACE-Hemmer (Blutdrucksenker);ja;nein;kurzsichtig;vor mehr als 1 Woche;nie;"Impedanzen am Anfang 2x gespeichert; Eyetracker vor LDT neu kalibriert und validiert"
+ABA0516;;;CE5;visu;aud;Tra;MA;TraStu;29.01.2020;Basil/Matthias;13.05.1995;male;Fachübersetzer;Master;4;7;27;C1;38;97;14;28;11;66;15;16;9;12.25;57.5;23.05;1;44.4;2;nein;nein;-;-;2;10;0;0;0;0;8;ja;nein;nein;-;nein;nein;-;nein;-;ja;nein;(nicht angegeben);vor 1 Woche;vor mehr als 1 Wo.;EEG bei lexical decision task erst ab der Hälfte angemacht
+MBN0898;;;CE6;aud;visu;Tra;MA;TraStu;04.03.2020;Magdalena/ Matthias;21.08.1990;female;Translation;Master;4;7;25;B2;36;52;5;27;10;48;9;21;13;9.25;47.5;29.11;1;55.25;0;ja;ja;ja;-;0;12;0;0;0;0;8;ja;nein;nein;-;nein;nein;-;nein;-;ja;ja;kurzsichtig;vor 1 Woche;nie;Bei Aufgabe 3 wurde die Kinnstütze nicht benutzt 
+MDG1232;;;CE7;visu;aud;Tra;MA;TraStu;09.03.2020;Amy;08.12.1998;female;Translation;Master;3;7;27;B2;37;93;13;26;10;55;11;14;8;10.5;51.66666667;15.4;0;29.81;0;ja;nein;-;-;0;12;0;0;0;1;7;ja;nein;nein;-;nein;nein;-;nein;-;nein;nein;-;vor mehr als 1 Woche;nie;
+RLI0393;;;CE8;aud;visu;Tra;MA;TraStu;12.03.2020;Matthias / Michi;02.03.1989;male;Fachübersetzer;Master;;;;;0;88;12;31;13;36;6;16;9;10;50;34.51;1;88.2;2;nein;nein;;;0;12;0;0;0;0;12;ja;nein;nein;Farbenblindheit;nein;nein;-;nein;;nein;nein;;vor 1 Woche;nie;EC - Augen kurz offen
+JMG0177;;;CE9;visu;aud;Tra;MA;TraStu;22.10.2020;Lydia/Matthias;04.01.1995;male;Angewandte Linguistik;Master;4;7;28;C1;39;70;8;27;10;65;15;27;17;12.5;58.33333333;29.01;0;52;0;nein;nein;-;-;0;12;0;0;0;0;8;ja;nein;nein;-;nein;nein;-;nein;-;ja;nein;;vor 1 Woche;nie;nach Resting-State Eyetracker neu validiert & vor Lesen 
+EF71176;;;CF0;aud;visu;Tra;MA;TraStu;02.11.2020;Mathis, Nina;11.11.1997;female;Angewandte Linguistik;Master;3;7;25;B2;35;90;12;28;11;65;15;25;16;13.5;61.66666667;21.02;0;36.17;1;ja;nein;-;-;0;12;0;0;0;0;8;ja;nein;nein;-;nein;nein;-;nein;-;ja;ja;kurzsichtig;Gestern;nie;Lesen 1 Tastatur hat anscheinend nicht gut funktioniert, Probandin hat sich nicht gemelded, da sie dachte es gehöre zumExperiment. Lesen 2 hat alles funktioniert.
+ABF1025;;;CF1;visu;aud;Tra;MA;TraStu;10.11.2020;Mathis, Nina;20.10.1994;male;Angewandte Sprachen;Master;4;7;26;B2;37;69;8;27;10;56;11;22;14;10.75;52.5;17.81;1;54.39;0;ja;nein;-;-;2;10;0;0;0;0;8;ja;nein;nein;-;nein;nein;-;nein;-;nein;nein;-;Gestern;vor mehr als 1 Wo.;Elektroden 115, 104, 79 & 81 nicht zum senden gebracht. Ist beim LDT 3x in einen Sekundenschlaf gefallen anscheinend. 
+CBZ0856;;;CF2;aud;visu;Tra;MA;TraStu;20.11.2020;Lydia, Nina;01.08.1986;female;Fachübersetzen (Angew. Ling.);Master;4;7;24;B2;35;109;18;27;10;48;9;17;10;11.75;55.83333333;20.28;2;35.35;0;ja;nein;-;-;0;12;0;0;0;0;8;ja;nein;nein;-;nein;nein;-;ja;Euthyrox;ja;ja;kurzsichtig;vor 1 Woche;nie;"Familiäre Linkshändigkeit: Mutter, Grossmutter; ET: Übungstrials & RS unten links und rechts nicht gut; auch beim Ruhe-EEG Augenbewegungen im Signal (trotz geschlossenen Augen); allg. stark ausgeprägte Augenartefakte "
+;;;CF3;visu;aud;Tra;MA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CF4;aud;visu;Tra;MA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CF5;visu;aud;Tra;MA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CF6;aud;visu;Tra;MA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CF7;visu;aud;Tra;MA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CF8;aud;visu;Tra;MA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CF9;visu;aud;Tra;MA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CG0;aud;visu;Tra;MA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CG1;visu;aud;Tra;MA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CG2;aud;visu;Tra;MA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CG3;visu;aud;Tra;MA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CG4;aud;visu;Tra;MA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CG5;visu;aud;Tra;MA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CG6;aud;visu;Tra;MA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CG7;visu;aud;Tra;MA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CG8;aud;visu;Tra;MA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CG9;visu;aud;Tra;MA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CH0;aud;visu;Tra;MA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CH1;visu;aud;Tra;MA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CH2;aud;visu;Tra;MA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CH3;visu;aud;Tra;MA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CH4;aud;visu;Tra;MA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CH5;visu;aud;Tra;MA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CH6;aud;visu;Tra;MA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CH7;visu;aud;Tra;MA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CH8;aud;visu;Tra;MA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CH9;visu;aud;Tra;MA;TraStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ALR1142;;;CI0;aud;visu;Tra;Profi;TraPro;16.12.2019;Nina/ Matthias;08.11.1983;female;-;dipl. Übersetzerin FH;4;7;27;C1;38;89;13;22;7;59;13;18;11;11;53.33333333;24.52;2;37.69;0;nein;nein;-;-;0;12;0;0;0;0;8;ja;nein;nein;-;nein;nein;-;nein;-;nein;nein;-;Gestern;vor mehr als 1 Woche;
 RZM0604;;;CI1;visu;aud;Tra;Profi;TraPro;07.02.2020;Nina;19.06.1962;female;Islamwissenschaften;Übersetzerin;4;7;25;B2;36;81;14;29;12;44;12;15;10;12;56.66666667;36.96;2;79.99;3;nein;-;-;-;0;12;1;0;0;0;7;ja;nein;nein;-;nein;nein;-;nein;-;nein;nein;-;gestern;nie;"sehr chaotisch, unkonzentrier (ADHS?), bei Reting State EO umhergeschaut und Augen teilweise zu, blinzelt sehr oft; beim 1. ELF beim Lesen direkt übersetzt im Kopf -> ging sehr lange und konnte die Fragen nicht richtig beantworten; vergessen, dass man SHIFT immer wieder drücken soll und alles wieder gelöscht; vor dem LDT gemerkt, dass man den Kopf mögichst wenig bewegen soll; EEG-Qualität sehr schlecht"
 JSH0185;;;CI2;aud;visu;Tra;Profi;TraPro;07.02.2020;Basil/ Nina;03.01.1986;female;Journalismus/ Kommunikation;Bachelor;4;7;27;C1;38;79;10;24;8;50;9;22;14;10.25;50.83333333;19.28;0;46.49;1;ja;nein;-;-;0;12;0;0;0;0;8;ja;nein;nein;-;nein;nein;-;ja;Sertralin;nein;nein;-;vor 1 Woche;vor 1 Woche;"Stift ging während Trailmaking aus. Musste neuen nehmen, Zeit wurde gestoppt. Fehlermeldung bei Start von n-back akkustisch,zweites Mal gestartet darum. EEG nicht sehr schön, da Impedanzen teilweise nicht gut; EEG vor allem im Resting State nicht gut, danach immer besser. Impendanzen aber auch am Schluss nicht 100% perfekt. Beim Reading Post Eyetracker nicht perfekt. "
 TFT1064;;;CI3;visu;aud;Tra;Profi;TraPro;10.02.2020;Nina;10.01.1980;female;-;Übersetzerin/Sprachlehrerin;5;7;28;C1;40;105;18;27;9;45;9;18;11;11.75;55.83333333;22.46;0;27.18;0;nein;.;.;.;0;12;0;0;0;0;8;ja;nein;nein;-;nein;nein;-;nein;-;nein;nein;-;Gestern;nie;Eyetracker bei ELF1 unten links nicht gut. 
 CBA0104;;;CI4;aud;visu;Tra;Profi;TraPro;27.02.2020;Amy;01.01.1969;female;-;Übersetzerin;4;7;27;C1;38;65;10;32;14;49;12;16;10;11.5;55;37.13;0;67.87;0;nein;nein;-;-;0;12;0;0;0;0;8;ja;ja;nein;hatte es vor der Schwangerschaft (Vokale, Zahlen ~ Farben);nein;nein;-;nein;-;ja;nein;kurzsichtig;vor mehr als 1 Woche;nie;
-;;;CI5;visu;aud;Tra;Profi;TraPro;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CI6;aud;visu;Tra;Profi;TraPro;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CI7;visu;aud;Tra;Profi;TraPro;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CI8;aud;visu;Tra;Profi;TraPro;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CI9;visu;aud;Tra;Profi;TraPro;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CJ0;aud;visu;Tra;Profi;TraPro;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CJ1;visu;aud;Tra;Profi;TraPro;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CJ2;aud;visu;Tra;Profi;TraPro;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CJ3;visu;aud;Tra;Profi;TraPro;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CJ4;aud;visu;Tra;Profi;TraPro;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CJ5;visu;aud;Tra;Profi;TraPro;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CJ6;aud;visu;Tra;Profi;TraPro;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CJ7;visu;aud;Tra;Profi;TraPro;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+NNB0585;;;CI5;visu;aud;Tra;Profi;TraPro;11.09.2020;Basil, Amy;30.05.1964;female;Übersetzung;Master;4;7;28;C1;39;94;17;31;14;50;14;16;11;14;63.33333333;30.28;1;63.06;0;ja;ja;ja;-;1;11;0;0;0;0;8;ja;nein;nein;-;nein;nein;-;nein;-;ja;nein;k;Gestern;nie;Hat während Text Block 1 Glöckchen geläutet, weil ihr der Lese-Teil zu lang vorkam und sie sich fragte, ob sie nicht bereits übersetzen müsse…
+DBS1057;;;CI6;aud;visu;Tra;Profi;TraPro;28.09.2020;Lydia, Mathis;03.10.1969;female;-;;4;7;27;C1;38;97;17;29;12;52;13;15;9;12.75;59.16666667;19.07;0;40.2;0;nein;nein;-;-;1;11;0;0;0;0;8;ja;nein;nein;-;nein;nein;-;nein;-;nein;nein;-;Gestern;nie;
+MGU1126;;;CI7;visu;aud;Tra;Profi;TraPro;29.09.2020;Nina, Basil;23.11.1975;male;Übersetzer ZHAW BA;Übersetzer;4;5;25;B2;34;70;9;31;13;33;6;18;11;9.75;49.16666667;53.13;2;53.8;4;nein;nein;;;0;12;0;0;0;0;8;ja;nein;nein;-;nein;nein;-;nein;-;ja;nein;kurzsichtig;vor 1 Woche;nie;"während Übungstrials Kopfstütze verändert: Eyetracker nicht brauchbar; Elektroden 115&81 hohe Impedanzen; ELF1: Kinnstütze & Eyetracker neu (oben rechts 1.5°), aber bewegt sich viel/schnell. Fand die Texte sehr langweilig. War müde, nach einem ganzen Tag arbeiten -> Gähnen, Termin anstrengender als gedacht.  "
+ASE0431;;;CI8;aud;visu;Tra;Profi;TraPro;30.09.2020;Mathis, Nina;26.04.1982;female;Fachübersetzerin MA;Übersetzerin;4;7;26;B2;37;97;15;23;7;60;14;20;12;12;56.66666667;19.65;0;37.82;0;ja;nein;;;12;0;7;1;0;0;0;ja;nein;nein;-;nein;nein;-;nein;-;;ja;kurzsichtig;gestern;vor mehr als 1 Woche;Elektrode 84 rausgefallen, war dann aber grün während der Messung
+TJH0469;;;CI9;visu;aud;Tra;Profi;TraPro;18.06.2021;Lydia, Matthias;13.04.1978;female;Übersetzung ;Übersetzerin ;4;7;28;C1;39;87;13;30;12;46;9;19;12;11.5;55;22.6;0;44.45;0;nein;nein;-;-;0;12;0;0;0;0;8;ja;nein;nein;-;nein;nein;-;nein;-;ja;nein;kurzsichtig;vor mehr als 1 Woche;nie;"beim n-back nicht durchgehend mitgemacht - zu anspruchsvoll; Eyetracker hat beim LDT nicht mehr funktioniert; allgemein Probleme mit dem Eyetracker (z.B.  beim letzten Teil Lesen z.T. verwackelt) "
+DAA0162;;;CJ0;aud;visu;Tra;Profi;TraPro;28.06.2021;Mathis, Matthias;02.01.1977;male;-;Üebersetzer;4;6;25;B2;35;91;15;32;14;56;14;25;16;14.75;65.83333333;22.54;0;39.45;1;ja;nein;-;-;11;2;7;1;0;0;0;ja;nein;nein;-;nein;nein;-;-;Augentropfen;ja;nein;k;vor mehr als 1 Woche;nie;Proband sieht vorallem mit dem linken Auge, Elek. 32 kicht auf Kopfhaut wegen Brillengestell, Eye-Tracker war unzufriedenstellend ab Lesen 2 bis Ende des Experimentes
+NBH0764;;;CJ1;visu;aud;Tra;Profi;TraPro;17.08.2021;Lydia, Matthias;11.07.1982;female;-;Übersetzerin;4;6;27;B2;37;72;9;23;7;38;7;11;5;7;40;29.73;1;56.34;1;nein;nein;-;-;12;0;6;2;0;0;0;ja;nein;nein;-;nein;nein;-;nein;-;ja;nein;;vor 1 Woche;nie;"Elektroden 126/127 z.T. no signal; Tastatur habe z.T. etwas gestockt; VL kurz im Raum beim letzten Teil Lesen "
+FBI0570;;;CJ2;aud;visu;Tra;Profi;TraPro;25.08.2021;Lydia, Matthias;24.05.1972;female;Übersetzerin;E-F 2. Staatsexamen Lehramt;4;7;28;C1;39;77;12;32;14;52;13;19;12;12.75;59.16666667;20.28;3;50.65;2;ja;nein;-;-;2;10;0;0;0;0;8;ja;nein;ja;Zahlen/Buchstaben + Farben;nein;nein;-;ja;Metozerok;ja;nein;k;vor mehr als 1 Woche;nie;"familiäre Linkshändigkeit: Bruder; n-back auditorisch frühzeitig abgebrochen (aufgegeben); Eye-tracker hat Pupille während allen Teilen immer wieder verloren (Ausnahme Lesen letzter Task); Eye-tracker unruhig und selten ein wenig über 1.00, jeweils bei jedem Teil neu kalibriert "
+MWV0342;;;CJ3;visu;aud;Tra;Profi;TraPro;09.09.2021;Mathis, Lydia;22.03.1984;female;Anglistik/Germanistik;DaF-Dozentin + Übersetzerin;4;6;28;C1;38;86;12;25;8;57;13;25;16;12.25;57.5;30.52;0;75.71;1;nein;nein;-;-;0;12;0;0;0;0;8;ja;nein;nein;-;nein;nein;-;nein;-;-;ja;k;vor mehr als 1 Woche;vor mehr als 1 Woche;"Elektr. 78&79 verrauscht; LDT: Eyetracker war nicht zufriedenstellend"
+JZZ0119;;;CJ4;aud;visu;Tra;Profi;TraPro;24.09.2021;Lydia, Matthias;29.01.1989;female;Übersetzerin BA;Lektorin, Übersetzerin;5;4;23;B1;32;103;16;20;6;53;10;21;13;11.25;54.16666667;22.22;0;40.45;1;ja;nein;-;-;0;12;0;0;0;0;8;ja;nein;nein;-;nein;nein;-;nein;-;nein;nein;-;vor mehr als 1 Woche;nie;"familiäre Linkshändigkeit: Tochter (aber eher väterlicherseits bedingt); Elektrode 48 & 61 verrauscht; Elektroden relativ schnell ausgetrocknet; Tastaturverbindung beim LDT z.T. schlecht "
+MOT0355;;;CJ5;visu;aud;Tra;Profi;TraPro;24.09.2021;Lydia, Matthias;18.03.1972;female;-;MSc ETH/Fachübersetzerin MA;4;7;26;B2;37;88;14;27;10;63;16;19;12;13;60;27.13;0;54.25;0;nein;-;-;-;0;12;0;0;0;0;8;ja;nein;ja;Orte/Erinnerungen + Literatur/Dokumentationen;nein;nein;-;nein;-;ja;nein;k;vor 1 Woche;vor mehr als 1 Woche;Probleme mit dem Eyetracker    
+HKC0481;;;CJ6;aud;visu;Tra;Profi;TraPro;15.10.2021;Lydia, Matthias;08.04.1970;female;-;Übersetzer (Master);4;7;26;B2;37;101;17;23;8;63;16;24;16;14.25;64.16666667;18.21;0;33.18;0;nein;nein;-;-;0;12;0;0;0;0;8;ja;nein;nein;-;nein;nein;-;nein;-;ja;nein;k;vor 1 Woche;nie;"Elektroden 9 & 22 z.T. leicht > 40; Eye-Tracker z.T. leicht über 1 "
+ABA1260;;;CJ7;visu;aud;Tra;Profi;TraPro;18.10.2021;Lydia, Matthias;10.12.1987;female;Übersetzung;Master/Übersetzerin;4;7;27;C1;38;90;12;28;10;64;14;17;10;11.5;55;19.44;0;43.37;1;nein;nein;-;-;0;12;0;0;0;1;7;ja;nein;nein;-;nein;nein;-;nein;-;ja;ja;k;vor 1 Woche;vor mehr als 1 Woche;"Eye-Tracker z.T. leicht > 1 (erst ab task richtig kalibriert/validiert); Elektroden stark ausgetrocknet am Ende der Blöcke; Tastatur habe z.T. gestockt "
 ;;;CJ8;aud;visu;Tra;Profi;TraPro;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;CJ9;visu;aud;Tra;Profi;TraPro;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;CK0;aud;visu;Tra;Profi;TraPro;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -119,93 +119,93 @@ CBA0104;;;CI4;aud;visu;Tra;Profi;TraPro;27.02.2020;Amy;01.01.1969;female;-;Über
 ;;;CL7;visu;aud;Tra;Profi;TraPro;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;CL8;aud;visu;Tra;Profi;TraPro;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;CL9;visu;aud;Tra;Profi;TraPro;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-CEG0921;;;CM0;aud;visu;Multi;BA;MulBa;08.01.2020;Amy;06.09.1998;female;Englische Literatur & Linguistik;Bachelor;5;7;28;C1;40;101;15;26;10;65;15;17;10;12.5;58.33333333;18.81;0;29.28;0;ja;nein;-;-;12;0;8;0;0;0;0;Ja;Nein;Nein;-;Nein;Nein;-;Nein;-;Nein;Nein;-;vor mehr als 1 Woche;nie;Eyetracker spackte (unterer Punkt konnte schlecht anvisiert werden)
-SSV1090;;;CM1;visu;aud;Multi;BA;MulBa;28.02.2020;Nina;07.10.1998;female;Anglistik ;Bachelor;4;7;28;C1;39;97;14;27;10;52;10;20;12;11.5;55;13.36;0;42.05;4;nein;nein;-;-;12;0;8;0;0;0;0;ja;nein;nein;-;nein;nein;-;nein;-;nein;nein;-;nie;nie;
-;;;CM2;aud;visu;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CM3;visu;aud;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CM4;aud;visu;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CM5;visu;aud;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CM6;aud;visu;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CM7;visu;aud;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CM8;aud;visu;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CM9;visu;aud;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CN0;aud;visu;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CN1;visu;aud;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CN2;aud;visu;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CN3;visu;aud;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CN4;aud;visu;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CN5;visu;aud;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CN6;aud;visu;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CN7;visu;aud;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CN8;aud;visu;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CN9;visu;aud;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CO0;aud;visu;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CO1;visu;aud;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CO2;aud;visu;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CO3;visu;aud;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CO4;aud;visu;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CO5;visu;aud;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CO6;aud;visu;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CO7;visu;aud;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CO8;aud;visu;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CO9;visu;aud;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CP0;aud;visu;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CP1;visu;aud;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CP2;aud;visu;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CP3;visu;aud;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CP4;aud;visu;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CP5;visu;aud;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CP6;aud;visu;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CP7;visu;aud;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CP8;aud;visu;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CP9;visu;aud;Multi;BA;MulBa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-DWI0402;;;CQ0;aud;visu;Multi;MA;MulMa;15.01.2020;Nina/Matthias;06.04.1975;female;Sprachwissenschaften;Master;4;7;28;C1;39;83;13;22;8;53;13;30;13;11.75;55.83333333;16.84;1;45.47;0;ja;nein;-;-;3;9;0;0;1;2;5;-;nein;nein;-;nein;nein;-;ja;Imigran (gegen Migräne, nur im Akutfall);ja;nein;kurzsichtig;vor 1 Woche;nie;"Eyetracker sehr unruhig, nicht richtig validierbar; bei Text Block 1 Impedanzen erst nach 21:05 gespeichert, davor EEG nicht gut, beim LDT Englisch kurz reingeplatzt am Anfang"
-;;;CQ1;visu;aud;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CQ2;aud;visu;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CQ3;visu;aud;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CQ4;aud;visu;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CQ5;visu;aud;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CQ6;aud;visu;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CQ7;visu;aud;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CQ8;aud;visu;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CQ9;visu;aud;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CR0;aud;visu;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CR1;visu;aud;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CR2;aud;visu;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CR3;visu;aud;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CR4;aud;visu;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CR5;visu;aud;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CR6;aud;visu;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CR7;visu;aud;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CR8;aud;visu;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CR9;visu;aud;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CS0;aud;visu;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CS1;visu;aud;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CS2;aud;visu;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CS3;visu;aud;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CS4;aud;visu;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CS5;visu;aud;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CS6;aud;visu;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CS7;visu;aud;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CS8;aud;visu;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CS9;visu;aud;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CT0;aud;visu;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CT1;visu;aud;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CT2;aud;visu;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CT3;visu;aud;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CT4;aud;visu;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CT5;visu;aud;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CT6;aud;visu;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CT7;visu;aud;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CT8;aud;visu;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;CT9;visu;aud;Multi;MA;MulMa;;;;;;;;;;;0;;;;;;;;;;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+CEG0921;;;CM0;aud;visu;Multi;BA;MulStu;08.01.2020;Amy;06.09.1998;female;Englische Literatur & Linguistik;Bachelor;5;7;28;C1;40;101;15;26;10;65;15;17;10;12.5;58.33333333;18.81;0;29.28;0;ja;nein;-;-;12;0;8;0;0;0;0;Ja;Nein;Nein;-;Nein;Nein;-;Nein;-;Nein;Nein;-;vor mehr als 1 Woche;nie;Eyetracker spackte (unterer Punkt konnte schlecht anvisiert werden)
+SSV1090;;;CM1;visu;aud;Multi;BA;MulStu;28.02.2020;Nina;07.10.1998;female;Anglistik ;Bachelor;4;7;28;C1;39;97;14;27;10;52;10;20;12;11.5;55;13.36;0;42.05;4;nein;nein;-;-;12;0;8;0;0;0;0;ja;nein;nein;-;nein;nein;-;nein;-;nein;nein;-;nie;nie;
+SWB1269;;;CM2;aud;visu;Multi;BA;MulStu;20.07.2020;Basil;04.12.1998;female;Anglistik & Psychologie;Bachelor;4;7;23;B2;34;79;10;25;9;47;9;19;12;10;50;22.42;0;57.71;0;nein;nein;-;-;0;12;0;0;0;0;8;ja;nein;nein;-;nein;nein;-;nein;-;Ja;nein;kurzsichtig;gestern;nie;Eyetracker hatte Mühe Pupille konstant zu erkennen (vorallem am Anfang) wegen Brille
+JBD0480;;;CM3;visu;aud;Multi;BA;MulStu;28.07.2020;Nina;13.04.1998;female;Anglistik ;Bachelor;4;7;26;B2;37;93;13;29;12;64;14;15;8;11.75;55.83333333;15.58;0;43.8;1;nein;nein;-;-;1;11;0;0;0;0;8;ja;nein;nein;-;nein;nein;.;nein;.;nein;nein;-;vor mehr als 1 Woche;nie;Eyetracker Resting State und ELF1: oben links nicht gut. 
+CSB0480;;;CM4;aud;visu;Multi;BA;MulStu;28.07.2020;Basil;09.04.1998;female;Anglistik ;Bachelor;4;7;25;B2;36;65;8;23;8;41;8;15;8;8;43.33333333;30.37;1;55.77;0;ja;nein;-;-;12;0;0;0;0;1;7;ja;nein;nein;-;nein;nein;-;nein;-;nein;nein;-;vor 1 Woche;nie;Eyetracker oben rechts und unten links nicht gut
+TDK0248;;;CM5;visu;aud;Multi;BA;MulStu;26.08.2020;Lydia;15.02.1990;female;Germanistik/Anglistik;Bachelor;4;7;26;B2;37;104;16;22;7;61;13;22;14;12.5;58.33333333;35.19;1;39.95;1;ja;nein;-;-;0;12;0;0;0;2;6;ja;nein;nein;-;nein;nein;-;nein;-;nein;nein;-;vor 1 Woche;nie;"Familiäre Linkshändigkeit: Mutter; Elektrode 84 mit Impedanzen über 2000, vor 2. Textblock wieder gut; Eyetracker nach Resting State neu kalibiert"
+MKC1111;;;CM6;aud;visu;Multi;BA;MulStu;11.09.2020;Lydia;06.11.1998;female;Anglistik & Politikwissenschaften;Bachelor;4;6;26;B2;36;103;15;24;9;59;12;21;13;12.25;57.5;13.9;0;25.61;1;ja;nein;-;Mutter umerzogen, jetzt beidhändig;0;12;0;0;3;2;3;ja;nein;nein;-;nein;nein;-;nein;-;ja;ja;kurzsichtig;vor 1 Woche;nie;"Textblock 2, zu Beginn Abschreiben/Übersetzen kurz in den EEG-Raum, Verwirrung ob Abschreiben oder Übersetzen; vor Lesen Eyetracker neu kalibriert "
+LER1147;;;CM7;visu;aud;Multi;BA;MulStu;25.09.2020;Lydia;24.11.1998;female;British and American Studies;Bachelor;3;7;25;B2;35;130;19;27;10;58;12;18;11;13;60;21.46;0;28.28;2;ja;nein;-;-;4;8;1;0;1;2;4;ja;nein;ja;Farben/Zahlen, Buchstaben/Zahlen, Töne/Farben;nein;nein;-;nein;-;nein;nein;-;vor 1 Woche;nie;"familiäre Linkshändigkeit: Vater, Grossvater; no signal bei Elektrode 84; nach resting state Messungen & Teil 1 & Teil 2 (2x) Eye-Tracker neu kalibriert; beim LDT bis switch trial ca. 233 save & close vergessen  "
+KKW0484;;;CM8;aud;visu;Multi;BA;MulStu;27.11.2020;Lydia;27.04.1997;female;Anglistik & Politikwissenschaften;Bachelor;;;;;0;89;12;28;11;66;15;16;9;11.75;55.83333333;23.92;3;57.8;0;nein;nein;-;-;2;10;0;0;0;0;8;ja;nein;nein;-;nein;nein;-;nein;-;nein;ja;kurzsichtig;vor mehr als 1 Woche;vor mehr als 1 Woche;Probleme mit dem Eyetracker (vor Teil 1 ff) - zu grosse Abweichungen > 1
+GCL0533;;;CM9;visu;aud;Multi;BA;MulStu;07.06.2021;Mathis;15.05.1999;female;Anglistik & Geschichte;Bachelor;4;7;26;B2;37;103;15;26;10;65;15;14;8;12;56.66666667;21.4;4;40.44;1;nein;nein;-;-;2;10;0;1;0;0;7;ja;nein;nein;-;nein;nein;-;ja;Epikem 30 (Anti Baby Pille;ja;ja;kurzsichtig;Gestern;vor mehr als 1 Woche;Eytracker hat nicht ganz zufriedenstellend reagiert// + CHF20 erhalten, da Prozess sehr verzögert wurde (Serverfehler)
+AWH0312;;;CN0;aud;visu;Multi;BA;MulStu;11.06.2021;Mathis;20.03.2000;female;Biologie & English;Bachelor;5;7;26;C1;38;109;16;25;9;62;13;21;13;12.75;59.16666667;17.04;0;33.95;0;ja;nein;-;-;1;11;0;0;0;1;7;ja;nein;nein;-;nein;nein;-;nein;-;nein;nein;-;vor mehr als 1 Woche;nie;
+NUB0805;;;CN1;visu;aud;Multi;BA;MulStu;11.06.2021;Lydia ;10.08.1999;male;Anglistik & Skandinavistik;Bachelor;3;7;28;C1;38;86;11;27;10;59;12;20;12;11.25;54.16666667;20.19;1;44.12;0;ja;nein;-;-;0;12;0;0;0;0;8;ja;nein;nein;-;nein;nein;-;ja;Ritalin LA 40mg;ja;nein;kurzsichtig;gestern;vor mehr als 1 Woche;"hat ADHS; familiäre Linkshänkdigkeit: Vater; resting state: Elektrode 48 kein Kontakt zur haut und 61 verrauscht, restliche Teile Elektrode 61 verrauscht; Probleme mit dem Eye-Trakcer (z.T. sehr verwackelt), besonders bei resting state & LDT"
+JBA0375;;;CN2;aud;visu;Multi;BA;MulStu;09.08.2021;Matthias, Michi;11.03.1999;female;Anglistik & Geschichte;Bachelor;4;7;27;C1;38;93;13;28;11;37;7;15;8;9.75;49.16666667;26;0;70;0;nein;nein;;;2;10;0;0;0;0;8;ja;nein;nein;;nein;nein;-;nein;-;nein;nein;-;nie;nie;kein 3D Scan möglich
+ILR0225;;;CN3;visu;aud;Multi;BA;MulStu;19.10.2021;Lydia, Matthias;02.11.2000;female;Anglistik & Geschichte;Bachelor;3;6;25;B2;34;91;12;29;12;57;11;15;8;10.75;52.5;14.12;1;54.65;3;nein;nein;;;2;10;0;0;1;0;7;ja;nein;nein;;nein;nein;-;nein;-;ja;nein;kurtsichtig;nie;nie;EEG verrauscht, ET sehr verwackelt, z.T. überfordert, kein 3D Scan
+PUH0430;;;CN4;aud;visu;Multi;BA;MulStu;21.10.2021;Matthias, Michi;26.04.2003;female;Anglistik & Geschichte;Bachelor;5;7;27;C1;39;64;8;29;12;50;10;19;12;10.5;51.66666667;42;0;99;2;nein;nein;;;1;11;0;0;0;1;7;ja;nein;nein;;nein;nein;;nein;;nein;nein;-;vor mehr als 1 Woche;nie;EEG vordere Kanäle verrauscht, ET im E1 nicht optimal
+SBH0707;;;CN5;visu;aud;Multi;BA;MulStu;28.10.2021;Lydia, Matthias;23.07.1997;male;Englisch Linguistik & Literatur;Bachelor;3;7;25;B2;35;91;12;26;10;59;12;21;13;11.75;55.83333333;20.5;0;27.03;2;nein;nein;-;-;1;11;0;0;0;1;7;ja;nein;nein;-;nein;nein;-;nein;-;nein;nein;-;gestern/vor 1 Woche;vor mehr als 1 Woche;Probleme mit Elektrode 61 
+;;;CN6;aud;visu;Multi;BA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CN7;visu;aud;Multi;BA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CN8;aud;visu;Multi;BA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CN9;visu;aud;Multi;BA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CO0;aud;visu;Multi;BA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CO1;visu;aud;Multi;BA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CO2;aud;visu;Multi;BA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CO3;visu;aud;Multi;BA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CO4;aud;visu;Multi;BA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CO5;visu;aud;Multi;BA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CO6;aud;visu;Multi;BA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CO7;visu;aud;Multi;BA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CO8;aud;visu;Multi;BA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CO9;visu;aud;Multi;BA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CP0;aud;visu;Multi;BA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CP1;visu;aud;Multi;BA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CP2;aud;visu;Multi;BA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CP3;visu;aud;Multi;BA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CP4;aud;visu;Multi;BA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CP5;visu;aud;Multi;BA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CP6;aud;visu;Multi;BA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CP7;visu;aud;Multi;BA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CP8;aud;visu;Multi;BA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CP9;visu;aud;Multi;BA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+DWI0402;;;CQ0;aud;visu;Multi;MA;MulStu;15.01.2020;Nina/Matthias;06.04.1975;female;Sprachwissenschaften;Master;4;7;28;C1;39;83;13;22;8;53;13;30;13;11.75;55.83333333;16.84;1;45.47;0;ja;nein;-;-;3;9;0;0;1;2;5;-;nein;nein;-;nein;nein;-;ja;Imigran (gegen Migräne, nur im Akutfall);ja;nein;kurzsichtig;vor 1 Woche;nie;"Eyetracker sehr unruhig, nicht richtig validierbar; bei Text Block 1 Impedanzen erst nach 21:05 gespeichert, davor EEG nicht gut, beim LDT Englisch kurz reingeplatzt am Anfang"
+;;;CQ1;visu;aud;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CQ2;aud;visu;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CQ3;visu;aud;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CQ4;aud;visu;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CQ5;visu;aud;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CQ6;aud;visu;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CQ7;visu;aud;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CQ8;aud;visu;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CQ9;visu;aud;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CR0;aud;visu;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CR1;visu;aud;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CR2;aud;visu;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CR3;visu;aud;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CR4;aud;visu;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CR5;visu;aud;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CR6;aud;visu;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CR7;visu;aud;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CR8;aud;visu;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CR9;visu;aud;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CS0;aud;visu;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CS1;visu;aud;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CS2;aud;visu;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CS3;visu;aud;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CS4;aud;visu;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CS5;visu;aud;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CS6;aud;visu;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CS7;visu;aud;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CS8;aud;visu;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CS9;visu;aud;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CT0;aud;visu;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CT1;visu;aud;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;0;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CT2;aud;visu;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CT3;visu;aud;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CT4;aud;visu;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CT5;visu;aud;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CT6;aud;visu;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CT7;visu;aud;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CT8;aud;visu;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;CT9;visu;aud;Multi;MA;MulStu;;;;;;;;;;;0;;;;;;;;;;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 AGI0915;[1 3 2];[3 2 1 4], [1 2 1 2];CU0;aud;visu;Multi;Profi;MulPro;04.09.2019;Damaris ;27.09.1985;female;"Anglistik & 
 Allg. Geschichte";Gymnasiallehrerin;4;6;28;B2;38;73;9;27;10;57;11;22;14;11;53.33333333;23;1;28;0;nein;nein;-;-;0;12;0;0;0;0;8;ja;nein;nein;-;nein;nein;-;nein;-;ja;ja;kurzsichtig;gestern;vor mehr als 1 Wo.;
 KWS0749;[3 1 2];"[3 2 1 4]; [2 1 1 2]";CU1;visu;aud;Multi;Profi;MulPro;17.09.2019;Amy;28.07.1960;female;Anglistik ;Gymnasiallehrerin;4;5;27;B2;36;80;14;30;13;48;13;20;14;13.5;61.66666667;29.03;1;48;3;nein;nein;-;-;0;12;0;0;0;0;8;ja;nein;nein;-;nein;nein;-;nein;-;ja;nein;k + w;gestern;nie;Beim Runterschauen fand der Eyetracker das Auge nicht, Brille spiegelte
 RBM1071;;;CU2;aud;visu;Multi;Profi;MulPro;17.10.2019;Amy;02.10.1969;male;Anglistik ;Gymnasiallehrer;4;7;28;C1;39;86;14;31;14;55;14;20;13;14.25;64.16666667;29.2;1;59.71;1;nein;nein;-;-;0;12;0;0;0;0;8;ja;nein;nein;-;nein;nein;-;nein;-;ja;nein;k + w;vor 1 Woche;nie;
 AUA0310;;;CU3;visu;aud;Multi;Profi;MulPro;08.01.2020;Amy;20.03.1992;female;Anglistik ;Gymnasiallehrerin;4;7;28;C1;39;95;13;27;10;62;13;13;7;10.5;51.66666667;24.41;0;52.79;2;ja;nein;-;-;0;12;0;0;0;1;7;ja;nein;ja;extrem schwach, einige Zahlen haben manchmal Farben;nein;nein;-;nein;-;nein;nein;-;gestern;nie;
 SWB0543;;;CU4;visu;aud;Multi;Profi;MulPro;09.03.2020;Matthias;24.05.1992;male;Anglistik, Latein;Dozent Uni Bern;4;7;28;C1;39;87;11;29;11;64;14;16;9;11.25;54.16666667;24;0;36;0;ja;nein;;;0;12;0;0;0;0;8;ja;nein;nein;;nein;ja;Hirnerschütterung mit 6 J.;nein;-;ja;ja;kurzsichtig;gestern;vor mehr als 1 Wo.;
-EBH1048;;;CU5;aud;visu;Multi;Profi;MulPro;12.03.2020;Matthias;17.10.1988;female;Anglistik, Philosophie;PhD Englischlehrerin;;;;;0;90;12;28;10;59;12;22;14;12;56.66666667;30.57;4;45.25;1;nein;nein;;;0;12;0;0;0;0;8;ja;nein;nein;;nein;nein;nein;nein;-;nein;nein;-;gestern;nie;
+EBH1048;;;CU5;aud;visu;Multi;Profi;MulPro;12.03.2020;Matthias;17.10.1988;female;Anglistik, Philosophie;PhD Englischlehrerin;4;6;28;C1;38;90;12;28;10;59;12;22;14;12;56.66666667;30.57;4;45.25;1;nein;nein;;;0;12;0;0;0;0;8;ja;nein;nein;;nein;nein;nein;nein;-;nein;nein;-;gestern;nie;
 ;;;CU6;aud;visu;Multi;Profi;MulPro;;;;;;;;;;;0;;;;;;;;;;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;CU7;visu;aud;Multi;Profi;MulPro;;;;;;;;;;;0;;;;;;;;;;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;CU8;aud;visu;Multi;Profi;MulPro;;;;;;;;;;;0;;;;;;;;;;16.66666667;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
