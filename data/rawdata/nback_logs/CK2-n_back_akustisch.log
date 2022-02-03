@@ -1,0 +1,83 @@
+Scenario - 
+Logfile written - 01/07/2022 14:54:27
+
+Subject	Trial	Event Type	Code	Time	TTime	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur	Stim Type	Pair Index
+
+CK2	1	Picture	Start	167	0	1	84667	1	0	next	false_alarm	2
+CK2	1	Response	1	84696	84529	0
+CK2	3	Sound	U54	91680	13	1045			0		other	0
+CK2	5	Sound	H57	116334	0	2			0		other	0
+CK2	7	Sound	E51	142334	0	2			0		other	0
+CK2	9	Sound	M59	168834	0	2			0		other	0
+CK2	11	Sound	B55	195834	0	2			0		other	0
+CK2	13	Sound	H57	221667	0	2			0		other	0
+CK2	14	Response	1	244683	2849	0
+CK2	15	Sound	M59	247501	0	2			0		miss	0
+CK2	17	Sound	F56	273001	0	2			0		other	0
+CK2	19	Sound	E51	297667	0	2			0		other	0
+CK2	21	Sound	M59	322167	0	2			0		hit	14
+CK2	21	Response	2	328601	6434	0
+CK2	23	Sound	A50	346667	0	2			0		other	0
+CK2	25	Sound	E51	372001	0	2			0		hit	17
+CK2	25	Response	2	386576	14575	0
+CK2	27	Sound	L58	397667	0	2			0		other	0
+CK2	29	Sound	A50	423667	0	2			0		hit	20
+CK2	29	Response	2	432461	8794	0
+CK2	31	Sound	F56	449334	0	2			0		other	0
+CK2	33	Sound	L58	474834	0	2			0		miss	0
+CK2	35	Sound	A50	499834	0	2			0		hit	24
+CK2	35	Response	2	508090	8256	0
+CK2	37	Sound	U54	524334	0	2			0		other	0
+CK2	39	Sound	M59	550001	0	1			0		other	0
+CK2	41	Sound	A50	576501	0	2			0		hit	28
+CK2	41	Response	2	585373	8873	0
+CK2	43	Sound	A50	603668	0	2			0		other	0
+CK2	45	Sound	F56	630668	0	2			0		other	0
+CK2	47	Sound	M59	656668	0	2			0		other	0
+CK2	49	Sound	B55	681834	0	2			0		other	0
+CK2	51	Sound	F56	708668	0	2			0		hit	34
+CK2	51	Response	2	713226	4558	0
+CK2	53	Sound	O53	734334	0	2			0		other	0
+CK2	55	Sound	H57	760834	0	2			0		other	0
+CK2	57	Sound	F56	785668	0	2			0		hit	38
+CK2	57	Response	2	794094	8427	0
+CK2	59	Sound	O53	811168	0	2			0		miss	0
+CK2	61	Sound	A50	835834	0	2			0		other	0
+CK2	63	Sound	F56	861168	0	2			0		miss	0
+CK2	65	Sound	B55	888501	0	2			0		false_alarm	43
+CK2	65	Response	1	889755	1254	0
+CK2	67	Sound	O53	914168	0	2			0		other	0
+CK2	69	Sound	I52	939668	0	2			0		other	0
+CK2	71	Sound	B55	965168	0	2			0		hit	47
+CK2	71	Response	2	982957	17790	0
+CK2	73	Sound	M59	991668	0	2			0		other	0
+CK2	75	Sound	I52	1017835	0	2			0		miss	0
+CK2	77	Sound	F56	1042668	0	2			0		false_alarm	51
+CK2	77	Response	1	1045660	2992	0
+CK2	79	Sound	H57	1069001	0	2			0		other	0
+CK2	81	Sound	I52	1095001	0	2			0		hit	54
+CK2	81	Response	2	1105420	10420	0
+CK2	83	Sound	I52	1119501	0	2			0		other	0
+CK2	85	Sound	O53	1146001	0	2			0		other	0
+CK2	87	Sound	I52	1172668	0	2			0		hit	58
+CK2	87	Response	2	1181244	8576	0
+CK2	89	Sound	U54	1199668	1	2			0		other	0
+CK2	91	Sound	L58	1225668	0	2			0		other	0
+CK2	93	Sound	I52	1252001	0	2			0		hit	62
+CK2	93	Response	2	1265596	13595	0
+CK2	95	Sound	H57	1279168	0	2			0		other	0
+CK2	97	Sound	E51	1305168	0	2			0		other	0
+CK2	99	Sound	O53	1330001	0	2			0		other	0
+CK2	101	Sound	H57	1356835	1	2			0		hit	67
+CK2	101	Response	2	1367964	11130	0
+CK2	103	Sound	E51	1381668	0	2			0		miss	0
+CK2	105	Sound	A50	1407668	0	2			0		other	0
+CK2	107	Sound	M59	1434502	0	2			0		other	0
+CK2	109	Sound	U54	1459002	0	2			0		other	0
+CK2	111	Sound	O53	1485835	0	2			0		other	0
+CK2	113	Sound	M59	1512168	0	2			0		miss	0
+CK2	115	Sound	U54	1539168	0	2			0		hit	75
+CK2	115	Response	2	1549172	10004	0
+CK2	117	Sound	H57	1565168	0	2			0		other	0
+CK2	119	Sound	B55	1592168	0	2			0		other	0
+CK2	121	Sound	I52	1618335	0	2			0		other	0

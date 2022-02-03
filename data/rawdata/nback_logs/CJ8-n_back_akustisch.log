@@ -1,0 +1,78 @@
+Scenario - 
+Logfile written - 11/02/2021 14:26:40
+
+Subject	Trial	Event Type	Code	Time	TTime	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur	Stim Type	Pair Index
+
+CJ8	1	Picture	Start	167	0	1	113333	1	0	next	false_alarm	2
+CJ8	1	Response	1	113436	113270	0
+CJ8	3	Sound	H57	118015	15	359			0		other	0
+CJ8	5	Sound	O53	145000	0	2			0		other	0
+CJ8	7	Sound	O53	169834	0	2			0		other	0
+CJ8	9	Sound	A50	195167	0	2			0		other	0
+CJ8	11	Sound	O53	220167	0	2			0		hit	8
+CJ8	11	Response	2	234273	14106	0
+CJ8	13	Sound	L58	246501	0	2			0		other	0
+CJ8	15	Sound	A50	273167	0	2			0		hit	11
+CJ8	15	Response	2	284852	11685	0
+CJ8	17	Sound	B55	299001	0	2			0		other	0
+CJ8	19	Sound	L58	325001	0	2			0		hit	14
+CJ8	19	Response	2	337661	12661	0
+CJ8	21	Sound	H57	351834	0	2			0		other	0
+CJ8	23	Sound	B55	377334	0	2			0		miss	0
+CJ8	25	Sound	L58	402501	0	2			0		miss	0
+CJ8	27	Sound	I52	429168	1	2			0		other	0
+CJ8	29	Sound	U54	455834	0	2			0		other	0
+CJ8	31	Sound	I52	482334	0	2			0		false_alarm	21
+CJ8	31	Response	1	491263	8929	0
+CJ8	33	Sound	I52	506668	1	2			0		hit	23
+CJ8	33	Response	2	524803	18136	0
+CJ8	35	Sound	B55	532334	0	2			0		other	0
+CJ8	37	Sound	U54	558334	0	2			0		other	0
+CJ8	39	Sound	I52	584168	1	2			0		miss	0
+CJ8	41	Sound	A50	610001	0	2			0		false_alarm	28
+CJ8	41	Response	1	611638	1637	0
+CJ8	43	Sound	F56	634668	1	2			0		other	0
+CJ8	45	Sound	I52	661334	0	2			0		miss	0
+CJ8	47	Sound	A50	687668	0	2			0		miss	0
+CJ8	49	Sound	F56	714168	0	2			0		miss	0
+CJ8	51	Sound	I52	740834	0	2			0		miss	0
+CJ8	53	Sound	A50	766168	0	2			0		miss	0
+CJ8	55	Sound	F56	792001	0	2			0		hit	36
+CJ8	55	Response	2	796464	4464	0
+CJ8	57	Sound	M59	818334	0	2			0		other	0
+CJ8	59	Sound	M59	845168	0	2			0		other	0
+CJ8	61	Sound	E51	870001	0	2			0		other	0
+CJ8	63	Sound	I52	894834	0	2			0		other	0
+CJ8	65	Sound	U54	920834	0	2			0		other	0
+CJ8	67	Sound	B55	946501	0	2			0		other	0
+CJ8	69	Sound	I52	973668	0	2			0		hit	44
+CJ8	69	Response	2	980915	7248	0
+CJ8	71	Sound	M59	999168	0	2			0		other	0
+CJ8	72	Response	1	1020582	1247	0
+CJ8	73	Sound	H57	1024168	0	2			0		other	0
+CJ8	75	Sound	A50	1050668	0	2			0		other	0
+CJ8	77	Sound	I52	1075668	0	2			0		other	0
+CJ8	79	Sound	U54	1100835	0	2			0		other	0
+CJ8	81	Sound	A50	1125501	0	2			0		miss	0
+CJ8	83	Sound	I52	1151168	0	2			0		hit	53
+CJ8	83	Response	2	1163591	12424	0
+CJ8	85	Sound	U54	1178001	0	2			0		miss	0
+CJ8	87	Sound	L58	1204668	1	2			0		other	0
+CJ8	89	Sound	B55	1229335	0	2			0		other	0
+CJ8	91	Sound	L58	1255668	0	2			0		other	0
+CJ8	93	Sound	U54	1282501	0	2			0		other	0
+CJ8	95	Sound	U54	1306835	0	2			0		false_alarm	60
+CJ8	95	Response	1	1316599	9764	0
+CJ8	97	Sound	E51	1331835	0	2			0		other	0
+CJ8	99	Sound	A50	1356335	0	2			0		other	0
+CJ8	101	Sound	I52	1382335	0	2			0		other	0
+CJ8	103	Sound	U54	1407002	0	2			0		other	0
+CJ8	105	Sound	B55	1434168	0	2			0		other	0
+CJ8	107	Sound	I52	1459002	0	2			0		miss	0
+CJ8	109	Sound	U54	1484168	0	2			0		miss	0
+CJ8	111	Sound	H57	1510002	0	2			0		other	0
+CJ8	113	Sound	L58	1535168	1	2			0		other	0
+CJ8	115	Sound	I52	1561335	0	2			0		other	0
+CJ8	117	Sound	F56	1586168	1	2			0		other	0
+CJ8	119	Sound	B55	1610502	0	2			0		other	0
+CJ8	121	Sound	I52	1635835	0	2			0		miss	0

@@ -1,0 +1,81 @@
+Scenario - 
+Logfile written - 11/24/2021 09:46:56
+
+Subject	Trial	Event Type	Code	Time	TTime	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur	Stim Type	Pair Index
+
+CF6	1	Picture	Start	167	0	1	602501	1	0	next	false_alarm	2
+CF6	1	Response	1	602648	602481	0
+CF6	3	Sound	A50	607183	16	415			0		other	0
+CF6	5	Sound	U54	632001	0	2			0		other	0
+CF6	7	Sound	M59	657501	0	2			0		other	0
+CF6	9	Sound	H57	683501	0	2			0		other	0
+CF6	11	Sound	L58	710168	0	2			0		other	0
+CF6	13	Sound	O53	735834	0	2			0		other	0
+CF6	15	Sound	H57	763001	1	2			0		miss	0
+CF6	17	Sound	A50	789668	0	2			0		other	0
+CF6	19	Sound	E51	816168	0	2			0		other	0
+CF6	21	Sound	H57	843168	0	2			0		hit	13
+CF6	21	Response	2	856603	13436	0
+CF6	23	Sound	I52	869168	0	2			0		other	0
+CF6	25	Sound	E51	895834	0	2			0		miss	0
+CF6	27	Sound	B55	923001	0	2			0		other	0
+CF6	29	Sound	I52	950001	0	2			0		miss	0
+CF6	31	Sound	I52	976501	0	2			0		false_alarm	19
+CF6	31	Response	1	992406	15905	0
+CF6	33	Sound	A50	1001168	0	2			0		other	0
+CF6	35	Sound	M59	1028168	0	2			0		other	0
+CF6	37	Sound	I52	1053835	0	2			0		hit	23
+CF6	37	Response	2	1065215	11381	0
+CF6	39	Sound	M59	1080335	0	2			0		other	0
+CF6	41	Sound	M59	1106501	0	2			0		hit	26
+CF6	41	Response	2	1116217	9716	0
+CF6	43	Sound	I52	1133335	0	2			0		miss	0
+CF6	45	Sound	I52	1159168	0	2			0		other	0
+CF6	47	Sound	H57	1184001	0	2			0		other	0
+CF6	49	Sound	I52	1210168	0	2			0		hit	31
+CF6	49	Response	2	1217688	7521	0
+CF6	51	Sound	I52	1236001	0	2			0		hit	33
+CF6	51	Response	2	1247631	11630	0
+CF6	53	Sound	L58	1262835	0	2			0		other	0
+CF6	55	Sound	F56	1288335	0	2			0		other	0
+CF6	57	Sound	U54	1313668	0	2			0		other	0
+CF6	59	Sound	L58	1340668	0	2			0		miss	0
+CF6	61	Sound	A50	1367001	0	2			0		other	0
+CF6	63	Sound	H57	1393835	0	2			0		other	0
+CF6	65	Sound	F56	1418335	0	2			0		other	0
+CF6	67	Sound	E51	1445502	0	2			0		other	0
+CF6	69	Sound	E51	1471335	0	2			0		other	0
+CF6	71	Sound	U54	1496168	0	2			0		false_alarm	44
+CF6	71	Response	1	1507521	11353	0
+CF6	73	Sound	F56	1522168	0	2			0		false_alarm	46
+CF6	73	Response	1	1530041	7874	0
+CF6	75	Sound	U54	1547335	0	2			0		other	0
+CF6	77	Sound	I52	1573835	0	2			0		other	0
+CF6	79	Sound	F56	1598668	0	2			0		hit	50
+CF6	79	Response	2	1607552	8884	0
+CF6	81	Sound	O53	1624335	0	2			0		other	0
+CF6	83	Sound	L58	1651002	0	2			0		other	0
+CF6	85	Sound	F56	1675335	0	2			0		miss	0
+CF6	87	Sound	A50	1699835	0	2			0		other	0
+CF6	89	Sound	I52	1727002	0	2			0		other	0
+CF6	91	Sound	F56	1753002	0	2			0		hit	57
+CF6	91	Response	2	1760586	7585	0
+CF6	93	Sound	A50	1779669	0	2			0		hit	59
+CF6	93	Response	2	1799372	19704	0
+CF6	95	Sound	H57	1805502	0	2			0		other	0
+CF6	97	Sound	F56	1831335	0	2			0		miss	0
+CF6	99	Sound	M59	1858502	0	2			0		other	0
+CF6	101	Sound	H57	1884335	0	2			0		hit	64
+CF6	101	Response	2	1894500	10166	0
+CF6	103	Sound	O53	1911502	0	2			0		other	0
+CF6	105	Sound	M59	1937835	0	2			0		miss	0
+CF6	107	Sound	H57	1963502	0	2			0		hit	68
+CF6	107	Response	2	1967983	4482	0
+CF6	109	Sound	H57	1987835	0	2			0		other	0
+CF6	111	Sound	M59	2012502	0	2			0		hit	71
+CF6	111	Response	2	2023887	11385	0
+CF6	113	Sound	M59	2039669	0	2			0		other	0
+CF6	115	Sound	B55	2065335	0	2			0		other	0
+CF6	117	Sound	M59	2091169	0	2			0		miss	0
+CF6	119	Sound	E51	2116835	0	2			0		other	0
+CF6	121	Sound	F56	2141835	0	2			0		other	0

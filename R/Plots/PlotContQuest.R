@@ -2,6 +2,7 @@
 
 #Prepare Data
 library("tidyverse")
+library("png")
 
 source(file.path("R/Preprocessing/behavioral_data.R"))
 
@@ -23,17 +24,16 @@ par(family = "sans") ## sans serif default - alternative "serif"
 par(font=1)  ## 1 = normal style (default), 2=bold, 3=italic
 par(mar=c(5,5,5,5), oma=c(1,1,1,1))
 par(xpd=NA) ## allows to draw points, lines etc. and legenfs outside of the plot area
-colors()
 
 
 ## Start Plot
-plot(NULL,axes=F,xlab="",ylab="", main = "Control Questions", ylim=c(0,1),xlim=c(0,10))
+plot(NULL,axes=F,xlab="",ylab="", main = "Control Questions", ylim=c(0,1),xlim=c(0,8))
 
 
 ## Add Datapoints
-lines(seq(1,9, by=2), c(CQRes$meanCQRes[1],CQRes$meanCQRes[3],CQRes$meanCQRes[5],CQRes$meanCQRes[7],CQRes$meanCQRes[9]), type="p", cex=2, pch=21, bg="black",col="black", lwd=2)
+lines(seq(1,7, by=2), c(CQRes$meanCQRes[1],CQRes$meanCQRes[3],CQRes$meanCQRes[5],CQRes$meanCQRes[7]), type="p", cex=2, pch=21, bg="black",col="black", lwd=2)
 
-lines(seq(2,10, by=2),c(CQRes$meanCQRes[2],CQRes$meanCQRes[4],CQRes$meanCQRes[6],CQRes$meanCQRes[8],CQRes$meanCQRes[10]), type="p", cex=2, pch=22, bg="white",col="black", lwd=2)
+lines(seq(2,8, by=2),c(CQRes$meanCQRes[2],CQRes$meanCQRes[4],CQRes$meanCQRes[6],CQRes$meanCQRes[8]), type="p", cex=2, pch=22, bg="white",col="black", lwd=2)
 
 
 ## Set X axis
@@ -42,11 +42,10 @@ axis(side=1,at=seq(1,2,1), label = c("",""),cex.axis=.7)
 axis(side=1,at=seq(3,4,1), label = c("",""),cex.axis=.7)
 axis(side=1,at=seq(5,6,1), label = c("",""),cex.axis=.7)
 axis(side=1,at=seq(7,8,1), label = c("",""),cex.axis=.7)
-axis(side=1,at=seq(9,10,1), label = c("",""),cex.axis=.7)
 
-mtext(side=1, text=c("MulBa","MulMa","MulPro","TraMa","TraPro"), 
-      line = 1, at=seq(1.5,9.5, by =2),font = 1, cex.axis=0.7)
-mtext(side=1,"Group", line=3, font=1, cex=1.2)
+mtext(side=1, text=c("MulPro","MulStu","TraPro","TraStu"), 
+      line = 1, at=seq(1.5,7.5, by =2),font = 1, cex.axis=0.7)
+mtext(side=1,"Group", at = 5.5, line=3, font=1, cex=1.2)
 
 
 ## Set Y axis
@@ -57,7 +56,7 @@ mtext(side=2,"Mean Percentage Correct", line=3, font =1, cex=1.2)
 
 ## Legend
 
-legend(x=8,y=1.25, ## coordinates of the legend - can be outside of plot of par(xpd=NA)
+legend(x=7,y=1.25, ## coordinates of the legend - can be outside of plot of par(xpd=NA)
        legend=c("ELF","EdE"),
        ## with ncol=2 the labels will be placed side by side
        ncol=1, bty="n",

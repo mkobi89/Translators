@@ -8,8 +8,8 @@ clear
 
 w_dev = 3;          %allowed deviation of the x-coordinate of a specific fixation to still be accounted for a word
 h_dev = 30;         %allowed deviation of the y-coordinate of a specific fixation to still be accounted for a word
-path_data = "E:/All_Data/"; % data path
-path_savetable = "E:/";  %path to save result table
+path_data = "\\130.60.235.123\users\neuro\Desktop\CLINT\All_Data"; % data path
+path_savetable = "C:\Users\matth\Documents\Translators\data\rawdata";  %path to save result table
 
 %% Change directory to the current m. file
 tmp = matlab.desktop.editor.getActive;
@@ -24,15 +24,13 @@ T=cell(10,11); %Preallocation of results table
 k = 0; %control variable for current row in T
 
 %look through All_data folder to look for subjects and assign them to groups
-group_pilot = [dir('C2*');dir('C3*')];
-group_traba = [dir('CA*');dir('CB*');dir('CC*');dir('CD*')];
-group_trama = [dir('CE*');dir('CF*');dir('CG*');dir('CH*')];
+%group_pilot = [dir('C2*');dir('C3*')];
+group_trastu = [dir('CA*');dir('CB*');dir('CC*');dir('CD*');dir('CE*');dir('CF*');dir('CG*');dir('CH*')];
 group_trapro = [dir('CI*');dir('CJ*');dir('CK*');dir('CL*')];
-group_mulba = [dir('CM*');dir('CN*');dir('CO*');dir('CP*')];
-group_mulma = [dir('CQ*');dir('CR*');dir('CS*');dir('CT*')];
-group_mulpro = [dir('CU*');dir('CV*');dir('CW*');dir('CX*')];
+group_mul = [dir('CM*');dir('CN*');dir('CO*');dir('CP*');dir('CQ*');dir('CR*');dir('CS*');dir('CT*'),dir('CU*');dir('CV*');dir('CW*');dir('CX*')];
+group_mulpro = [];
 
-group_all = [group_pilot;group_traba;group_trama;group_trapro;group_mulba;group_mulma;group_mulpro]; %Get all subjects
+group_all = [group_trastu;group_trapro;group_mul]; %Get all subjects
 
 vpNames = {group_all.name};
 
@@ -64,19 +62,9 @@ for zz = 1:length(vpNames) %loop through subjects
     %% define groups
     
     for i = 1:length(vpNames)
-        for j = 1:size(group_pilot,1)
-            if strcmp(vpNames{zz},group_pilot(j).name)
-                group = 'Pilot';
-                break
-            end
-        end
-        
-        %         elseif strcmp(vpNames{zz},group_traba(j).name) && j < size(group_traba,1)
-        %             group = 'TraBa';
-        %             break
-        for j = 1:size(group_trama,1)
-            if strcmp(vpNames{zz},group_trama(j).name)
-                group = 'TraMa';
+        for j = 1:size(group_trastu,1)
+            if strcmp(vpNames{zz},group_trastu(j).name)
+                group = 'TraStu';
                 break
             end
         end
@@ -88,26 +76,20 @@ for zz = 1:length(vpNames) %loop through subjects
             end
         end
         
-        for j = 1:size(group_mulba,1)
-            if strcmp(vpNames{zz},group_mulba(j).name)
-                group = 'MulBa';
+        for j = 1:size(group_mul,1)
+            if strcmp(vpNames{zz},group_mul(j).name)
+                group = 'Mul';
                 break
             end
         end
         
-        for j = 1:size(group_mulma,1)
-            if strcmp(vpNames{zz},group_mulma(j).name)
-                group = 'MulMa';
-                break
-            end
-        end
         
-        for j = 1:size(group_mulpro,1)
-            if strcmp(vpNames{zz},group_mulpro(j).name)
-                group = 'MulPro';
-                break
-            end
-        end
+%         for j = 1:size(group_mulpro,1)
+%             if strcmp(vpNames{zz},group_mulpro(j).name)
+%                 group = 'MulPro';
+%                 break
+%             end
+%         end
     end
     
     %% loop trough eyetracking files

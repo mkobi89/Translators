@@ -6,17 +6,17 @@ library("png")
 
 source(file.path("R/Preprocessing/psychometrics.R"))
 
-SpT <- vpdata %>% 
-  filter(SpT_Score != 0) %>%
-  select(group,id,SpT_Score)
+SpT <- psychometrics %>% 
+  filter(english_score != 0) %>%
+  select(group,id,english_score)
   
 SpT <- SpT %>%   
-  pivot_wider(names_from = group, values_from = SpT_Score)
+  pivot_wider(names_from = group, values_from = english_score)
                        
-SpT_means <- vpdata %>% 
-  filter(SpT_Score != 0) %>% 
+SpT_means <- psychometrics %>% 
+  filter(english_score != 0) %>% 
   group_by(group) %>% 
-  summarise(meanSpT = mean(SpT_Score))
+  summarise(meanEnglish_score = mean(english_score))
 
 ## Plotting
 
@@ -31,34 +31,29 @@ par(xpd=NA) ## allows to draw points, lines etc. and legenfs outside of the plot
 
 
 ## Start Plot
-plot(NULL,axes=F,xlab="",ylab="", main = "Language Proficiency", ylim=c(35,40),xlim=c(0,6))
+plot(NULL,axes=F,xlab="",ylab="", main = "Language Proficiency", ylim=c(30,40),xlim=c(1,4))
 
 
 ## Add Datapoints
 jit <- 2
 ce <- 1.8
 
-#lines(jitter(rep(1,nrow(SpT)),jit), jitter(SpT$TraBa,.2), type="p", cex=ce, pch=21, bg="grey",col="black", lwd=2)
 
-lines(jitter(rep(2,nrow(SpT)),jit), jitter(SpT$TraMa,.2), type="p", cex=ce, pch=21, bg="grey",col="black", lwd=2)
+lines(jitter(rep(1.5,nrow(SpT)),jit), jitter(SpT$TraStu,.2), type="p", cex=ce, pch=21, bg="grey",col="black", lwd=2)
 
-lines(jitter(rep(3,nrow(SpT)),jit), jitter(SpT$TraPro,.2), type="p", cex=ce, pch=21, bg="grey",col="black", lwd=2)
+lines(jitter(rep(2,nrow(SpT)),jit), jitter(SpT$TraPro,.2), type="p", cex=ce, pch=21, bg="grey",col="black", lwd=2)
 
-lines(jitter(rep(4,nrow(SpT)),jit), jitter(SpT$MulBa,.2), type="p", cex=ce, pch=21, bg="grey",col="black", lwd=2)
+lines(jitter(rep(2.5,nrow(SpT)),jit), jitter(SpT$MulStu,.2), type="p", cex=ce, pch=21, bg="grey",col="black", lwd=2)
 
-lines(jitter(rep(5,nrow(SpT)),jit), jitter(SpT$MulMa,.2), type="p", cex=ce, pch=21, bg="grey",col="black", lwd=2)
-
-lines(jitter(rep(6,nrow(SpT)),jit), jitter(SpT$MulPro,.2), type="p", cex=ce, pch=21, bg="grey",col="black", lwd=2)
+lines(jitter(rep(3,nrow(SpT)),jit), jitter(SpT$MulPro,.2), type="p", cex=ce, pch=21, bg="grey",col="black", lwd=2)
 
 # adding Means
 ce <- 1.5
 
-#lines(1, mean(SpT$TraBa,na.rm = TRUE), type="p", cex=ce, pch=22, bg="red",col="black", lwd=2)
-lines(2, mean(SpT$TraMa,na.rm = TRUE), type="p", cex=ce, pch=22, bg="red",col="black", lwd=2)
-lines(3, mean(SpT$TraPro,na.rm = TRUE), type="p", cex=ce, pch=22, bg="red",col="black", lwd=2)
-lines(4, mean(SpT$MulBa,na.rm = TRUE), type="p", cex=ce, pch=22, bg="red",col="black", lwd=2)
-lines(5, mean(SpT$MulMa,na.rm = TRUE), type="p", cex=ce, pch=22, bg="red",col="black", lwd=2)
-lines(6, mean(SpT$MulPro,na.rm = TRUE), type="p", cex=ce, pch=22, bg="red",col="black", lwd=2)
+lines(1.5, mean(SpT$TraStu,na.rm = TRUE), type="p", cex=ce, pch=22, bg="red",col="black", lwd=2)
+lines(2, mean(SpT$TraPro,na.rm = TRUE), type="p", cex=ce, pch=22, bg="red",col="black", lwd=2)
+lines(2.5, mean(SpT$MulStu,na.rm = TRUE), type="p", cex=ce, pch=22, bg="red",col="black", lwd=2)
+lines(3, mean(SpT$MulPro,na.rm = TRUE), type="p", cex=ce, pch=22, bg="red",col="black", lwd=2)
 
 ## Set X axis
 
@@ -68,15 +63,15 @@ lines(6, mean(SpT$MulPro,na.rm = TRUE), type="p", cex=ce, pch=22, bg="red",col="
 #axis(side=1,at=seq(7,8,1), label = c("",""),cex.axis=.7)
 #axis(side=1,at=seq(9,10,1), label = c("",""),cex.axis=.7)
 
-mtext(side=1, text=c("TraBa","TraMa","TraPro","MulBa","MulMa","MulPro"), 
-      line = 1, at=seq(1,6, by =1), font = 1, cex.axis=1.2)
-mtext(side=1,at = 3.5, "Group", line=3, font=1, cex=1.5)
+mtext(side=1, text=c("TraStu","TraPro","MulStu","MulPro"), 
+      line = -0.8, at=seq(1.5,3, by =0.5), font = 1, cex.axis=1.2)
+mtext(side=1,at = 2.25, "Group", line=1, font=1, cex=1.5)
 
 
 ## Set Y axis
 
-axis(side=2,at=seq(35,40,1), labels=seq(35,40,1), font = 1, cex.axis=1.2, las=1)
-mtext(side=2,"Score", line=3, font =1, cex=1.5)
+axis(side=2,at=seq(31,40,1), line = -3, labels=seq(31,40,1), font = 1, cex.axis=1.2, las=1)
+mtext(side=2,"Score", at=35.5 ,line= 0, font =1, cex=1.5)
 
 
 ## Legend

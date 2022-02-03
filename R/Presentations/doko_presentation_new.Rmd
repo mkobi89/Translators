@@ -1,0 +1,664 @@
+---
+title: "Cognitive Load in Interpreting and Translating"
+subtitle: "DoKo Presentation"
+author: "Matthias Kobi"
+date: "`r format(Sys.time(), '%d %b %Y')`"
+output:
+  xaringan::moon_reader:
+    css: [default, metropolis, metropolis-fonts]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: 16:9
+
+---
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+if (!"xaringan" %in% installed.packages()[, "Package"]) {
+  install.packages("xaringan")
+}
+
+library(xaringan)
+library(tikzDevice)
+library(tidyverse)
+library(tinytex)
+library(png)
+library(grid)
+library(xtable)
+library(gtsummary)
+
+#RFolder <- file.path("R") 
+
+options(htmltools.dir.version = FALSE)
+# see: https://github.com/yihui/xaringan
+# install.packages("xaringan")
+# see: 
+# https://github.com/yihui/xaringan/wiki
+# https://github.com/gnab/remark/wiki/Markdown
+options(width=110)
+options(digits = 4)
+```
+
+# Overview
+
+--
+
+1. The project
+
+--
+
+2. Experiment with translators
+
+--
+
+3. Behavioral results
+
+---
+class: inverse, mline, center, middle
+
+# The Project
+
+---
+# UZH Website
+![](figures/doko_presentation/clint_ch_project.png)
+
+.footnote[https://psy-klipsy-web01.uzh.ch/anmeldung-clint-u/about-clint-u/]
+---
+# ZHAW Website
+
+```{r fig.width=12, fig.height=6.5,echo=FALSE}
+library(png)
+library(grid)
+img <- readPNG(file.path("figures/doko_presentation/zhaw_project.png"))
+grid.raster(img)
+```
+
+.footnote[https://www.zhaw.ch/de/linguistik/institute-zentren/iued/forschung/clint/]
+---
+# Research Question
+
+- English as Lingua Franca (ELF)
+
+???
+Communication between two non-native speakers in English
+Example: to keep the ball flat vs. to keep our feet on the ground
+--
+
+- Increasingly more text and speeches in non-native English
+
+--
+
+-  Challenging for translators
+
+???
+ELF is more time and work demanding
+--
+
+- Enhanced cognitive load while translating
+---
+
+# Research Question
+
+Mixed method approach that addresses:
+
+--
+
+- Problems reading and translating ELF text
+
+--
+
+- Language proficiency depending differences while reading and translating EdE vs. ELF text
+
+--
+
+- Cognitive load while reading and translating EdE vs. ELF text
+
+--
+
+<t>using:</t>
+
+--
+
+- EEG
+
+- Eyetracking
+
+---
+class: inverse, mline, center, middle
+
+# Experiment with Translators
+
+---
+# Participants
+
+L1: German
+
+L2: English (Level C1)
+--
+
+.pull-left[
+#### Translators
+
+- 18 Professionals
+
+- 16 Students (3 Bachelor, 15 Master)
+]
+--
+.pull-right[
+#### Multilingual Control Group
+
+- 6 Professionals
+
+- 17 Students (16 Bachelor, 1 Master)]
+---
+# Psychometrics
+
+* English test
+
+* WAIS (short form) 
+
+* 3-back task (visual/auditory)
+  - dprimes<sup>1</sup>
+    - sensitivity and response bias 
+    - d' = z(Hit) minus z(FA)
+
+* Language questionaire
+  - Age of commencement
+  - Language exposure
+  - Cumulative training hours in translation (group difference)
+
+.footnote[
+  1) Macmillan & Creelman (1991)
+]
+
+
+---
+# Paradigm
+```{r dpi = 1600, fig.width=8, fig.height=4,echo=FALSE}
+library(png)
+library(grid)
+img <- readPNG(file.path("figures/doko_presentation/paradigm.png"))
+grid.raster(img)
+```
+
+---
+# Reading task
+
+Social Information and Energy Conservation - Environmental Identity and Social Norms  
+ELF - Version
+
+![](figures/doko_presentation/SI_ELF_1.png)
+
+???
+Sentence by sentence
+Double spacing
+
+---
+# Reading task
+
+Social Information and Energy Conservation - Environmental Identity and Social Norms  
+ELF - Version
+
+![](figures/doko_presentation/SI_ELF_1_2.png)
+
+---
+# Reading task
+
+Social Information and Energy Conservation - Environmental Identity and Social Norms  
+ELF - Version
+
+![](figures/doko_presentation/SI_ELF_2.png)
+
+---
+# Reading task
+
+Social Information and Energy Conservation - Environmental Identity and Social Norms  
+EdE - Version
+
+![](figures/doko_presentation/SI_EdE_2.png)
+
+
+---
+# Copying task
+
+Social Information and Energy Conservation - Environmental Identity and Social Norms  
+EdE - Version
+
+![](figures/doko_presentation/SI_EdE_copy.png)
+
+---
+# Translating task
+
+Social Information and Energy Conservation - Environmental Identity and Social Norms  
+EdE - Version
+
+![](figures/doko_presentation/SI_EdE_translate.png)
+
+??? 
+Shortcommings: keyboard is limited
+
+---
+class: inverse, mline, center, middle
+
+# Behavioral results
+
+---
+# Reading task
+
+![](figures/doko_presentation/fixations.png)
+
+.pull-left[
+- Average reading duration per sentence
+]
+
+.pull-right[
+- Eyetracking data: 
+  - number of fixations & regressions
+  - average fixation duration
+  - first-pass / total reading or regression time
+
+
+--> depends on text difficulty, reading ability, motivation and strategy<sup>2</sup>
+]
+
+.footnote[
+  1) Eckstein et al. (2019)  
+  2) Essig-Shih, L. Y. (2008)
+  ]
+
+---
+
+# Reading task
+
+
+```{r warning= FALSE, message=FALSE, echo=FALSE}
+source(file.path("R/Preprocessing/psychometrics.R"))
+source(file.path("R/reading_task.R"))
+
+readingDuration_trimmed_t1_select <- readingDuration_trimmed_t1 %>% 
+  select(group,condition, avgReadingDuration)
+
+tbl_strata(
+  readingDuration_trimmed_t1_select,
+  strata = c(group),
+  .tbl_fun =
+    ~ .x %>%
+    tbl_summary(by = condition,
+                label = avgReadingDuration ~ "Average reading duration per sentence in s",
+                type = avgReadingDuration ~ "continuous2",
+                statistic = list(all_continuous() ~ 
+                                   c("{mean}",
+                                     "{median} ({p25}, {p75})", 
+                                     "{min}, {max}")),
+                missing = "no")
+)    %>% 
+  modify_header(label = "**Variable**") %>% # update the column header
+  modify_caption("**Reading duration text 1: Social information and energy conservation**") %>% 
+  bold_labels() %>%
+  italicize_levels()
+
+```
+
+---
+# Reading task
+
+```{r warning= FALSE, message=FALSE, echo=FALSE}
+
+source(file.path("R/reading_task.R"))
+
+readingDuration_trimmed_t2_select <- readingDuration_trimmed_t2 %>% 
+  select(group,condition, avgReadingDuration)
+
+tbl_strata(
+  readingDuration_trimmed_t2_select,
+  strata = c(group),
+  .tbl_fun =
+    ~ .x %>%
+    tbl_summary(by = condition,
+                label = avgReadingDuration ~ "Average reading duration per sentence in s",
+                type = avgReadingDuration ~ "continuous2",
+                statistic = list(all_continuous() ~ 
+                                   c("{mean}",
+                                     "{median} ({p25}, {p75})", 
+                                     "{min}, {max}")),
+                missing = "no")
+)    %>% 
+  modify_header(label = "**Variable**") %>% # update the column header
+  modify_caption("**Reading duration text 2: Behaviour changes to alleviate energy poverty in Europe**") %>% 
+  bold_labels() %>%
+  italicize_levels()
+
+```
+
+---
+# Reading task
+.pull-left[
+```{r warning= FALSE, message=FALSE, echo=FALSE}
+ggplot(readingDuration_all, aes(x = condition, y = percFixationDuration, color = group)) +
+  geom_boxplot() +
+  theme_bw() +
+  ggtitle("Percentage fixation duration Eyetracker") +
+  facet_wrap( ~ text)
+```
+]
+.pull-right[
+```{r warning= FALSE, message=FALSE, echo=FALSE}
+ggplot(fixation_evaluation_total, aes(x = condition, y = percunknown, color = group)) +
+  geom_boxplot() +
+  theme_bw() +
+  ggtitle("Percentage unknown fixations") +
+  facet_wrap( ~ text)
+```
+]
+---
+# Reading task
+.pull-left[
+```{r warning= FALSE, message=FALSE, echo=FALSE}
+ggplot(fixation_evaluation_total_trimmed_2, aes(x = condition, y = totalFixationPerSentence, color = group)) +
+  geom_boxplot() +
+  theme_bw() +
+  ggtitle("Word fixations per sentence") +
+  facet_wrap( ~ text)
+```
+]
+.pull-right[
+```{r warning= FALSE, message=FALSE, echo=FALSE}
+ggplot(fixation_evaluation_total_trimmed_2, aes(x = condition, y = regressionPerSentence, color = group)) +
+  geom_boxplot() +
+  theme_bw() +
+  ggtitle("Regressions per sentence") +
+  facet_wrap( ~ text)
+```
+]
+---
+# Reading task
+.pull-left[
+```{r warning= FALSE, message=FALSE, echo=FALSE}
+ggplot(fixation_duration_evaluation_wide_trimmed, aes(x = condition, y = totalReadingTimePerSentence, color = group)) +
+  geom_boxplot() +
+  theme_bw() +
+  ggtitle("Total reading time per sentence") +
+  facet_wrap( ~ text)
+```
+]
+.pull-right[
+```{r warning= FALSE, message=FALSE, echo=FALSE}
+ggplot(fixation_duration_evaluation_wide_trimmed, aes(x = condition, y = regressionTimePerSentence, color = group)) +
+  geom_boxplot() +
+  theme_bw() +
+  ggtitle("Total regression time per sentence") +
+  facet_wrap( ~ text)
+```
+]
+---
+# Reading task
+.pull-left[
+```{r warning= FALSE, message=FALSE, echo=FALSE}
+ggplot(fixation_summary_all_trimmed, aes(x = condition, y = avgFixationDuration, color = group)) +
+  geom_boxplot() +
+  theme_bw() +
+  ggtitle("Average fixation duration") +
+  facet_wrap( ~ text)
+```
+]
+
+---
+# Copying Task
+
+- Efficiency: 
+  - Total amount of chars typed
+
+- Deletions: 
+
+  - Total amount of backslashes proportional to total amount of chars
+
+- Stringdist: 
+
+  - Optimal string aligment distance (restricted Damerau-Levenshtein distance)
+
+---
+# Translation Task
+
+- Efficiency: 
+
+ - Total amount of chars typed
+
+- Deletions: 
+
+  - Total amount of backslashes proportional to total amount of chars
+
+Rating of<sup>1</sup>:
+
+- Fluency
+
+- Accuracy
+
+compared to reference translation
+
+.footnote[
+  1) Koehn & Monz (2006)
+  ]
+---
+# Cognitive load in EEG
+.pull-left[
+
+Cognitive load theory (CLT): 
+
+- Cognitive load measures the occupied space of working memory<sup>1</sup>
+
+- Intrinsic cognitive load reflects mental effort, depending of difficulty of task<sup>2</sup>
+
+- Alpha ERD and theta ERS<sup>3</sup>
+
+- Holm et al. (2009): Fz-theta / Pz-alpha - Ratio
+
+.footnote[
+  1) Mills et al. (2019)  
+  2) Anderson et al. (2011)  
+  3) Antonenko et al. (2010)  
+  ]
+]
+.pull-right[
+Looking at:
+
+1) Reading task
+
+- ELF vs. SE
+
+- Language expertise (Tra vs Mul)
+
+2) Translating task
+
+- Copying task vs. Translating task
+
+- ELF vs. SE
+
+- Language expertise (Tra vs Mul)
+
+]
+
+---
+
+class: inverse, mline, center, middle
+
+# Thanks for listening
+## Special thanks to Team CLINT!
+---
+
+class: inverse, mline, center, middle
+
+# Supplementary information
+---
+# Psychometrics
+
+```{r error=FALSE, warning=FALSE, message = FALSE, comment="", echo = FALSE }
+source(file.path("R/Preprocessing/psychometrics.R"))
+
+psych_select <- psychometrics %>% 
+  select(group, age, gender, handedness)
+
+psych_select$gender <- droplevels(psych_select$gender)
+
+tbl_summary(
+  psych_select,
+  label = list(age ~ "Age", gender ~ "Gender", handedness ~ "Handedness"),
+  by = group, # split table by group
+  type = all_continuous() ~ "continuous2",
+  statistic = list(all_categorical() ~ "{n} ({p}%)",
+                   all_continuous() ~ c("{mean}",
+                                        "{median} ({p25}, {p75})", 
+                                        "{min}, {max}")),
+) %>%
+  #  add_n() %>% # add column with total number of non-missing observations
+  add_p() %>% # test for a difference between groups
+  modify_header(label = "**Variable**") %>% # update the column header
+  modify_caption("**Sample characteristics**") %>% 
+  bold_labels() %>%
+  italicize_levels()
+```
+---
+# Psychometrics
+```{r finalplotSpT, dpi=600, fig.height= 4,message = FALSE, comment="", echo = FALSE}
+psych_select <- psychometrics %>% 
+  select(group, english_score)
+
+tbl_summary(
+  psych_select,
+  label = list(english_score ~ "English score"),
+  by = group, # split table by group
+  type = english_score ~ "continuous2",
+  statistic =  all_continuous() ~ c("{mean}",
+                                    "{median} ({p25}, {p75})", 
+                                    "{min}, {max}"),
+) %>%
+  add_n() %>% # add column with total number of non-missing observations
+  add_p() %>% # test for a difference between groups
+  modify_header(label = "**Variable**") %>% # update the column header
+  modify_caption("**Sample characteristics**") %>% 
+  bold_labels() %>%
+  italicize_levels()
+```
+---
+# Psychometrics
+
+```{r error=FALSE, warning=FALSE, message = FALSE, comment="", echo = FALSE }
+psych_select <- psychometrics %>% 
+  select(group, HAWIE_T_Value)
+
+tbl_summary(
+  psych_select,
+  label = list(HAWIE_T_Value ~ "WAIS t score"),
+  by = group, # split table by group
+  type = all_continuous() ~ "continuous2",
+  statistic = list(all_categorical() ~ "{n} ({p}%)",
+                   all_continuous() ~ c("{mean}",
+                                        "{median} ({p25}, {p75})", 
+                                        "{min}, {max}")),
+) %>%
+  add_n() %>% # add column with total number of non-missing observations
+  add_p() %>% # test for a difference between groups
+  modify_header(label = "**Variable**") %>% # update the column header
+  modify_caption("**Sample characteristics**") %>% 
+  bold_labels() %>%
+  italicize_levels()
+```
+---
+# Psychometrics
+
+```{r error=FALSE, warning=FALSE, message = FALSE, comment="", echo = FALSE }
+psych_select <- psychometrics %>% 
+  select(group, auditory_dprime, visual_dprime)
+
+tbl_summary(
+  psych_select,
+  label = list(auditory_dprime ~ "dprime auditory", visual_dprime ~ "dprime visual"),
+  by = group, # split table by group
+  type = all_continuous() ~ "continuous2",
+  statistic = list(all_categorical() ~ "{n} ({p}%)",
+                   all_continuous() ~ c("{mean}",
+                                        "{median} ({p25}, {p75})", 
+                                        "{min}, {max}")),
+) %>%
+  add_n() %>% # add column with total number of non-missing observations
+  add_p() %>% # test for a difference between groups
+  modify_header(label = "**Variable**") %>% # update the column header
+  modify_caption("**Sample characteristics**") %>% 
+  bold_labels() %>%
+  italicize_levels()
+```
+---
+# Psychometrics
+
+```{r error=FALSE, warning=FALSE, message = FALSE, comment="", echo = FALSE }
+psych_select <- psychometrics %>% 
+  select(group, cumTH_U, hpd_U)
+
+tbl_summary(
+  psych_select,
+  label = list(cumTH_U ~ "Cumulative training hours in translation", hpd_U ~ "Hours per day translating"),
+  by = group, # split table by group
+  type = all_continuous() ~ "continuous2",
+  statistic = list(all_categorical() ~ "{n} ({p}%)",
+                   all_continuous() ~ c("{mean}",
+                                        "{median} ({p25}, {p75})", 
+                                        "{min}, {max}")),
+) %>%
+  add_n() %>% # add column with total number of non-missing observations
+  add_p() %>% # test for a difference between groups
+  modify_header(label = "**Variable**") %>% # update the column header
+  modify_caption("**Sample characteristics**") %>% 
+  bold_labels() %>%
+  italicize_levels()
+```
+---
+# Psychometrics
+
+```{r error=FALSE, warning=FALSE, message = FALSE, comment="", echo = FALSE }
+psych_select <- psychometrics %>% 
+  select(group, cumTH_U, hpd_U)
+
+tbl_summary(
+  psych_select,
+  label = list(cumTH_U ~ "Cumulative training hours in translation", hpd_U ~ "Hours per day translating"),
+  by = group, # split table by group
+  type = all_continuous() ~ "continuous2",
+  statistic = list(all_categorical() ~ "{n} ({p}%)",
+                   all_continuous() ~ c("{mean}",
+                                        "{median} ({p25}, {p75})", 
+                                        "{min}, {max}")),
+) %>%
+  add_n() %>% # add column with total number of non-missing observations
+  add_p() %>% # test for a difference between groups
+  modify_header(label = "**Variable**") %>% # update the column header
+  modify_caption("**Sample characteristics**") %>% 
+  bold_labels() %>%
+  italicize_levels()
+```
+---
+# Psychometrics
+
+```{r error=FALSE, warning=FALSE, message = FALSE, comment="", echo = FALSE }
+psych_select <- psychometrics %>% 
+  select(group, hpd_all, perchpd_all)
+
+tbl_summary(
+  psych_select,
+  label = list(hpd_all ~ "Language exposure per day", perchpd_all ~ "% Lanugage exposure per day"),
+  by = group, # split table by group
+  type = all_continuous() ~ "continuous2",
+  statistic = list(all_categorical() ~ "{n} ({p}%)",
+                   all_continuous() ~ c("{mean}",
+                                        "{median} ({p25}, {p75})", 
+                                        "{min}, {max}")),
+) %>%
+  add_n() %>% # add column with total number of non-missing observations
+  add_p() %>% # test for a difference between groups
+  modify_header(label = "**Variable**") %>% # update the column header
+  modify_caption("**Sample characteristics**") %>% 
+  bold_labels() %>%
+  italicize_levels()
+```

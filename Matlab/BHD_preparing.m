@@ -11,6 +11,7 @@ dataPath = '//130.60.235.123/Users/neuro/Desktop/CLINT/All_Data/';
 savePath = 'C:\Users\matth\Documents\Translators/data/rawdata/';
 savePathMatlab = 'C:\Users\matth\Documents\Translators/data/rawdata/matlab_rawdata/';
 savePathTask = 'C:\Users\matth\Documents\Translators/data/rawdata/task/';
+reference = "C:\Users\matth\Documents\Translators\stimuli\";
 
 if exist(savePath)~=7 %#ok<*EXIST> %Check wheter Directory exists
     mkdir savePath;
@@ -26,8 +27,8 @@ end
 group.trastu = {'CA0','CA1','CA2','CA3','CA4','CA5','CA6','CA7','CA8','CA9','CB0','CB1','CB2','CB3','CB4','CB5','CB6','CB7','CB8','CB9','CC0','CC1','CC2','CC3','CC4','CC5','CC6','CC7','CC8','CC9','CD0','CD1','CD2','CD3','CD4','CD5','CD6','CD7','CD8','CD9','CE0','CE1','CE2','CE3','CE4','CE5','CE6','CE7','CE8','CE9','CF0','CF1','CF2','CF3','CF4','CF5','CF6','CF7','CF8','CF9','CG0','CG1','CG2','CG3','CG4','CG5','CG6','CG7','CG8','CG9','CH0','CH1','CH2','CH3','CH4','CH5','CH6','CH7','CH8','CH9'};
 group.trapro = {'CI0','CI1','CI2','CI3','CI4','CI5','CI6','CI7','CI8','CI9','CJ0','CJ1','CJ2','CJ3','CJ4','CJ5','CJ6','CJ7','CJ8','CJ9','CK0','CK1','CK2','CK3','CK4','CK5','CK6','CK7','CK8','CK9','CL0','CL1','CL2','CL3','CL4','CL5','CL6','CL7','CL8','CL9'};
 
-group.mulstu = {'CM0','CM1','CM2','CM3','CM4','CM5','CM6','CM7','CM8','CM9','CN0','CN1','CN2','CN3','CN4','CN5','CN6','CN7','CN8','CN9','CO0','CO1','CO2','CO3','CO4','CO5','CO6','CO7','CO8','CO9','CP0','CP1','CP2','CP3','CP4','CP5','CP6','CP7','CP8','CP9','CQ0','CQ1','CQ2','CQ3','CQ4','CQ5','CQ6','CQ7','CQ8','CQ9','CR0','CR1','CR2','CR3','CR4','CR5','CR6','CR7','CR8','CR9','CS0','CS1','CS2','CS3','CS4','CS5','CS6','CS7','CS8','CS9','CT0','CT1','CT2','CT3','CT4','CT5','CT6','CT7','CT8','CT9'};
-group.mulpro = {'CU0','CU1','CU2','CU3','CU4','CU5','CU6','CU7','CU8','CU9','CV0','CV1','CV2','CV3','CV4','CV5','CV6','CV7','CV8','CV9','CW0','CW1','CW2','CW3','CW4','CW5','CW6','CW7','CW8','CW9','CX0','CX1','CX2','CX3','CX4','CX5','CX6','CX7','CX8','CX9'};
+group.mul = {'CM0','CM1','CM2','CM3','CM4','CM5','CM6','CM7','CM8','CM9','CN0','CN1','CN2','CN3','CN4','CN5','CN6','CN7','CN8','CN9','CO0','CO1','CO2','CO3','CO4','CO5','CO6','CO7','CO8','CO9','CP0','CP1','CP2','CP3','CP4','CP5','CP6','CP7','CP8','CP9','CQ0','CQ1','CQ2','CQ3','CQ4','CQ5','CQ6','CQ7','CQ8','CQ9','CR0','CR1','CR2','CR3','CR4','CR5','CR6','CR7','CR8','CR9','CS0','CS1','CS2','CS3','CS4','CS5','CS6','CS7','CS8','CS9','CT0','CT1','CT2','CT3','CT4','CT5','CT6','CT7','CT8','CT9','CU0','CU1','CU2','CU3','CU4','CU5','CU6','CU7','CU8','CU9','CV0','CV1','CV2','CV3','CV4','CV5','CV6','CV7','CV8','CV9','CW0','CW1','CW2','CW3','CW4','CW5','CW6','CW7','CW8','CW9','CX0','CX1','CX2','CX3','CX4','CX5','CX6','CX7','CX8','CX9'};
+group.mulpro = {};
 
 
 %% Copy Answerfiles to Matlab Folder
@@ -66,10 +67,10 @@ for zz = 1:length(fileNames)
         subject(2,zz) = {'TraStu'};
     elseif sum(strcmp(subject(1,zz),group.trapro)) > 0
         subject(2,zz) = {'TraPro'};
-    elseif sum(strcmp(subject(1,zz),group.mulstu)) > 0
-        subject(2,zz) = {'MulStu'};
-    elseif sum(strcmp(subject(1,zz),group.mulpro)) > 0
-        subject(2,zz) = {'MulPro'};
+    elseif sum(strcmp(subject(1,zz),group.mul)) > 0
+        subject(2,zz) = {'Mul'};
+%     elseif sum(strcmp(subject(1,zz),group.mulpro)) > 0
+%         subject(2,zz) = {'MulPro'};
     end
 end
 
@@ -92,6 +93,18 @@ translation_rating_preparation_t2 = {};
 n_row_1 = 1;
 n_row_2 = 1;
 exp_control = {};
+
+%% import reference translation
+
+SI_sentences_reference_file = "C:\Users\matth\Documents\Translators\stimuli\ABS_Socal_Info_reference_translation.csv";
+EA_sentences_reference_file = 'C:\Users\matth\Documents\Translators\stimuli\ABS_Energy_Advisors_reference_translation.csv';
+
+SI_sentences_reference_raw=readtable(SI_sentences_reference_file,'FileEncoding', 'UTF-8');
+EA_sentences_reference_raw=readtable(EA_sentences_reference_file,'FileEncoding', 'UTF-8');
+
+sentences_ref_SI = SI_sentences_reference_raw.Sentence;
+sentences_ref_EA = EA_sentences_reference_raw.Sentence;
+
 
 %% Process Files
 
@@ -137,6 +150,7 @@ for zz = 1:length(fileNames)
                     translation_rating_preparation_t1{n_row_1,5} = 'SE';
                     translation_rating_preparation_t1{n_row_1,6} = s;
                     translation_rating_preparation_t1{n_row_1,7} = results_text_uebersetzen{t,s};
+                    translation_rating_preparation_t1{n_row_1,8} = sentences_ref_SI{s,1};
                     n_row_1 = n_row_1+1;
                 elseif t == 2
                     translation_rating_preparation_t1{n_row_1,1} = n_row_1;
@@ -146,6 +160,7 @@ for zz = 1:length(fileNames)
                     translation_rating_preparation_t1{n_row_1,5} = 'ELF';
                     translation_rating_preparation_t1{n_row_1,6} = s;
                     translation_rating_preparation_t1{n_row_1,7} = results_text_uebersetzen{t,s};
+                    translation_rating_preparation_t1{n_row_1,8} = sentences_ref_SI{s,1};
                     n_row_1 = n_row_1+1;
                 elseif t == 3
                     translation_rating_preparation_t2{n_row_2,1} = n_row_2;
@@ -155,6 +170,7 @@ for zz = 1:length(fileNames)
                     translation_rating_preparation_t2{n_row_2,5} = 'SE';
                     translation_rating_preparation_t2{n_row_2,6} = s;
                     translation_rating_preparation_t2{n_row_2,7} = results_text_uebersetzen{t,s};
+                    translation_rating_preparation_t2{n_row_2,8} = sentences_ref_EA{s,1};
                     n_row_2 = n_row_2+1;
                 elseif t == 4
                     translation_rating_preparation_t2{n_row_2,1} = n_row_2;
@@ -164,6 +180,7 @@ for zz = 1:length(fileNames)
                     translation_rating_preparation_t2{n_row_2,5} = 'ELF';
                     translation_rating_preparation_t2{n_row_2,6} = s;
                     translation_rating_preparation_t2{n_row_2,7} = results_text_uebersetzen{t,s};
+                    translation_rating_preparation_t2{n_row_2,8} = sentences_ref_EA{s,1};
                     n_row_2 = n_row_2+1;
                 end
             end
@@ -1131,12 +1148,11 @@ writetable(readingDuration,[savePath, 'readingDuration.csv'],'FileType','spreads
 sentences_copying = table(sentences(:,1),sentences(:,2),sentences(:,3),sentences(:,4), 'VariableNames', {'T1_SE_copy_stimulus','T1_ELF_copy_stimulus','T2_SE_copy_stimulus','T2_ELF_copy_stimulus'});
 %writetable(sentences_copying,[savePathTask,'copying_stimulus.csv'],'FileType','spreadsheet')
 
-%translation_rating_preparation_t1 = table(translation_rating_preparation_t1(:,1),translation_rating_preparation_t1(:,2),translation_rating_preparation_t1(:,3),translation_rating_preparation_t1(:,4),translation_rating_preparation_t1(:,5),translation_rating_preparation_t1(:,6),translation_rating_preparation_t1(:,7),'VariableNames', {'control_number','id','group','text','condition','sentence','translation'});
-cd(strjoin([savePathTask,{'translation/'}],''));
-save(['translation_rating_preparation_t1_',strrep(char(datetime), ':','-')],'translation_rating_preparation_t1');
+translation_rating_t1 = table(translation_rating_preparation_t1(:,1),translation_rating_preparation_t1(:,2),translation_rating_preparation_t1(:,3),translation_rating_preparation_t1(:,4),translation_rating_preparation_t1(:,5),translation_rating_preparation_t1(:,6),translation_rating_preparation_t1(:,7),translation_rating_preparation_t1(:,8),'VariableNames', {'control_number','id','group','text','condition','sentence_nr','translation', 'reference_translation'});
+writetable(translation_rating_t1,[savePath,'translation_rating_t1.csv'],'FileType','spreadsheet')
 
-%translation_rating_preparation_t2 = table(translation_rating_preparation_t2(:,1),translation_rating_preparation_t2(:,2),translation_rating_preparation_t2(:,3),translation_rating_preparation_t2(:,4),translation_rating_preparation_t2(:,5),translation_rating_preparation_t2(:,6),translation_rating_preparation_t2(:,7),'VariableNames', {'control_number','id','group','text','condition','sentence','translation'});
-save(['translation_rating_preparation_t2_',strrep(char(datetime), ':','-')],'translation_rating_preparation_t2');
+% cd(strjoin([savePathTask,{'translation/'}],''));
+% save(['translation_rating_preparation_t1_',strrep(char(datetime), ':','-')],'translation_rating_preparation_t1');
 
-tmp = matlab.desktop.editor.getActive;
-cd(fileparts(tmp.Filename));
+translation_rating_t2 = table(translation_rating_preparation_t2(:,1),translation_rating_preparation_t2(:,2),translation_rating_preparation_t2(:,3),translation_rating_preparation_t2(:,4),translation_rating_preparation_t2(:,5),translation_rating_preparation_t2(:,6),translation_rating_preparation_t2(:,7),translation_rating_preparation_t2(:,8),'VariableNames', {'control_number','id','group','text','condition','sentence_nr','translation','reference_translation'});
+writetable(translation_rating_t2,[savePath,'translation_rating_t2.csv'],'FileType','spreadsheet')
