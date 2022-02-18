@@ -97,5 +97,31 @@ as_numeric<- c(2,3,4,5)
 res_copy[, as_numeric] <- lapply(res_copy[, as_numeric], as.numeric)
 res_copy[, 1] <- lapply(res_copy[, 1], factor)
 
+##convert to long format
+
+res_copy_long <- pivot_longer(
+  res_copy,
+  2:5,
+  names_to = "cond",
+  values_to = "copy_stringdist"
+)
+
+for(i in 1:nrow(res_copy_long)){
+  if(res_copy_long$cond[i] == "T1_SE_copy"){
+    res_copy_long$cond_new[i] = "31_35"
+  }
+  if(res_copy_long$cond[i] == "T1_ELF_copy"){
+    res_copy_long$cond_new[i] = "32_36"
+  }
+  if(res_copy_long$cond[i] == "T2_SE_copy"){
+    res_copy_long$cond_new[i] = "33_37"
+  }
+  if(res_copy_long$cond[i] == "T2_ELF_copy"){
+    res_copy_long$cond_new[i] = "34_38"
+  } 
+}
+
+res_copy <- res_copy_long
+
 ## Clear workspace----
-remove(copy, max_row, res_copy_sub, stimulus, as_char, as_numeric, dataFolder, dataFolderRaw, f, file_list, s, t)
+remove(copy, max_row, res_copy_sub, stimulus, as_char, as_numeric, dataFolder, dataFolderRaw, f, file_list, s, t,i, res_copy_long)

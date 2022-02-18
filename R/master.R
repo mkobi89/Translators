@@ -22,8 +22,8 @@ library(tidyverse)
 set.seed(1234321)
 
 #dataFolderRaw   <- file.path("data/rawdata")
-figureFolder <- file.path("figures/final")
-RFolder      <- file.path("R/final")
+figureFolder <- file.path("figures")
+RFolder      <- file.path("R")
 saveFolder    <- file.path("data")
 
 
@@ -32,30 +32,24 @@ saveFolder    <- file.path("data")
 ##########################################################
 
 # 01: Prepare and preprocess datasets----------------------
-# load and merge the data files
-source(paste(RFolder, "01_answer_files_to_LDT_final.R", sep = "/"))
-
 # load psychometrics
-source(paste(RFolder, "02_psychometrics_final.R", sep = "/"))
+source(paste(RFolder, "01_psychometrics.R", sep = "/"))
 
-# calculate outliers --> remove plot script from outliers
-source(paste(RFolder, "03_RT_outliers_final.R", sep = "/"))
+# load nback
+source(paste(RFolder, "02_nback.R", sep = "/"))
+
+# load language survey
+source(paste(RFolder, "03_language_survey.R", sep = "/"))
 
 
-# calculate DDM parms
-#source(paste(RFolder, "04_DDM_generate_datasets_without_outliers_final.R", sep = "/"))
-#source(paste(RFolder, "05_DDM_parameter_estimation_final.R", sep = "/"))
+# load copying task
+source(paste(RFolder, "04_copyingtask.R", sep = "/"))
+
 
 # combine LDT, psychometrics, DDM and latencie values in a lfinal data format, calculate accuracy and mean rt for each condition and each person
-source(paste(RFolder, "06_final_table_final.R", sep = "/"))
+source(paste(RFolder, "06_fft.R", sep = "/"))
 
-
-#### shortcut load datasets ----
-#load(paste(saveFolder, "LDT.Rdata", sep = "/"))
-#load(paste(saveFolder, "LDT_clean.Rdata", sep = "/"))
-#load(paste(saveFolder, "psychometrcs.Rdata", sep = "/"))
-#load(paste(saveFolder, "accuracies.Rdata", sep = "/"))
-#load(paste(saveFolder, "all_tasks.Rdata", sep = "/"))
+source(paste(RFolder, "07_merging_data.R", sep = "/"))
 
 
 ## remove unwanted  participants
@@ -79,25 +73,6 @@ exclude_final <- exclude_final %>%
   filter(subjectID != "C50", subjectID != "C55", subjectID != "CE5",subjectID != "CI0",subjectID != "CI2", subjectID != "CJ0", subjectID != "CM7",subjectID != "CN1", subjectID != "CU2", subjectID != "C69", subjectID != "CE8", subjectID != "CM8")
 exclude_final$subjectID <- droplevels(exclude_final$subjectID)
 
-
-
-exclude_lower <- exclude_final %>% 
-  filter(RT < 0.3)
-
-critical_trials_switch <- LDT_final %>%
-  filter(condition != "GNW", condition != "ENW", condition != "NWG", condition != "NWE", condition != "NWNW")
-
-trials_wf <- LDT_final %>% 
-  filter(which_task != "Switch")
-
-exclude_wf <- exclude_final %>% 
-  filter(which_task != "Switch")
-
-
-exclude_switch <- exclude_final %>% 
-  filter(condition != "GNW", condition != "ENW", condition != "NWG", condition != "NWE", condition != "NWNW")
-
-exclude_trial <- (nrow(exclude_switch)+nrow(exclude_wf))/(nrow(critical_trials_switch)+nrow(trials_wf))
 
 
 

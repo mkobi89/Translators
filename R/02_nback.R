@@ -108,7 +108,8 @@ res_nback$Subject <- gsub("DPR_DBS1057", "CI6", res_nback$Subject)
 res_nback$Subject <- gsub("UPR_CBA0104", "CI4", res_nback$Subject)
 res_nback$Subject <- gsub("CA1_", "CA1", res_nback$Subject)
 res_nback$Subject <- gsub("CN0 ", "CN0", res_nback$Subject)
-
+res_nback$Subject <- gsub("MPR_KWS0749", "CU1", res_nback$Subject)
+res_nback$Subject <- gsub("CF6", "CF7", res_nback$Subject)
 
 
 

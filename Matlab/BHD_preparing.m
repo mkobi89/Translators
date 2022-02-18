@@ -11,7 +11,7 @@ dataPath = '//130.60.235.123/Users/neuro/Desktop/CLINT/All_Data/';
 savePath = 'C:\Users\matth\Documents\Translators/data/rawdata/';
 savePathMatlab = 'C:\Users\matth\Documents\Translators/data/rawdata/matlab_rawdata/';
 savePathTask = 'C:\Users\matth\Documents\Translators/data/rawdata/task/';
-reference = "C:\Users\matth\Documents\Translators\stimuli\";
+reference = "C:\Users\matth\Documents\Translators\experiment\stimuli\";
 
 if exist(savePath)~=7 %#ok<*EXIST> %Check wheter Directory exists
     mkdir savePath;
@@ -96,8 +96,8 @@ exp_control = {};
 
 %% import reference translation
 
-SI_sentences_reference_file = "C:\Users\matth\Documents\Translators\stimuli\ABS_Socal_Info_reference_translation.csv";
-EA_sentences_reference_file = 'C:\Users\matth\Documents\Translators\stimuli\ABS_Energy_Advisors_reference_translation.csv';
+SI_sentences_reference_file = "C:\Users\matth\Documents\Translators\experiment\stimuli\ABS_Socal_Info_reference_translation.csv";
+EA_sentences_reference_file = 'C:\Users\matth\Documents\Translators\experiment\stimuli\ABS_Energy_Advisors_reference_translation.csv';
 
 SI_sentences_reference_raw=readtable(SI_sentences_reference_file,'FileEncoding', 'UTF-8');
 EA_sentences_reference_raw=readtable(EA_sentences_reference_file,'FileEncoding', 'UTF-8');
@@ -873,9 +873,9 @@ for j = 1: size(text_output,1)
                 text_output_long_format{n_row,6} = 'SE';
                 
                 if  t1_is_first(j) == 1
-                    text_output_long_format{n_row,7} = 'First';
-                else
                     text_output_long_format{n_row,7} = 'Second';
+                else
+                    text_output_long_format{n_row,7} = 'First';
                 end
                 
                 text_output_long_format{n_row,8} = text_output.copSenT3{j};
@@ -909,9 +909,9 @@ for j = 1: size(text_output,1)
                 text_output_long_format{n_row,6} = 'ELF';
                 
                 if  t1_is_first(j) == 1
-                    text_output_long_format{n_row,7} = 'First';
-                else
                     text_output_long_format{n_row,7} = 'Second';
+                else
+                    text_output_long_format{n_row,7} = 'First';
                 end
                 
                 text_output_long_format{n_row,8} = text_output.copSenT4{j};
