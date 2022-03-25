@@ -53,8 +53,6 @@ psychometrics <- psychometrics %>%
 psychometrics$id <- droplevels(psychometrics$id)
 psychometrics$gender <- droplevels(psychometrics$gender)
 
-remove(hgf,hgf_used)
-remove(indices_nback, indices_nback_wide)
 
 ## adding fft
 
@@ -63,7 +61,7 @@ alldata <- full_join(psychometrics,fft, by = c("id"))
 
 ## adding perceived difficulty
 
-perceivedDifficulty$task <- tolower(perceivedDifficulty$task)
+#perceivedDifficulty$task <- tolower(perceivedDifficulty$task)
 
 perceivedDifficulty <- perceivedDifficulty %>% 
   select(-timeTra)
@@ -75,7 +73,7 @@ alldata <- full_join(alldata,perceivedDifficulty, by = c("id","group", "task", "
 
 ## adding reading duration
 readingDuration <- readingDuration %>% 
-  mutate(task = "reading") %>% 
+  mutate(task = "Reading") %>% 
   select(1,2,8,3:7)
 
 
@@ -87,7 +85,7 @@ alldata <- full_join(alldata,readingDuration, by = c("id","group","task","text",
 CQRes <- controlQuestions %>% 
   group_by(id, group, condition) %>% 
   summarise(percCQRes = sum(correct)/5) %>% 
-  mutate(task = "reading")
+  mutate(task = "Reading")
 
 alldata <- full_join(alldata,CQRes, by = c("id","group", "condition", "task"))
 
@@ -95,7 +93,7 @@ alldata <- full_join(alldata,CQRes, by = c("id","group", "condition", "task"))
 
 
 ## adding text output
-textOutput$task <- tolower(textOutput$task)
+#textOutput$task <- tolower(textOutput$task)
 
 textOutput <- textOutput %>% 
   select(-timeTra)
@@ -120,41 +118,14 @@ alldata <- full_join(alldata,res_copy, by = c("id","cond"))
 alldata <- alldata %>% 
   filter(id != "CK0", id != "CU2")
 
+
 alldata$cond <- as.factor(alldata$cond)
-alldata$task <- as.factor(alldata$task)
+alldata$task <- factor(alldata$task,  levels = c("Reading","Copying", "Translating", "Reading_post"))
 alldata$text <- as.factor(alldata$text)
-alldata$condition <- as.factor(alldata$condition)
+alldata$condition <- factor(alldata$condition,  levels = c("EdE","ELF"))
 alldata$time <- as.factor(alldata$time)
 
-remove(readingDuration, controlQuestions,CQRes, perceivedDifficulty, res_copy, textOutput, expControl, dataFolder, dataFolderRaw)
-
-
-### for statistics
-
-
-
-theta_11_15_r5min_elec <- theta_11_15_r5min_long %>% 
-  group_by(electrode, cond) %>% 
-  summarise(mean_theta = mean(theta), sd_theta = sd(theta)) %>% 
-  filter(electrode == "11")
-
-
-alpha_11_15_ROI_frontal <- alpha_11_15_long %>% 
-  group_by(File,cond) %>% 
-  filter(electrode == "52" | electrode == "61" | electrode == "62" | electrode == "78" | electrode == "92") %>% 
-  summarise(parietal_alpha = mean(alpha))
-
-alpha_11_15_elec <- alpha_11_15_long %>% 
-  group_by(electrode, cond) %>% 
-  summarise(mean_alpha = mean(alpha), sd_theta = sd(alpha))%>% 
-  filter(electrode == "62")
-
-
-
-alpha_11_15_r5min_elec <- alpha_11_15_r5min_long %>% 
-  group_by(electrode, cond) %>% 
-  summarise(mean_alpha = mean(alpha), sd_theta = sd(alpha))%>% 
-  filter(electrode == "62")
+remove(readingDuration, controlQuestions,CQRes, perceivedDifficulty, res_copy, textOutput, expControl, dataFolder, dataFolderRaw, hgf, hgf_used, indices_nback, indices_nback_wide)
 
 
 
