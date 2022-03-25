@@ -1,0 +1,10 @@
+*** Area Export ***
+
+Output file: L:\BVA_Translators\exp\alpha_12_16.txt
+Decimal symbol: .
+Area: 8Hz - 12Hz
+Reference file for channels, length, sampling rate etc.: CA2_all_eog
+Data has not been rectified.
+Exporting Mean Values
+Fields: <Channel>-<Dataset> (mean value in  µV²)
+
