@@ -7,7 +7,7 @@ cd(fileparts(tmp.Filename));
 %% Define Paths
 
 
-dataPath = '//130.60.235.123/Users/neuro/Desktop/CLINT/All_Data/';
+dataPath = 'F:\CLINT backup_15.02.2022\All_Data/';
 savePath = 'C:\Users\matth\Documents\Translators/data/rawdata/';
 savePathMatlab = 'C:\Users\matth\Documents\Translators/data/rawdata/matlab_rawdata/';
 savePathTask = 'C:\Users\matth\Documents\Translators/data/rawdata/task/';
@@ -98,13 +98,15 @@ exp_control = {};
 
 SI_sentences_reference_file = "C:\Users\matth\Documents\Translators\experiment\stimuli\ABS_Socal_Info_reference_translation.csv";
 EA_sentences_reference_file = 'C:\Users\matth\Documents\Translators\experiment\stimuli\ABS_Energy_Advisors_reference_translation.csv';
+EA_sentences_reference_file_elf = 'C:\Users\matth\Documents\Translators\experiment\stimuli\ABS_Energy_Advisors_reference_translation_elf.csv';
 
 SI_sentences_reference_raw=readtable(SI_sentences_reference_file,'FileEncoding', 'UTF-8');
 EA_sentences_reference_raw=readtable(EA_sentences_reference_file,'FileEncoding', 'UTF-8');
+EA_sentences_reference_raw_elf=readtable(EA_sentences_reference_file_elf,'FileEncoding', 'UTF-8');
 
 sentences_ref_SI = SI_sentences_reference_raw.Sentence;
 sentences_ref_EA = EA_sentences_reference_raw.Sentence;
-
+sentences_ref_EA_elf = EA_sentences_reference_raw_elf.Sentence;
 
 %% Process Files
 
@@ -147,7 +149,7 @@ for zz = 1:length(fileNames)
                     translation_rating_preparation_t1{n_row_1,2} = subject{1,zz};
                     translation_rating_preparation_t1{n_row_1,3} = subject{2,zz};                    
                     translation_rating_preparation_t1{n_row_1,4} = 'Text1';
-                    translation_rating_preparation_t1{n_row_1,5} = 'SE';
+                    translation_rating_preparation_t1{n_row_1,5} = 'EdE';
                     translation_rating_preparation_t1{n_row_1,6} = s;
                     translation_rating_preparation_t1{n_row_1,7} = results_text_uebersetzen{t,s};
                     translation_rating_preparation_t1{n_row_1,8} = sentences_ref_SI{s,1};
@@ -167,7 +169,7 @@ for zz = 1:length(fileNames)
                     translation_rating_preparation_t2{n_row_2,2} = subject{1,zz};
                     translation_rating_preparation_t2{n_row_2,3} = subject{2,zz}; 
                     translation_rating_preparation_t2{n_row_2,4} = 'Text2';
-                    translation_rating_preparation_t2{n_row_2,5} = 'SE';
+                    translation_rating_preparation_t2{n_row_2,5} = 'EdE';
                     translation_rating_preparation_t2{n_row_2,6} = s;
                     translation_rating_preparation_t2{n_row_2,7} = results_text_uebersetzen{t,s};
                     translation_rating_preparation_t2{n_row_2,8} = sentences_ref_EA{s,1};
@@ -180,7 +182,7 @@ for zz = 1:length(fileNames)
                     translation_rating_preparation_t2{n_row_2,5} = 'ELF';
                     translation_rating_preparation_t2{n_row_2,6} = s;
                     translation_rating_preparation_t2{n_row_2,7} = results_text_uebersetzen{t,s};
-                    translation_rating_preparation_t2{n_row_2,8} = sentences_ref_EA{s,1};
+                    translation_rating_preparation_t2{n_row_2,8} = sentences_ref_EA_elf{s,1};
                     n_row_2 = n_row_2+1;
                 end
             end
@@ -292,7 +294,7 @@ for zz = 1:length(fileNames)
     exp_control{zz,7} = par.recordFullEXP;
     exp_control{zz,8} = par.order_index;
     exp_control{zz,9} = par.order;
-    exp_control{zz,10} = par.order_index_task;
+%     exp_control{zz,10} = par.order_index_task;
     exp_control{zz,11} = par.order_task;
     exp_control{zz,12} = par.order_index_LDT;
     exp_control{zz,13} = par.order_LDT;
@@ -357,7 +359,7 @@ for j = 1: size(readingDuration,1)
                 readingDuration_long_format(n_row,1) = readingDuration.id(j);
                 readingDuration_long_format(n_row,2) = readingDuration.group(j);
                 readingDuration_long_format{n_row,3} = 'Text1';
-                readingDuration_long_format{n_row,4} = 'SE';
+                readingDuration_long_format{n_row,4} = 'EdE';
                 
                 if  readingDuration.T1_is_first(j) == 1
                     readingDuration_long_format{n_row,5} = 'First';
@@ -395,7 +397,7 @@ for j = 1: size(readingDuration,1)
                 readingDuration_long_format(n_row,1) = readingDuration.id(j);
                 readingDuration_long_format(n_row,2) = readingDuration.group(j);
                 readingDuration_long_format{n_row,3} = 'Text2';
-                readingDuration_long_format{n_row,4} = 'SE';
+                readingDuration_long_format{n_row,4} = 'EdE';
                 
                 if  readingDuration.T1_is_first(j) == 1
                     readingDuration_long_format{n_row,5} = 'Second';
@@ -445,7 +447,7 @@ for j = 1: size(control_questions_pd_r_t,1)
             if control_questions_pd_r_t.T1_is_ELF(j) == 1
                 control_questions_pd_r_t_long_format{n_row,4} = 'ELF';
             else
-                control_questions_pd_r_t_long_format{n_row,4} = 'SE';
+                control_questions_pd_r_t_long_format{n_row,4} = 'EdE';
             end
             
             if control_questions_pd_r_t.T1_is_first(j) == 1
@@ -463,7 +465,7 @@ for j = 1: size(control_questions_pd_r_t,1)
             if control_questions_pd_r_t.T1_is_ELF(j) == 1
                 control_questions_pd_r_t_long_format{n_row,4} = 'ELF';
             else
-                control_questions_pd_r_t_long_format{n_row,4} = 'SE';
+                control_questions_pd_r_t_long_format{n_row,4} = 'EdE';
             end
             
             if control_questions_pd_r_t.T1_is_first(j) == 1
@@ -481,7 +483,7 @@ for j = 1: size(control_questions_pd_r_t,1)
             if control_questions_pd_r_t.T1_is_ELF(j) == 1
                 control_questions_pd_r_t_long_format{n_row,4} = 'ELF';
             else
-                control_questions_pd_r_t_long_format{n_row,4} = 'SE';
+                control_questions_pd_r_t_long_format{n_row,4} = 'EdE';
             end
             
             if control_questions_pd_r_t.T1_is_first(j) == 1
@@ -499,7 +501,7 @@ for j = 1: size(control_questions_pd_r_t,1)
             if control_questions_pd_r_t.T1_is_ELF(j) == 1
                 control_questions_pd_r_t_long_format{n_row,4} = 'ELF';
             else
-                control_questions_pd_r_t_long_format{n_row,4} = 'SE';
+                control_questions_pd_r_t_long_format{n_row,4} = 'EdE';
             end
             
             if control_questions_pd_r_t.T1_is_first(j) == 1
@@ -517,7 +519,7 @@ for j = 1: size(control_questions_pd_r_t,1)
             if control_questions_pd_r_t.T1_is_ELF(j) == 1
                 control_questions_pd_r_t_long_format{n_row,4} = 'ELF';
             else
-                control_questions_pd_r_t_long_format{n_row,4} = 'SE';
+                control_questions_pd_r_t_long_format{n_row,4} = 'EdE';
             end
             
             if control_questions_pd_r_t.T1_is_first(j) == 1
@@ -533,7 +535,7 @@ for j = 1: size(control_questions_pd_r_t,1)
             control_questions_pd_r_t_long_format{n_row,3} = 'Text2';
             
             if control_questions_pd_r_t.T1_is_ELF(j) == 1
-                control_questions_pd_r_t_long_format{n_row,4} = 'SE';
+                control_questions_pd_r_t_long_format{n_row,4} = 'EdE';
             else
                 control_questions_pd_r_t_long_format{n_row,4} = 'ELF';
             end
@@ -552,7 +554,7 @@ for j = 1: size(control_questions_pd_r_t,1)
             control_questions_pd_r_t_long_format{n_row,3} = 'Text2';
             
             if control_questions_pd_r_t.T1_is_ELF(j) == 1
-                control_questions_pd_r_t_long_format{n_row,4} = 'SE';
+                control_questions_pd_r_t_long_format{n_row,4} = 'EdE';
             else
                 control_questions_pd_r_t_long_format{n_row,4} = 'ELF';
             end
@@ -570,7 +572,7 @@ for j = 1: size(control_questions_pd_r_t,1)
             control_questions_pd_r_t_long_format{n_row,3} = 'Text2';
             
             if control_questions_pd_r_t.T1_is_ELF(j) == 1
-                control_questions_pd_r_t_long_format{n_row,4} = 'SE';
+                control_questions_pd_r_t_long_format{n_row,4} = 'EdE';
             else
                 control_questions_pd_r_t_long_format{n_row,4} = 'ELF';
             end
@@ -588,7 +590,7 @@ for j = 1: size(control_questions_pd_r_t,1)
             control_questions_pd_r_t_long_format{n_row,3} = 'Text2';
             
             if control_questions_pd_r_t.T1_is_ELF(j) == 1
-                control_questions_pd_r_t_long_format{n_row,4} = 'SE';
+                control_questions_pd_r_t_long_format{n_row,4} = 'EdE';
             else
                 control_questions_pd_r_t_long_format{n_row,4} = 'ELF';
             end
@@ -606,7 +608,7 @@ for j = 1: size(control_questions_pd_r_t,1)
             control_questions_pd_r_t_long_format{n_row,3} = 'Text2';
             
             if control_questions_pd_r_t.T1_is_ELF(j) == 1
-                control_questions_pd_r_t_long_format{n_row,4} = 'SE';
+                control_questions_pd_r_t_long_format{n_row,4} = 'EdE';
             else
                 control_questions_pd_r_t_long_format{n_row,4} = 'ELF';
             end
@@ -653,7 +655,7 @@ for j = 1: size(text_output,1)
                 end
                 
                 text_output_long_format{n_row,5} = 'Text1';
-                text_output_long_format{n_row,6} = 'SE';
+                text_output_long_format{n_row,6} = 'EdE';
                 
                 if  t1_is_first(j) == 1
                     text_output_long_format{n_row,7} = 'First';
@@ -725,7 +727,7 @@ for j = 1: size(text_output,1)
                 end
                 
                 text_output_long_format{n_row,5} = 'Text2';
-                text_output_long_format{n_row,6} = 'SE';
+                text_output_long_format{n_row,6} = 'EdE';
                 
                 if  t1_is_first(j) == 1
                     text_output_long_format{n_row,7} = 'Second';
@@ -798,7 +800,7 @@ for j = 1: size(text_output,1)
                 end
                 
                 text_output_long_format{n_row,5} = 'Text1';
-                text_output_long_format{n_row,6} = 'SE';
+                text_output_long_format{n_row,6} = 'EdE';
                 
                 if  t1_is_first(j) == 1
                     text_output_long_format{n_row,7} = 'First';
@@ -870,7 +872,7 @@ for j = 1: size(text_output,1)
                 end
                 
                 text_output_long_format{n_row,5} = 'Text2';
-                text_output_long_format{n_row,6} = 'SE';
+                text_output_long_format{n_row,6} = 'EdE';
                 
                 if  t1_is_first(j) == 1
                     text_output_long_format{n_row,7} = 'Second';
@@ -937,7 +939,7 @@ for j = 1: size(control_questions_pd_r_t,1)
                 pd_r_t_long_format(n_row,2) = control_questions_pd_r_t.group(j);
                 pd_r_t_long_format{n_row,3} = 'Reading';
                 pd_r_t_long_format{n_row,4} = 'Text1';
-                pd_r_t_long_format{n_row,5} = 'SE';
+                pd_r_t_long_format{n_row,5} = 'EdE';
                 if control_questions_pd_r_t.T1_is_first(j) == 1
                     pd_r_t_long_format{n_row,6} = 'First';
                 else
@@ -969,7 +971,7 @@ for j = 1: size(control_questions_pd_r_t,1)
                 pd_r_t_long_format(n_row,2) = control_questions_pd_r_t.group(j);
                 pd_r_t_long_format{n_row,3} = 'Reading';
                 pd_r_t_long_format{n_row,4} = 'Text2';
-                pd_r_t_long_format{n_row,5} = 'SE';
+                pd_r_t_long_format{n_row,5} = 'EdE';
                 if control_questions_pd_r_t.T1_is_first(j) == 1
                     pd_r_t_long_format{n_row,6} = 'Second';
                 else
@@ -1001,7 +1003,7 @@ for j = 1: size(control_questions_pd_r_t,1)
                 pd_r_t_long_format(n_row,2) = control_questions_pd_r_t.group(j);
                 pd_r_t_long_format{n_row,3} = 'Translating';
                 pd_r_t_long_format{n_row,4} = 'Text1';
-                pd_r_t_long_format{n_row,5} = 'SE';
+                pd_r_t_long_format{n_row,5} = 'EdE';
                 
                 if control_questions_pd_r_t.T1_is_first(j) == 1
                     pd_r_t_long_format{n_row,6} = 'First';
@@ -1066,7 +1068,7 @@ for j = 1: size(control_questions_pd_r_t,1)
                 pd_r_t_long_format(n_row,2) = control_questions_pd_r_t.group(j);
                 pd_r_t_long_format{n_row,3} = 'Translating';
                 pd_r_t_long_format{n_row,4} = 'Text2';
-                pd_r_t_long_format{n_row,5} = 'SE';
+                pd_r_t_long_format{n_row,5} = 'EdE';
                 
                 if control_questions_pd_r_t.T1_is_first(j) == 1
                     pd_r_t_long_format{n_row,6} = 'Second';
@@ -1149,10 +1151,10 @@ sentences_copying = table(sentences(:,1),sentences(:,2),sentences(:,3),sentences
 %writetable(sentences_copying,[savePathTask,'copying_stimulus.csv'],'FileType','spreadsheet')
 
 translation_rating_t1 = table(translation_rating_preparation_t1(:,1),translation_rating_preparation_t1(:,2),translation_rating_preparation_t1(:,3),translation_rating_preparation_t1(:,4),translation_rating_preparation_t1(:,5),translation_rating_preparation_t1(:,6),translation_rating_preparation_t1(:,7),translation_rating_preparation_t1(:,8),'VariableNames', {'control_number','id','group','text','condition','sentence_nr','translation', 'reference_translation'});
-writetable(translation_rating_t1,[savePath,'translation_rating_t1.csv'],'FileType','spreadsheet')
+%writetable(translation_rating_t1,[savePath,'translation_rating_t1_new_2.csv'],'FileType','spreadsheet')
 
 % cd(strjoin([savePathTask,{'translation/'}],''));
 % save(['translation_rating_preparation_t1_',strrep(char(datetime), ':','-')],'translation_rating_preparation_t1');
 
 translation_rating_t2 = table(translation_rating_preparation_t2(:,1),translation_rating_preparation_t2(:,2),translation_rating_preparation_t2(:,3),translation_rating_preparation_t2(:,4),translation_rating_preparation_t2(:,5),translation_rating_preparation_t2(:,6),translation_rating_preparation_t2(:,7),translation_rating_preparation_t2(:,8),'VariableNames', {'control_number','id','group','text','condition','sentence_nr','translation','reference_translation'});
-writetable(translation_rating_t2,[savePath,'translation_rating_t2.csv'],'FileType','spreadsheet')
+%writetable(translation_rating_t2,[savePath,'translation_rating_t2_new_2.csv'],'FileType','spreadsheet')
