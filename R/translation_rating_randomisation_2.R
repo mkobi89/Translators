@@ -94,4 +94,7 @@ tra_ra_accuracy_select_shuffle$accuracy <- ""
 write.csv(tra_ra_accuracy_select_shuffle,file.path(dataFolder,"translation_rating_accuracy_3.csv"), row.names = FALSE)
 
 
+## redo stuff
+tra_ra_accuracy_all <- tra_ra_accuracy_2
+save(tra_ra_accuracy_all, file = file.path(dataFolder,"Translation_rating_accuracy_all.RData"))
 
