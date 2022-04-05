@@ -151,6 +151,8 @@ accuracy_results <- tra_ra_accuracy %>%
 
 remove(tra_ra_accuracy, tra_ra_accuracy_all)
 
+accuracy_results$condition <- as.character(accuracy_results$condition)
+
 for (i in 1:nrow(accuracy_results)){
   if(is.na(accuracy_results$accuracy_R1[i])){
     accuracy_results$accuracy_R2[i] = NA
@@ -163,36 +165,13 @@ for (i in 1:nrow(accuracy_results)){
   if(is.na(accuracy_results$accuracy_R3[i])){
     accuracy_results$accuracy_R1[i] = NA
     accuracy_results$accuracy_R2[i] = NA
-  }  
+  }
+  if(accuracy_results$condition[i]== "SE"){
+    accuracy_results$condition[i] = "EdE"
+  }
 }
 
-accuracy_results_icc <- accuracy_results %>% 
-  filter(!(is.na(accuracy_R1))) %>% 
-  select(accuracy_R1, accuracy_R2, accuracy_R3)
+accuracy_results$condition <- as.factor(accuracy_results$condition)
 
-icc(
-  accuracy_results_icc, model = "twoway", 
-  type = "consistency", unit = "average"
-)
+remove(accuracy_R1, accuracy_R2, accuracy_R3)
 
-accuracy_results_avg <- accuracy_results %>% 
-  group_by(id, text, condition) %>% 
-  summarise(meanR1 = mean(accuracy_R1, na.rm = TRUE), meanR2 = mean(accuracy_R2, na.rm = TRUE), meanR3 = mean(accuracy_R3,na.rm = TRUE),n_obs = n()) %>% 
-  ungroup()
-
-accuracy_results_avg_icc <- accuracy_results_avg %>% 
-  select(meanR1, meanR2,meanR3)
-
-icc(
-  accuracy_results_avg_icc, model = "twoway", 
-  type = "consistency", unit = "average"
-)
-
-## mean all raters
-
-accuracy_results_avgR <- accuracy_results_avg %>% 
-  mutate(meanR = (meanR1+ meanR2 + meanR3)/3)
-
-grande_results_accuracy <- accuracy_results_avgR %>% 
-  group_by(text, condition) %>% 
-  summarise(accuracyRating = mean(meanR), n_subjects = n(), n_obs = sum(n_obs))

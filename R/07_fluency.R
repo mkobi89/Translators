@@ -108,6 +108,8 @@ fluency_results <- trans_rat_fluency %>%
 
 remove(trans_rat_fluency)
 
+fluency_results$condition <- as.character(fluency_results$condition)
+
 for (i in 1:nrow(fluency_results)){
   if(is.na(fluency_results$fluency_R1[i])){
     fluency_results$fluency_R2[i] = NA
@@ -120,36 +122,12 @@ for (i in 1:nrow(fluency_results)){
   if(is.na(fluency_results$fluency_R3[i])){
     fluency_results$fluency_R1[i] = NA
     fluency_results$fluency_R2[i] = NA
-  }  
+  }
+  if(fluency_results$condition[i]== "SE"){
+    fluency_results$condition[i] = "EdE"
+  }
 }
 
-fluency_results_icc <- fluency_results %>% 
-  filter(!(is.na(fluency_R1))) %>% 
-  select(fluency_R1, fluency_R2, fluency_R3)
+fluency_results$condition <- as.factor(fluency_results$condition)
 
-icc(
-  fluency_results_icc, model = "twoway", 
-  type = "consistency", unit = "average"
-)
-
-fluency_results_avg <- fluency_results %>% 
-  group_by(id, text, condition) %>% 
-  summarise(meanR1 = mean(fluency_R1, na.rm = TRUE), meanR2 = mean(fluency_R2, na.rm = TRUE), meanR3 = mean(fluency_R3,na.rm = TRUE),n_obs = n()) %>% 
-  ungroup()
-
-fluency_results_avg_icc <- fluency_results_avg %>% 
-  select(meanR1, meanR2,meanR3)
-
-icc(
-  fluency_results_avg_icc, model = "twoway", 
-  type = "consistency", unit = "average"
-)
-
-## mean all raters
-
-fluency_results_avgR <- fluency_results_avg %>% 
-  mutate(meanR = (meanR1+ meanR2 + meanR3)/3)
-
-grande_results_fluency <- fluency_results_avgR %>% 
-  group_by(text, condition) %>% 
-  summarise(fluencyRating = mean(meanR), n_subjects = n(), n_obs = sum(n_obs))
+remove(fluency_R1, fluency_R2, fluency_R3)

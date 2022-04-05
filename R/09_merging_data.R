@@ -115,6 +115,37 @@ res_copy <- res_copy %>%
 alldata <- full_join(alldata,res_copy, by = c("id","cond"))
 
 
+## adding fluency results
+
+fluency_merging <- fluency_results %>%
+  filter(!(is.na(fluency_R1))) %>%
+  group_by(id, text, condition) %>% 
+  summarise(fluency_meanR1 = mean(fluency_R1, na.rm = TRUE), fluency_meanR2 = mean(fluency_R2, na.rm = TRUE), fluency_meanR3 = mean(fluency_R3,na.rm = TRUE)) %>% 
+  ungroup() %>% 
+  mutate(fluency_meanRater = (fluency_meanR1+ fluency_meanR2 + fluency_meanR3)/3) %>% 
+  mutate(task = "Translating")
+
+alldata <- full_join(alldata,fluency_merging, by = c("id","text", "task", "condition"))
+
+
+## adding accuracy results
+
+accuracy_merging <- accuracy_results %>%
+  filter(!(is.na(accuracy_R1))) %>%
+  group_by(id, text, condition) %>% 
+  summarise(accuracy_meanR1 = mean(accuracy_R1, na.rm = TRUE), accuracy_meanR2 = mean(accuracy_R2, na.rm = TRUE), accuracy_meanR3 = mean(accuracy_R3,na.rm = TRUE)) %>% 
+  ungroup() %>% 
+  mutate(accuracy_meanRater = (accuracy_meanR1+ accuracy_meanR2 + accuracy_meanR3)/3) %>% 
+  mutate(task = "Translating")
+
+alldata <- full_join(alldata,accuracy_merging, by = c("id","text", "task", "condition"))
+
+
+
+
+
+
+
 alldata <- alldata %>% 
   filter(id != "CK0", id != "CU2")
 
@@ -125,7 +156,7 @@ alldata$text <- as.factor(alldata$text)
 alldata$condition <- factor(alldata$condition,  levels = c("EdE","ELF"))
 alldata$time <- as.factor(alldata$time)
 
-remove(readingDuration, controlQuestions,CQRes, perceivedDifficulty, res_copy, textOutput, expControl, dataFolder, dataFolderRaw, hgf, hgf_used, indices_nback, indices_nback_wide)
+remove(readingDuration, controlQuestions,CQRes, perceivedDifficulty, res_copy, textOutput, expControl, dataFolder, dataFolderRaw, hgf, hgf_used, indices_nback, indices_nback_wide, fluency_merging, accuracy_merging)
 
 
 
