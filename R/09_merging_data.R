@@ -25,18 +25,20 @@ indices_nback_wide <- indices_nback %>%
   pivot_wider(names_from = task, values_from = dprime) %>% 
   rename(auditory_dprime = auditory, visual_dprime = visual)
 
+indices_nback_wide <- indices_nback_wide %>% 
+  filter(id != "CF3")
+
 psychometrics <- full_join(psychometrics,indices_nback_wide, by = "id" )
 
-psychometrics <- psychometrics %>% 
-  filter(VPN_Code != "CF3")
+
 
 
 ## include language survey dataset
 hgf_used <- hgf %>% 
 #  filter(group != "IntPro", group != "IntMA", group != "IntBA") %>% 
-  select(VPN_Code, cum_trainingh_DuU, Prozent_cumth_Life.x,hpd_DuU, hpw_letztesJahr_DE, hpw_letztesJahr_E, hpd_ALLE, Prozent_ALLE_pd)
+  select(VPN_Code, cum_trainingh_DuU, Prozent_cumth_Life.x,hpd_DuU, hpw_letztesJahr_DE, hpw_letztesJahr_E, hpd_ALLE, Prozent_ALLE_pd, Alter_E)
 
-colnames(hgf_used) <- c("VPN_Code", "cumTH_U", "percCumTH_U_life", "hpd_U", "hpw_DE_lj", "hpw_E_lj", "hpd_all", "perchpd_all")
+colnames(hgf_used) <- c("VPN_Code", "cumTH_U", "percCumTH_U_life", "hpd_U", "hpw_DE_lj", "hpw_E_lj", "hpd_all", "perchpd_all", "Aoa_E")
 
 psychometrics <- full_join(psychometrics,hgf_used, by = "VPN_Code")
 

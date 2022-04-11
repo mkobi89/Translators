@@ -18,6 +18,7 @@ library(lme4)
 library(gtsummary)
 library(png)
 library(ez)
+library(irr)
 
 ##########################################################
 ##                       SETTINGS                       ##
@@ -116,19 +117,21 @@ as_gt(sample_char) %>%
 
 
 psychometrics_selected_2 <- psychometrics %>% 
-  select(group, english_score, HAWIE_T_Value, auditory_dprime, visual_dprime, cumTH_U, hpd_U)
+  select(group, english_score,Aoa_E, HAWIE_T_Value, auditory_dprime, visual_dprime, cumTH_U, hpd_U)
 
 # create table
 psycho <- tbl_summary(
   psychometrics_selected_2,
-  label = list(english_score ~ "English score", 
-               HAWIE_T_Value ~ "HAWIE t score", 
+  label = list(english_score ~ "English score",
+               Aoa_E ~ "Age of L2 aquisition",
+               HAWIE_T_Value ~ "WAIS T-values", 
                auditory_dprime ~ "Auditory dprime", 
                visual_dprime ~ "Visual dprime", 
                cumTH_U ~ "Translating experience (cumulative training hours)",
-               hpd_U ~ "Translating experience (hours per day) "),
+               hpd_U ~ "Translating experience (hours per day) since age 17"),
   by = group, # split table by group
   type = list(english_score ~ 'continuous2', 
+              Aoa_E ~ 'continuous2', 
               HAWIE_T_Value ~ 'continuous2', 
               auditory_dprime ~ 'continuous2', 
               visual_dprime ~ 'continuous2', 
@@ -811,7 +814,7 @@ chars3 <- tbl_regression(chars_del_7,
 ## merge tables
 table_keys <- tbl_merge(
   tbls = list(chars1, chars2 , chars3),
-  tab_spanner = c("**Efficiency (total chars typed)**", "**Efficiency (chars chars endversion)**", "**Percentage deletions**")
+  tab_spanner = c("**Efficiency (total chars typed)**", "**Efficiency (chars endversion)**", "**Percentage deletions**")
 ) %>%
   modify_caption("**LMM Fixed Effects for the keyboard data**")
 
@@ -953,6 +956,36 @@ perceivedDifficulty_4 <- lmer(perceivedDifficulty ~ task + text + condition+ (1|
 anova(perceivedDifficulty_2, perceivedDifficulty_4)
 
 
+# stats
+perceivedDifficulty_null <- lmer(perceivedDifficulty ~ (1|id) , data= percDiff_select)
+
+perceivedDifficulty_1 <- lmer(perceivedDifficulty ~ task + (1|id), data= percDiff_select)
+
+anova(perceivedDifficulty_null, perceivedDifficulty_1)
+
+perceivedDifficulty_2 <- lmer(perceivedDifficulty ~ text + (1|id), data= percDiff_select)
+
+anova(perceivedDifficulty_null, perceivedDifficulty_2)
+
+perceivedDifficulty_3 <- lmer(perceivedDifficulty ~ text + group + (1|id), data= percDiff_select)
+
+anova(perceivedDifficulty_2, perceivedDifficulty_3)
+
+perceivedDifficulty_4 <- lmer(perceivedDifficulty ~ text + condition + (1|id), data= percDiff_select)
+
+anova(perceivedDifficulty_2, perceivedDifficulty_4)
+
+
+perceivedDifficulty_5 <- lmer(perceivedDifficulty ~ text + task + (1|id), data= percDiff_select)
+
+anova(perceivedDifficulty_2, perceivedDifficulty_5)
+
+
+perceivedDifficulty_6 <- lmer(perceivedDifficulty ~ text * condition + condition*group +  (1|id), data= percDiff_select)
+
+anova(perceivedDifficulty_4, perceivedDifficulty_6)
+
+
 
 
 perceivedDifficulty_full <- lmer(perceivedDifficulty ~  text + task+   + condition + group + condition : group + task : group+ text:task + text:group + (1|id) + (1|id:task) + (1|id:condition), data= percDiff_select)
@@ -965,19 +998,22 @@ anova(perceivedDifficulty_full, perceivedDifficulty_less)
 ## fullest model with significant result
 
 ## create table
-percDiff <- tbl_regression(perceivedDifficulty_full, 
+percDiff <- tbl_regression(perceivedDifficulty_2, 
                      exponentiate = FALSE,
                      pvalue_fun = ~style_pvalue(.x, digits = 2),
-                     label = list(text ~ "Text", group ~ "Group", condition ~"Condition", task ~ "Task"),
+                     label = list(text ~ "Text"),
                      intercept= TRUE
 ) %>% 
   add_global_p() %>%
   bold_p(t = 0.10) %>%
   bold_labels() %>%
   italicize_levels() %>% 
-  modify_header(label = "**Variable**")
+  modify_header(label = "**Variable**") %>% 
+  modify_caption("**LMM Fixed Effects for the perceived difficulty**")
 
-
+as_gt(percDiff) %>%
+#  gt::tab_source_note(gt::md("EdE = edited English, ELF = English as lingua franca*")) %>%
+  gt::gtsave(filename = file.path(figureFolder, "Statistics_percDiff.png"))
 
 
 fft_anova <- ezANOVA(
@@ -1092,7 +1128,7 @@ avgReadDur_select$task <- droplevels(avgReadDur_select$task)
 # stats
 avgReadDu_null <- lmer(avgReadingDuration ~ (1|id) , data= avgReadDur_select)
 
-avgReadDu_1 <- lmer(avgReadingDuration ~  group + (1|id) , data= avgReadDur_select)
+avgReadDu_1 <- lmer(avgReadingDuration ~ text + (1|id) , data= avgReadDur_select)
 
 anova(avgReadDu_null, avgReadDu_1)
 
@@ -1100,9 +1136,15 @@ avgReadDu_2 <- lmer(avgReadingDuration ~ text + condition + (1|id), data= avgRea
 
 anova(avgReadDu_1, avgReadDu_2)
 
-avgReadDu_3 <- lmer(avgReadingDuration ~ text * group + (1|id), data= avgReadDur_select)
+
+
+avgReadDu_3 <- lmer(avgReadingDuration ~ text + group + (1|id), data= avgReadDur_select)
 
 anova(avgReadDu_1, avgReadDu_3)
+
+avgReadDu_4 <- lmer(avgReadingDuration ~ text * group + (1|id), data= avgReadDur_select)
+
+anova(avgReadDu_3, avgReadDu_4)
 
 
 avgReadDu_full <- lmer(avgReadingDuration ~ text  + group  + text : group +  (1|id), data= avgReadDur_select)
@@ -1112,10 +1154,10 @@ avgReadDu_less <- lmer(avgReadingDuration ~ text  + group  + text : group + (1|i
 anova(avgReadDu_full, avgReadDu_less)
 
 ## create table
-avgReadDu <- tbl_regression(avgReadDu_3, 
+avgReadDu <- tbl_regression(avgReadDu_1, 
                           exponentiate = FALSE,
                           pvalue_fun = ~style_pvalue(.x, digits = 2),
-                          label = list(text ~ "Text", group ~ "Group"),
+                          label = list(text ~ "Text"),
                           intercept= TRUE
 ) %>% 
   add_global_p() %>%
@@ -1127,13 +1169,13 @@ avgReadDu <- tbl_regression(avgReadDu_3,
 
 ## merge tables to final table for task 1 and 2
 table_reading <- tbl_merge(
-  tbls = list(percCQRes, avgReadDu, percDiff),
-  tab_spanner = c("**Percentage correct answers control questions**", "**Average reading duration per sentence**", "**Perceived difficulty**")) %>%
+  tbls = list(percCQRes, avgReadDu),
+  tab_spanner = c("**Percentage correct answers control questions**", "**Average reading duration per sentence**")) %>%
   modify_caption("**LMM Fixed Effects for the reading task**")
 
 ## save table
 as_gt(table_reading) %>%
-  gt::tab_source_note(gt::md("*EdE = edited English, ELF = English as lingua franca, TraPro = professional translators, TraStu = translation students*")) %>%
+  gt::tab_source_note(gt::md("*Mul = multilingual control group, TraPro = professional translators, TraStu = translation students*")) %>%
   gt::gtsave(filename = file.path(figureFolder, "Statistics_reading.png"))
 
 
@@ -1284,7 +1326,7 @@ table_translation <- tbl_merge(
 ## save table
 as_gt(table_translation) %>%
   gt::tab_source_note(gt::md("EdE = edited English, ELF = English as lingua franca, Mul = multilingual control group, TraPro = professional translators, TraStu = translation students*")) %>%
-  gt::gtsave(filename = file.path(figureFolder, "Statistics_keys.png"))
+  gt::gtsave(filename = file.path(figureFolder, "Statistics_translation_output.png"))
 
 
 

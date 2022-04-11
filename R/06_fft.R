@@ -234,7 +234,7 @@ alpha_12_16_long$cond <- gsub("_2", "", alpha_12_16_long$cond)
 
 alpha_12_16_ROI_parietal <- alpha_12_16_long %>% 
   group_by(File,cond) %>% 
-  filter(electrode == "61" | electrode == "62" | electrode == "67" | electrode == "72" | electrode == "76" | electrode == "78") %>%   summarise(parietal_alpha = mean(alpha))
+  filter(electrode == "61" | electrode == "62" | electrode == "67" | electrode == "72" | electrode == "77" | electrode == "78") %>%   summarise(parietal_alpha = mean(alpha))
 
 
 
