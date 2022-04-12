@@ -109,7 +109,7 @@ sample_char <- tbl_summary(
 
 # save
 as_gt(sample_char) %>%
-  gt::tab_source_note(gt::md("*Mul = multilingual control group, TraPro = professional translators, TraStu = translation students*")) %>%
+  gt::tab_source_note(gt::md("Mul = multilingual control group, TraPro = professional translators, TraStu = translation students")) %>%
   gt::gtsave(filename = file.path(figureFolder, "sample_char.png"))
 
 
@@ -151,7 +151,7 @@ psycho <- tbl_summary(
 
 # save table to figure folder
 as_gt(psycho) %>%
-  gt::tab_source_note(gt::md("*Mul = multilingual control group, TraPro = professional translators, TraStu = translation students*")) %>%
+  gt::tab_source_note(gt::md("Mul = multilingual control group, TraPro = professional translators, TraStu = translation students")) %>%
   gt::gtsave(filename = file.path(figureFolder, "psychometrics.png"))
 
 #### Unused psychometrics / linguistics ####
@@ -210,7 +210,7 @@ alldata_overview <- alldata_ext %>%
 
 fft_summarise <- alldata_ext %>% 
   filter(task != "Reading_post") %>% 
-  group_by(task, condition, group) %>% 
+  group_by(task, group) %>% 
   summarise(mean_fontal_theta = mean(frontal_theta), sd_fontal_theta = sd(frontal_theta), mean_parietal_alpha = mean(parietal_alpha), sd_parietal_alpha = sd(parietal_alpha), mean_tfz_apz = mean(tfz_apz), sd_tfz_apz = sd(tfz_apz))
 
 ## Stats
@@ -237,145 +237,36 @@ fft_anova <- ezANOVA(
 
 
 
-## reading task only
-# frontal theta
-fft_select_reading <- alldata_ext %>% 
-  select(id, group, text, task, condition,frontal_theta, parietal_alpha, tfz_apz) %>% 
-  filter(task == "Reading")
-fft_select_reading$task <- droplevels(fft_select_reading$task)
+## frontal theta 
+
+fft_ft_null <- lmer(frontal_theta ~ (1|id), data= fft_select)
+fft_ft_1 <- lmer(frontal_theta ~ task + (1|id), data= fft_select)
+
+anova(fft_ft_null, fft_ft_1)
+
+summary(fft_ft_1)
+
+fft_ft_2 <- lmer(frontal_theta ~ task + text + (1|id), data= fft_select)
+
+anova(fft_ft_1, fft_ft_2)
+
+fft_ft_3 <- lmer(frontal_theta ~ task + condition + (1|id), data= fft_select)
+
+anova(fft_ft_1, fft_ft_3)
+
+fft_ft_4 <- lmer(frontal_theta ~ task + group + (1|id), data= fft_select)
+
+anova(fft_ft_1, fft_ft_4)
 
 
-fft_reading_theta_null <- lmer(frontal_theta ~ (1|id), data= fft_select_reading)
-fft_reading_theta_1 <- lmer(frontal_theta ~ group + (1|id), data= fft_select_reading)
-
-anova(fft_reading_theta_null, fft_reading_theta_1)
-
-#fft_reading_2 <- lmer(frontal_theta ~ group + (1|id) + (1|id:condition), data= fft_select_reading)
-
-#anova(fft_reading_1, fft_reading_2)
+fft_ft_5 <- lmer(frontal_theta ~ task + group + task : group +  (1|id), data= fft_select)
 
 
-fft_reading_theta <- tbl_regression(fft_reading_theta_1, 
-                          exponentiate = FALSE,
-                          pvalue_fun = ~style_pvalue(.x, digits = 2),
-                          label = list(group ~ "Group"),
-                          intercept= TRUE
-) %>% 
-  add_global_p() %>%
-  bold_p(t = 0.10) %>%
-  bold_labels() %>%
-  italicize_levels() %>% 
-  modify_header(label = "**Variable**")
+anova(fft_ft_4,fft_ft_5)
 
+summary(fft_ft_5)
 
-
-# parietal alpha
-
-fft_reading_alpha_null <- lmer(parietal_alpha ~ (1|id), data= fft_select_reading)
-fft_reading_alpha_1 <- lmer(parietal_alpha ~ condition + (1|id), data= fft_select_reading)
-
-anova(fft_reading_alpha_null, fft_reading_alpha_1)
-
-fft_reading_alpha_2 <- lmer(parietal_alpha ~ text + condition + (1|id), data= fft_select_reading)
-
-anova(fft_reading_alpha_1, fft_reading_alpha_2)
-
-#fft_reading_alpha_3 <- lmer(parietal_alpha ~ text * condition + (1|id), data= fft_select_reading)
-
-#anova(fft_reading_alpha_2, fft_reading_alpha_3)
-
-fft_reading_alpha <- tbl_regression(fft_reading_alpha_2, 
-                                    exponentiate = FALSE,
-                                    pvalue_fun = ~style_pvalue(.x, digits = 2),
-                                    label = list(condition ~ "Condition", text ~ "Text"),
-                                    intercept= TRUE
-) %>% 
-  add_global_p() %>%
-  bold_p(t = 0.10) %>%
-  bold_labels() %>%
-  italicize_levels() %>% 
-  modify_header(label = "**Variable**")
-
-# tfz_apz
-
-fft_reading_tfz_apz_null <- lmer(tfz_apz ~ (1|id), data= fft_select_reading)
-fft_reading_tfz_apz_1 <- lmer(tfz_apz ~ condition + (1|id), data= fft_select_reading)
-
-anova(fft_reading_tfz_apz_null, fft_reading_tfz_apz_1)
-
-#fft_reading_tfz_apz_2 <- lmer(tfz_apz ~ text + condition + (1|id), data= fft_select_reading)
-
-#anova(fft_reading_tfz_apz_1, fft_reading_tfz_apz_2)
-
-#fft_reading_tfz_apz_3 <- lmer(tfz_apz ~ text * condition + (1|id), data= fft_select_reading)
-
-#anova(fft_reading_tfz_apz_2, fft_reading_tfz_apz_3)
-
-fft_reading_tfz_apz <- tbl_regression(fft_reading_tfz_apz_null, 
-                                    exponentiate = FALSE,
-                                    pvalue_fun = ~style_pvalue(.x, digits = 2),
-                                    #label = list(condition ~ "Condition", text ~ "Text"),
-                                    intercept= TRUE
-) %>% 
-  add_global_p() %>%
-  bold_p(t = 0.10) %>%
-  bold_labels() %>%
-  italicize_levels() %>% 
-  modify_header(label = "**Variable**")
-
-# merge tables
-table_fft_reading <- tbl_merge(
-  tbls = list(fft_reading_theta, fft_reading_alpha , fft_reading_tfz_apz),
-  tab_spanner = c("**Frontal theta**", "**Parietal alpha**", "**Frontal theta / Parietal alpha**")
-) %>%
-  modify_caption("**LMM Fixed Effects for the FFT in reading task only**")
-
-## save table
-as_gt(table_fft_reading) %>%
-  gt::tab_source_note(gt::md("*Mul = multilingual control group, TraPro = professional translators, TraStu = translation students, EdE = edited English, ELF = English as lingua franca*")) %>%
-  gt::gtsave(filename = file.path(figureFolder, "Statistics_fft.png"))
-
-
-
-
-## task only
-fft_task_null <- lmer(frontal_theta ~ (1|id), data= fft_select)
-fft_task_1 <- lmer(frontal_theta ~ task + (1|id), data= fft_select)
-
-anova(fft_task_null, fft_task_1)
-
-fft_task_2 <- lmer(frontal_theta ~ task + group + (1|id), data= fft_select)
-
-anova(fft_task_1, fft_task_2)
-
-fft_task_3 <- lmer(frontal_theta ~ task * group + (1|id), data= fft_select)
-
-anova(fft_task_2, fft_task_3)
-
-
-ffttask <- tbl_regression(fft_task_1, 
-                                    exponentiate = FALSE,
-                                    pvalue_fun = ~style_pvalue(.x, digits = 2),
-                                    label = list(task ~ "Task"),
-                                    intercept= TRUE
-) %>% 
-  add_global_p() %>%
-  bold_p(t = 0.10) %>%
-  bold_labels() %>%
-  italicize_levels() %>% 
-  modify_header(label = "**Variable**")
-
-
-
-fft_full <- lmer(frontal_theta ~ task + group + task : group +  (1|id), data= fft_select)
-
-fft_less <- lmer(frontal_theta ~ task + group + task : group + (1|id), data= fft_select)
-
-anova(fft_full,fft_less)
-
-summary(fft_full)
-
-fft1 <- tbl_regression(fft_full, 
+fft1 <- tbl_regression(fft_ft_5, 
                      exponentiate = FALSE,
                      pvalue_fun = ~style_pvalue(.x, digits = 2),
                      label = list(task ~ "Task", group ~ "Group"),
@@ -391,13 +282,33 @@ fft1 <- tbl_regression(fft_full,
 
 
 ## parietal alpha
-fftpa_full <- lmer(parietal_alpha ~ task + group + task : group  + (1|id) + (1|id:task), data= fft_select)
+fft_pa_null <- lmer(parietal_alpha ~ (1|id), data= fft_select)
+fft_pa_1 <- lmer(parietal_alpha ~ task + (1|id), data= fft_select)
 
-fftpa_less <- lmer(parietal_alpha ~ task + group + task : group  + (1|id) + (1|id:task), data= fft_select)
+anova(fft_pa_null, fft_pa_1)
+
+fft_pa_2 <- lmer(parietal_alpha ~ text + (1|id), data= fft_select)
+
+anova(fft_pa_null, fft_pa_2)
+
+fft_pa_3 <- lmer(parietal_alpha ~ condition + (1|id), data= fft_select)
+
+anova(fft_pa_null, fft_pa_3)
+
+fft_pa_4 <- lmer(parietal_alpha ~ group + (1|id), data= fft_select)
+
+anova(fft_pa_null, fft_pa_4)
+
+
+
+
+fftpa_full <- lmer(parietal_alpha ~ task + group + task : group  + (1|id), data= fft_select)
+
+fftpa_less <- lmer(parietal_alpha ~ task + group  + (1|id), data= fft_select)
 
 anova(fftpa_full,fftpa_less)
 
-summary(fft_full)
+summary(fftpa_full)
 
 fft2 <- tbl_regression(fftpa_full, 
                        exponentiate = FALSE,
@@ -435,14 +346,14 @@ fft3 <- tbl_regression(fftq_full,
 
 ## merge tables to final table for task 1 and 2
 table_fft <- tbl_merge(
-  tbls = list(ffttask, fft1 , fft2, fft3),
-  tab_spanner = c("**Frontal theta task only**", "**Frontal theta**", "**Parietal alpha**", "**Frontal theta / Parietal alpha**")
+  tbls = list(fft1 , fft2),
+  tab_spanner = c("**Frontal theta**", "**Parietal alpha**")
 ) %>%
-  modify_caption("**LMM Fixed Effects for the FFT all tasks**")
+  modify_caption("**LMM Fixed Effects for the EEG data**")
 
 ## save table
 as_gt(table_fft) %>%
-  gt::tab_source_note(gt::md("Mul = multilingual control group, TraPro = professional translators, TraStu = translation students*")) %>%
+  gt::tab_source_note(gt::md("Mul = multilingual control group, TraPro = professional translators, TraStu = translation students")) %>%
   gt::gtsave(filename = file.path(figureFolder, "Statistics_fft.png"))
 
 
@@ -470,149 +381,6 @@ ggplot(fft_select, aes(x = group, y = frontal_theta)) +
 dev.off()
 
 
-## copy / translating
-fft_select_copytrans <- alldata_ext %>% 
-  select(id, group, text, task, condition,frontal_theta, parietal_alpha, tfz_apz) %>% 
-  filter(task == "Copying" | task == "Translating")
-fft_select_copytrans$task <- droplevels(fft_select_copytrans$task)
-
-
-fft_full <- lmer(frontal_theta ~ task + condition + group + condition : group + task : group + task:condition + task*condition*group + (1|id) + (1|id:task) + (1|id:condition), data= fft_select_copytrans)
-
-fft_less1 <- lmer(frontal_theta ~ task + condition + group + condition : group + task : group + task:condition + task*condition*group + (1|id) + (1|id:condition), data= fft_select_copytrans)
-
-anova(fft_full,fft_less1)
-
-fft_less2 <- lmer(frontal_theta ~ task + condition + group + condition : group + task : group + task:condition + (1|id) + (1|id:condition), data= fft_select_copytrans)
-
-anova(fft_less1,fft_less2)
-
-fft_less3 <- lmer(frontal_theta ~ task + condition + group + condition : group + task : group + (1|id) + (1|id:condition), data= fft_select_copytrans)
-
-anova(fft_less2,fft_less3)
-
-fft_less4 <- lmer(frontal_theta ~ task + condition + group + task : group + (1|id) + (1|id:condition), data= fft_select_copytrans)
-
-anova(fft_less3,fft_less4)
-
-
-fft_less5 <- lmer(frontal_theta ~ task + group + task : group + (1|id) + (1|id:condition), data= fft_select_copytrans)
-
-anova(fft_less4,fft_less5)
-
-fft_less6 <- lmer(frontal_theta ~ task + group + (1|id) + (1|id:condition), data= fft_select_copytrans)
-
-anova(fft_less5,fft_less6)
-
-fft_less7 <- lmer(frontal_theta ~ task + (1|id) + (1|id:condition), data= fft_select_copytrans)
-
-anova(fft_less6,fft_less7)
-
-fft_less8 <- lmer(frontal_theta ~ (1|id) + (1|id:condition), data= fft_select_copytrans)
-
-anova(fft_less7,fft_less8)
-
-summary(fft_full)
-
-fft1 <- tbl_regression(fft_full, 
-                       exponentiate = FALSE,
-                       pvalue_fun = ~style_pvalue(.x, digits = 2),
-                       label = list(task ~ "Task", group ~ "Group"),
-                       intercept= TRUE
-) %>% 
-  add_global_p() %>%
-  bold_p(t = 0.10) %>%
-  bold_labels() %>%
-  italicize_levels() %>% 
-  modify_header(label = "**Variable**")
-
-
-
-
-## parietal alpha
-fftpa_full <- lmer(parietal_alpha ~ task + group + task : group  + (1|id) + (1|id:task), data= fft_select)
-
-fftpa_less <- lmer(parietal_alpha ~ task + group + task : group  + (1|id) + (1|id:task), data= fft_select)
-
-anova(fftpa_full,fftpa_less)
-
-summary(fft_full)
-
-fft2 <- tbl_regression(fftpa_full, 
-                       exponentiate = FALSE,
-                       pvalue_fun = ~style_pvalue(.x, digits = 2),
-                       label = list(task ~ "Task", group ~ "Group"),
-                       intercept= TRUE
-) %>% 
-  add_global_p() %>%
-  bold_p(t = 0.10) %>%
-  bold_labels() %>%
-  italicize_levels() %>% 
-  modify_header(label = "**Variable**")
-
-
-## tfz_apz
-fft_ta_full <- lmer(tfz_apz ~ task + condition + group + condition : group + task : group + task:condition + task*condition*group + (1|id) + (1|id:condition), data= fft_select_copytrans)
-
-fft_ta_less1 <- lmer(tfz_apz ~ task + condition + group + condition : group + task : group + task:condition + task*condition*group + (1|id) + (1|id:condition), data= fft_select_copytrans)
-
-anova(fft_ta_full,fft_ta_less1)
-
-fft_ta_less2 <- lmer(tfz_apz ~ task + condition + group + condition : group + task : group + task:condition + (1|id) + (1|id:condition), data= fft_select_copytrans)
-
-anova(fft_ta_less1,fft_ta_less2)
-
-fft_ta_less3 <- lmer(tfz_apz ~ task + condition + group + condition : group + task : group + (1|id) + (1|id:condition), data= fft_select_copytrans)
-
-anova(fft_ta_less2,fft_ta_less3)
-
-fft_ta_less4 <- lmer(tfz_apz ~ task + condition + group + task : group + (1|id) + (1|id:condition), data= fft_select_copytrans)
-
-anova(fft_ta_less3,fft_ta_less4)
-
-
-fft_ta_less5 <- lmer(tfz_apz ~ task + group + task : group + (1|id) + (1|id:condition), data= fft_select_copytrans)
-
-anova(fft_ta_less4,fft_ta_less5)
-
-fft_ta_less6 <- lmer(tfz_apz ~ task + group + (1|id) + (1|id:condition), data= fft_select_copytrans)
-
-anova(fft_ta_less5,fft_ta_less6)
-
-fft_ta_less7 <- lmer(tfz_apz ~ task + (1|id) + (1|id:condition), data= fft_select_copytrans)
-
-anova(fft_ta_less6,fft_ta_less7)
-
-fft_ta_less8 <- lmer(tfz_apz ~ (1|id) + (1|id:condition), data= fft_select_copytrans)
-
-anova(fft_ta_less7,fft_ta_less8)
-
-fft3 <- tbl_regression(fftq_full, 
-                       exponentiate = FALSE,
-                       pvalue_fun = ~style_pvalue(.x, digits = 2),
-                       label = list(task ~ "Task"),
-                       intercept= TRUE
-) %>% 
-  add_global_p() %>%
-  bold_p(t = 0.10) %>%
-  bold_labels() %>%
-  italicize_levels() %>% 
-  modify_header(label = "**Variable**")
-
-## merge tables to final table for task 1 and 2
-table_fft <- tbl_merge(
-  tbls = list(ffttask, fft1 , fft2, fft3),
-  tab_spanner = c("**Frontal theta task only**", "**Frontal theta**", "**Parietal alpha**", "**Frontal theta / Parietal alpha**")
-) %>%
-  modify_caption("**LMM Fixed Effects for the FFT all tasks**")
-
-## save table
-as_gt(table_fft) %>%
-  gt::tab_source_note(gt::md("Mul = multilingual control group, TraPro = professional translators, TraStu = translation students*")) %>%
-  gt::gtsave(filename = file.path(figureFolder, "Statistics_fft.png"))
-
-
-
 
 #### keys data ####
 
@@ -638,36 +406,32 @@ keys_copy_select$task <- droplevels(keys_copy_select$task)
 
 chars_tot_null <- lmer(charsTotal ~ (1|id) , data= keys_select)
 
-chars_tot_1 <- lmer(charsTotal ~ (1|id) + (1|id:task) , data= keys_select)
+chars_tot_1 <- lmer(charsTotal ~ task +  (1|id), data= keys_select)
 
 anova(chars_tot_null, chars_tot_1)
 
-chars_tot_2 <- lmer(charsTotal ~ (1|id) + (1|id:task) + (1|id:condition), data= keys_select)
+summary(chars_tot_1)
+
+chars_tot_2 <- lmer(charsTotal ~ task + text +  (1|id), data= keys_select)
 
 anova(chars_tot_1, chars_tot_2)
 
-chars_tot_3 <- lmer(charsTotal ~ task +  (1|id) + (1|id:task) + (1|id:condition), data= keys_select)
+chars_tot_3 <- lmer(charsTotal ~ task + condition +  (1|id), data= keys_select)
 
-anova(chars_tot_2, chars_tot_3)
+anova(chars_tot_1, chars_tot_3)
 
+chars_tot_4 <- lmer(charsTotal ~ task + group +  (1|id), data= keys_select)
 
-chars_tot_4 <- lmer(charsTotal ~ task + group+  (1|id) + (1|id:task) + (1|id:condition), data= keys_select)
-
-anova(chars_tot_3, chars_tot_4)
-
-
-chars_tot_5 <- lmer(charsTotal ~ task + condition +  (1|id) + (1|id:task) + (1|id:condition), data= keys_select)
-
-anova(chars_tot_3, chars_tot_5)
-
-chars_tot_6 <- lmer(charsTotal ~ task + text +  (1|id) + (1|id:task) + (1|id:condition), data= keys_select)
-
-anova(chars_tot_3, chars_tot_6)
-
-chars_tot_7 <- lmer(charsTotal ~ task + group + condition +  (1|id) + (1|id:task) + (1|id:condition), data= keys_select)
+anova(chars_tot_1, chars_tot_4)
 
 
-chars_tot_8 <- lmer(charsTotal ~ task + group * condition +  (1|id) + (1|id:task) + (1|id:condition), data= keys_select)
+
+
+
+chars_tot_7 <- lmer(charsTotal ~ task + group + condition +  (1|id), data= keys_select)
+
+
+chars_tot_8 <- lmer(charsTotal ~ task + group * condition +  (1|id), data= keys_select)
 
 anova(chars_tot_7, chars_tot_8)
 
@@ -681,7 +445,7 @@ anova(chars_tot_full,chars_tot_less)
 
 summary(chars_tot_full)
 
-chars1 <- tbl_regression(chars_tot_3, 
+chars1 <- tbl_regression(chars_tot_1, 
                        exponentiate = FALSE,
                        pvalue_fun = ~style_pvalue(.x, digits = 2),
                        label = list(task ~ "Task"),
@@ -696,49 +460,27 @@ chars1 <- tbl_regression(chars_tot_3,
 ## CHARS
 chars_null <- lmer(chars ~ (1|id) , data= keys_select)
 
-chars_1 <- lmer(chars ~ (1|id) + (1|id:task) , data= keys_select)
+chars_1 <- lmer(chars ~ task +  (1|id), data= keys_select)
 
 anova(chars_null, chars_1)
 
-chars_2 <- lmer(chars ~ (1|id) + (1|id:task) + (1|id:condition), data= keys_select)
+summary(chars_1)
+
+chars_2 <- lmer(chars ~ task + text +  (1|id), data= keys_select)
 
 anova(chars_1, chars_2)
 
-chars_3 <- lmer(chars ~ task +  (1|id) + (1|id:task), data= keys_select)
+chars_3 <- lmer(chars ~ task + condition +  (1|id), data= keys_select)
 
 anova(chars_1, chars_3)
 
+chars_4 <- lmer(chars ~ task + group+  (1|id), data= keys_select)
 
-chars_4 <- lmer(chars ~ task + group+  (1|id) + (1|id:task), data= keys_select)
-
-anova(chars_3, chars_4)
-
-
-chars_5 <- lmer(chars ~ task + condition +  (1|id) + (1|id:task), data= keys_select)
-
-anova(chars_3, chars_5)
-
-chars_6 <- lmer(chars ~ task + text +  (1|id) + (1|id:task), data= keys_select)
-
-anova(chars_3, chars_6)
-
-chars_7 <- lmer(chars ~ task + group + condition +  (1|id) + (1|id:task), data= keys_select)
+anova(chars_1, chars_4)
 
 
-chars_8 <- lmer(chars ~ task + group * condition +  (1|id) + (1|id:task), data= keys_select)
 
-anova(chars_7, chars_8)
-
-
-charsTot_full <- lmer(chars ~ task +  (1|id) + (1|id:task) + (1|id:condition), data= keys_select)
-
-charsTot_less <- lmer(chars ~ (1|id) + (1|id:task) + (1|id:condition), data= keys_select)
-
-anova(charsTot_full,charsTot_less)
-
-summary(chars_full)
-
-chars2 <- tbl_regression(chars_3, 
+chars2 <- tbl_regression(chars_1, 
                          exponentiate = FALSE,
                          pvalue_fun = ~style_pvalue(.x, digits = 2),
                          label = list(task ~ "Task"),
@@ -755,51 +497,51 @@ chars2 <- tbl_regression(chars_3,
 
 chars_del_null <- lmer(percCharsErrors ~ (1|id) , data= keys_select)
 
-chars_del_1 <- lmer(percCharsErrors ~ (1|id) + (1|id:task) , data= keys_select)
+
+chars_del_1 <- lmer(percCharsErrors ~ task +  (1|id), data= keys_select)
 
 anova(chars_del_null, chars_del_1)
 
-chars_del_2 <- lmer(percCharsErrors ~ (1|id) + (1|id:task) + (1|id:condition), data= keys_select)
+summary(chars_del_1)
+
+chars_del_2 <- lmer(percCharsErrors ~ task + text+  (1|id), data= keys_select)
 
 anova(chars_del_1, chars_del_2)
 
-chars_del_3 <- lmer(percCharsErrors ~ task +  (1|id) + (1|id:task), data= keys_select)
+summary(chars_del_2)
 
-anova(chars_del_1, chars_del_3)
+chars_del_3 <- lmer(percCharsErrors ~ task + text + condition +  (1|id), data= keys_select)
 
+anova(chars_del_2, chars_del_3)
 
-chars_del_4 <- lmer(percCharsErrors ~ task + group+  (1|id) + (1|id:task), data= keys_select)
+summary(chars_del_3)
+
+chars_del_4 <- lmer(percCharsErrors ~ task + text + condition + group +  (1|id), data= keys_select)
 
 anova(chars_del_3, chars_del_4)
 
-
-chars_del_5 <- lmer(percCharsErrors ~ task + condition +  (1|id) + (1|id:task), data= keys_select)
+chars_del_5 <- lmer(percCharsErrors ~ task + text + condition + task:text +  (1|id), data= keys_select)
 
 anova(chars_del_3, chars_del_5)
 
-chars_del_6 <- lmer(percCharsErrors ~ task + condition + text +  (1|id) + (1|id:task), data= keys_select)
+summary(chars_del_5)
+
+
+chars_del_6 <- lmer(percCharsErrors ~ task + text + condition +task:text + text:condition +  (1|id), data= keys_select)
 
 anova(chars_del_5, chars_del_6)
 
-chars_del_7 <- lmer(percCharsErrors ~ task + text + condition + task:text +  (1|id) + (1|id:task), data= keys_select)
 
-anova(chars_del_6, chars_del_7)
+chars_del_7 <- lmer(percCharsErrors ~ task + text + condition +task:text  + task:condition +  (1|id), data= keys_select)
 
-chars_del_8 <- lmer(percCharsErrors ~ task + text + group * condition +  (1|id) + (1|id:task), data= keys_select)
-
-anova(chars_del_7, chars_del_8)
+anova(chars_del_5, chars_del_7)
 
 
 
-charsError_full <- lmer(percCharsErrors ~ task + condition + (1|id), data= keys_select)
-
-charsError_less <- lmer(percCharsErrors ~ task + condition + (1|id) , data= keys_select)
-
-anova(charsError_full,charsError_less)
 
 summary(chars_del_full)
 
-chars3 <- tbl_regression(chars_del_7, 
+chars3 <- tbl_regression(chars_del_5, 
                          exponentiate = FALSE,
                          pvalue_fun = ~style_pvalue(.x, digits = 2),
                          label = list(task ~ "Task", condition ~ "Condition", text ~ "Text"),
@@ -820,7 +562,7 @@ table_keys <- tbl_merge(
 
 ## save table
 as_gt(table_keys) %>%
-  gt::tab_source_note(gt::md("EdE = edited English, ELF = English as lingua franca*")) %>%
+  gt::tab_source_note(gt::md("EdE = edited English, ELF = English as lingua franca")) %>%
   gt::gtsave(filename = file.path(figureFolder, "Statistics_keys.png"))
 
 
@@ -967,6 +709,8 @@ perceivedDifficulty_2 <- lmer(perceivedDifficulty ~ text + (1|id), data= percDif
 
 anova(perceivedDifficulty_null, perceivedDifficulty_2)
 
+summary(perceivedDifficulty_2)
+
 perceivedDifficulty_3 <- lmer(perceivedDifficulty ~ text + group + (1|id), data= percDiff_select)
 
 anova(perceivedDifficulty_2, perceivedDifficulty_3)
@@ -1077,6 +821,9 @@ percCQRes_3 <- lmer(percCQRes ~ group + (1|id), data= percCQRes_select)
 
 anova(percCQRes_null, percCQRes_3)
 
+summary(percCQRes_3)
+
+
 
 ## create table
 percCQRes <- tbl_regression(percCQRes_3, 
@@ -1132,6 +879,8 @@ avgReadDu_1 <- lmer(avgReadingDuration ~ text + (1|id) , data= avgReadDur_select
 
 anova(avgReadDu_null, avgReadDu_1)
 
+summary(avgReadDu_1)
+
 avgReadDu_2 <- lmer(avgReadingDuration ~ text + condition + (1|id), data= avgReadDur_select)
 
 anova(avgReadDu_1, avgReadDu_2)
@@ -1154,7 +903,7 @@ avgReadDu_less <- lmer(avgReadingDuration ~ text  + group  + text : group + (1|i
 anova(avgReadDu_full, avgReadDu_less)
 
 ## create table
-avgReadDu <- tbl_regression(avgReadDu_1, 
+avgReadDu <- tbl_regression(avgReadDu_2, 
                           exponentiate = FALSE,
                           pvalue_fun = ~style_pvalue(.x, digits = 2),
                           label = list(text ~ "Text"),
@@ -1175,7 +924,7 @@ table_reading <- tbl_merge(
 
 ## save table
 as_gt(table_reading) %>%
-  gt::tab_source_note(gt::md("*Mul = multilingual control group, TraPro = professional translators, TraStu = translation students*")) %>%
+  gt::tab_source_note(gt::md("Mul = multilingual control group, TraPro = professional translators, TraStu = translation students")) %>%
   gt::gtsave(filename = file.path(figureFolder, "Statistics_reading.png"))
 
 
@@ -1292,6 +1041,8 @@ accuracy_2 <- lmer(accuracy_meanRater ~ condition + (1|id), data= accuracy_selec
 
 anova(accuracy_null, accuracy_2)
 
+summary(accuracy_2)
+
 accuracy_3 <- lmer(accuracy_meanRater ~ condition + group + (1|id), data= accuracy_select)
 
 anova(accuracy_2, accuracy_3)
@@ -1325,7 +1076,7 @@ table_translation <- tbl_merge(
 
 ## save table
 as_gt(table_translation) %>%
-  gt::tab_source_note(gt::md("EdE = edited English, ELF = English as lingua franca, Mul = multilingual control group, TraPro = professional translators, TraStu = translation students*")) %>%
+  gt::tab_source_note(gt::md("EdE = edited English, ELF = English as lingua franca, Mul = multilingual control group, TraPro = professional translators, TraStu = translation students")) %>%
   gt::gtsave(filename = file.path(figureFolder, "Statistics_translation_output.png"))
 
 
