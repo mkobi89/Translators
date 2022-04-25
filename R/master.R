@@ -15,7 +15,9 @@ library(tidyverse)
 library(gtsummary)
 library(webshot)
 library(lme4)
-library(gtsummary)
+library(graphics)
+library(GGally)
+library(ggpubr)
 library(png)
 library(ez)
 library(irr)
@@ -59,7 +61,7 @@ source(paste(RFolder, "08_accuracy.R", sep = "/"))
 # merge data 
 source(paste(RFolder, "09_merging_data.R", sep = "/"))
 
-
+write.csv(alldata,file.path("data/alldata_translators.csv"), row.names = FALSE)
 
 #### remove unwanted  participants ####
 
@@ -85,6 +87,10 @@ fluency_results <- fluency_results %>%
   filter(!(id %in% exclude_subjects))
 fluency_results$id <- droplevels(fluency_results$id)
 
+alldata_ext <- alldata %>% 
+  mutate(tfz_apz = frontal_theta/parietal_alpha)
+
+
 #### Sample Characteristics ####
 
 psychometrics_selected <- psychometrics %>% 
@@ -101,16 +107,40 @@ sample_char <- tbl_summary(
                                    "{min}, {max}"),
 ) %>%
   add_n() %>% # add column with total number of non-missing observations
-  add_p() %>% # test for a difference between groups
+  add_p(all_continuous() ~ "aov") %>% # test for a difference between groups
   modify_header(label = "**Variable**") %>% # update the column header
   modify_caption("**Sample characteristics**") %>% 
   bold_labels() %>%
   italicize_levels()
 
+aov(age ~ as.factor(group), data = psychometrics_selected)
+
+age_anova <- ezANOVA(
+  psychometrics
+  , age
+  , id
+  , within = NULL
+  , between = c(group)
+  , observed = NULL
+  , diff = NULL
+  , reverse_diff = FALSE
+  , type = 2
+  , white.adjust = FALSE
+  , detailed = FALSE
+  , return_aov = FALSE
+)
+
+
 # save
 as_gt(sample_char) %>%
   gt::tab_source_note(gt::md("Mul = multilingual control group, TraPro = professional translators, TraStu = translation students")) %>%
   gt::gtsave(filename = file.path(figureFolder, "sample_char.png"))
+
+#plot
+filename <- file.path(figureFolder,"ggairs_task_1_2_all.png")
+png(filename,pointsize = 20,width=1000, height=600,units = "px")
+ggpairs(psychometrics_selected, title = "Variable overview", cardinality_threshold = NULL) + theme_bw()
+dev.off()
 
 
 #### Psychometrics ####
@@ -142,17 +172,58 @@ psycho <- tbl_summary(
                                    "{min}, {max}"),
 ) %>%
   add_n() %>% # add column with total number of non-missing observations
-  add_p() %>% # test for a difference between groups
+  add_p(all_continuous() ~ "aov") %>% # test for a difference between groups
   modify_header(label = "**Variable**") %>% # update the column header
   modify_caption("**Psychometrics**") %>% 
   bold_labels() %>%
   italicize_levels()
 
 
+cumTH_U_anova <- ezANOVA(
+  psychometrics
+  , cumTH_U
+  , id
+  , within = NULL
+  , between = c(group)
+  , observed = NULL
+  , diff = NULL
+  , reverse_diff = FALSE
+  , type = 2
+  , white.adjust = FALSE
+  , detailed = FALSE
+  , return_aov = FALSE
+)
+hpd_U_anova <- ezANOVA(
+  psychometrics
+  , hpd_U
+  , id
+  , within = NULL
+  , between = c(group)
+  , observed = NULL
+  , diff = NULL
+  , reverse_diff = FALSE
+  , type = 2
+  , white.adjust = FALSE
+  , detailed = FALSE
+  , return_aov = FALSE
+)
+
+
+
 # save table to figure folder
 as_gt(psycho) %>%
   gt::tab_source_note(gt::md("Mul = multilingual control group, TraPro = professional translators, TraStu = translation students")) %>%
   gt::gtsave(filename = file.path(figureFolder, "psychometrics.png"))
+
+#plot
+filename <- file.path(figureFolder,"ggairs_task_1_2_all.png")
+png(filename,pointsize = 20,width=1000, height=600,units = "px")
+ggpairs(psychometrics_selected_2, title = "Variable overview", cardinality_threshold = NULL) + theme_bw()
+dev.off()
+
+
+
+
 
 #### Unused psychometrics / linguistics ####
 
@@ -200,8 +271,6 @@ remove(sample_char, psycho, psycho2, psychometrics_selected, psychometrics_selec
 
  
 #### FFT ####
-alldata_ext <- alldata %>% 
-  mutate(tfz_apz = frontal_theta/parietal_alpha)
 
 alldata_overview <- alldata_ext %>% 
   group_by(cond) %>% 
@@ -219,21 +288,6 @@ fft_select <- alldata_ext %>%
   select(id, group, text, task, condition,frontal_theta, parietal_alpha, tfz_apz) %>% 
   filter(task != "Reading_post")
 fft_select$task <- droplevels(fft_select$task)
-
-fft_anova <- ezANOVA(
-  fft_select_copytrans
-  , frontal_theta
-  , id
-  , within = c(text, condition)
-  , between = c(group)
-  , observed = NULL
-  , diff = NULL
-  , reverse_diff = FALSE
-  , type = 2
-  , white.adjust = FALSE
-  , detailed = FALSE
-  , return_aov = FALSE
-)
 
 
 
@@ -389,6 +443,20 @@ copy_summarise <- alldata_ext %>%
   mutate(relDel = charsTotal/charsErrors) %>% 
   group_by(task, condition, group) %>% 
   summarise(meanChars = mean(chars), sdChars = sd(chars), meanDeletions = mean(charsErrors), sdDeletions = sd(charsErrors), meanrelDel = mean(relDel), sdrelDel = sd(relDel), meanCopyStringdist = mean(copy_stringdist), sdCopyStringdist = sd(copy_stringdist))
+
+
+keys_plot <- alldata_ext %>%
+  filter(task == "Translating" | task == "Copying") %>%
+  mutate(percCharsErrors = charsErrors/charsTotal) %>% 
+  select(age, english_score,Aoa_E, HAWIE_T_Value, auditory_dprime, visual_dprime, cumTH_U, hpd_U, charsTotal, percCharsErrors)
+
+#plot
+filename <- file.path(figureFolder,"keys_plot.png")
+png(filename,pointsize = 20,width=1000, height=600,units = "px")
+ggpairs(keys_plot, title = "Variable overview Keys", cardinality_threshold = NULL) + theme_bw()
+dev.off()
+
+
 
 keys_select <- alldata_ext %>%
   filter(task == "Translating" | task == "Copying") %>%
@@ -662,6 +730,19 @@ percDiff_select <- alldata_ext %>%
   select(id, group, text, task, condition, perceivedDifficulty) 
 percDiff_select$task <- droplevels(percDiff_select$task)
 
+
+percDiff_plot <- alldata_ext %>%
+  filter(task == "Translating" | task == "Reading") %>%
+  select(age, english_score,Aoa_E, HAWIE_T_Value, auditory_dprime, visual_dprime, cumTH_U, hpd_U, perceivedDifficulty)
+
+#plot
+filename <- file.path(figureFolder,"percDiff_plot.png")
+png(filename,pointsize = 20,width=1000, height=600,units = "px")
+ggpairs(percDiff_plot, title = "Variable overview Keys", cardinality_threshold = NULL) + theme_bw()
+dev.off()
+
+
+
 percDiff_reading_select <- percDiff_select %>% 
   filter(task == "Reading")
 
@@ -801,9 +882,19 @@ percCQRes_summarise <- alldata_ext %>%
 
 
 percCQRes_select <- alldata_ext %>%
-  filter(task == "Translating" | task == "Reading") %>%
+  filter(task == "Reading") %>%
   select(id, group, text, task, condition,percCQRes) 
 percCQRes_select$task <- droplevels(percCQRes_select$task)
+
+percCQRes_plot <- alldata_ext %>%
+  filter(task == "Reading") %>%
+  select(age, english_score,Aoa_E, HAWIE_T_Value, auditory_dprime, visual_dprime, cumTH_U, hpd_U, percCQRes)
+
+#plot
+filename <- file.path(figureFolder,"percCQRes_plot")
+png(filename,pointsize = 20,width=1000, height=600,units = "px")
+ggpairs(percCQRes_plot, title = "Variable psychometrics and behavioral data", cardinality_threshold = NULL) + theme_bw()
+dev.off()
 
 
 # stats
@@ -864,13 +955,55 @@ print(fft_anova)
 avgReadDur_summarise <- alldata_ext %>%
   filter(task == "Reading") %>% 
   group_by(text, condition, group) %>% 
-  summarise(meanAvgReadDur = mean(avgReadingDuration), sdpercDiff = sd(avgReadingDuration))
+  summarise(meanAvgReadDur = mean(avgReadingDuration), sdAvgReadDur = sd(avgReadingDuration), maxAvgReadDur = max(avgReadingDuration), minAvgReadDur = min(avgReadingDuration), medianAvgReadDur = median(avgReadingDuration), IQRAvgReadDur = IQR(avgReadingDuration), q75 = quantile(avgReadingDuration,probs =.75))
+
+## trimming with .75 quantile + 1.5 * IQR
+
+avgReadDur_t1 <- alldata_ext %>%
+  filter(task == "Reading") %>% 
+  filter(text == "Text1") 
+
+iqrAvgReadDurT1 = IQR(avgReadDur_t1$avgReadingDuration)
+
+UpperQuantilesAvgReadDurT1 = quantile(avgReadDur_t1$avgReadingDuration,probs =.75)
 
 
-avgReadDur_select <- alldata_ext %>%
-  filter(task == "Reading") %>%
-  select(id, group, text, condition,avgReadingDuration) 
-avgReadDur_select$task <- droplevels(avgReadDur_select$task)
+avgReadDur_trim_T1 <- alldata_ext %>%
+  filter(task == "Reading") %>% 
+  filter(text == "Text1") %>% 
+  filter(avgReadingDuration < UpperQuantilesAvgReadDurT1 + 1.5*iqrAvgReadDurT1)
+
+
+
+  
+avgReadDur_t2 <- alldata_ext %>%
+  filter(task == "Reading") %>% 
+  filter(text == "Text2") 
+
+iqrAvgReadDurT2 = IQR(avgReadDur_t2$avgReadingDuration)
+
+UpperQuantilesAvgReadDurT2 = quantile(avgReadDur_t2$avgReadingDuration,probs =.75)
+
+
+avgReadDur_trim_T2 <- alldata_ext %>%
+  filter(task == "Reading") %>% 
+  filter(text == "Text2") %>% 
+  filter(avgReadingDuration < UpperQuantilesAvgReadDurT2 + 1.5*iqrAvgReadDurT2)
+
+
+
+avgReadDur_select <- full_join(avgReadDur_trim_T1, avgReadDur_trim_T2) %>% 
+  select(id, age, english_score,Aoa_E, HAWIE_T_Value, auditory_dprime, visual_dprime, cumTH_U, hpd_U, group, text, condition,avgReadingDuration) 
+
+avgReadDur_plot <- avgReadDur_select %>%
+  select(age, english_score,Aoa_E, HAWIE_T_Value, auditory_dprime, visual_dprime, cumTH_U, hpd_U, avgReadingDuration)
+
+#plot
+filename <- file.path(figureFolder,"avgReadDur_plot")
+png(filename,pointsize = 20,width=1000, height=600,units = "px")
+ggpairs(avgReadDur_plot, title = "Variable psychometrics and behavioral data", cardinality_threshold = NULL) + theme_bw()
+dev.off()
+
 
 # stats
 avgReadDu_null <- lmer(avgReadingDuration ~ (1|id) , data= avgReadDur_select)
@@ -887,23 +1020,23 @@ anova(avgReadDu_1, avgReadDu_2)
 
 
 
-avgReadDu_3 <- lmer(avgReadingDuration ~ text + group + (1|id), data= avgReadDur_select)
+avgReadDu_3 <- lmer(avgReadingDuration ~ text + condition + (1|id), data= avgReadDur_select)
 
 anova(avgReadDu_1, avgReadDu_3)
 
-avgReadDu_4 <- lmer(avgReadingDuration ~ text * group + (1|id), data= avgReadDur_select)
+avgReadDu_4 <- lmer(avgReadingDuration ~ text + condition + group + (1|id), data= avgReadDur_select)
 
 anova(avgReadDu_3, avgReadDu_4)
 
 
-avgReadDu_full <- lmer(avgReadingDuration ~ text  + group  + text : group +  (1|id), data= avgReadDur_select)
+avgReadDu_full <- lmer(avgReadingDuration ~ text + (1|id), data= avgReadDur_select)
 
-avgReadDu_less <- lmer(avgReadingDuration ~ text  + group  + text : group + (1|id), data= avgReadDur_select)
+avgReadDu_less <- lmer(avgReadingDuration ~ (1|id), data= avgReadDur_select)
 
 anova(avgReadDu_full, avgReadDu_less)
 
 ## create table
-avgReadDu <- tbl_regression(avgReadDu_2, 
+avgReadDu <- tbl_regression(avgReadDu_1, 
                           exponentiate = FALSE,
                           pvalue_fun = ~style_pvalue(.x, digits = 2),
                           label = list(text ~ "Text"),
@@ -950,6 +1083,16 @@ fluency_select<- alldata_ext %>%
   filter(task == "Translating") %>%
   select(id, group, text, task, condition,fluency_meanRater) 
 fluency_select$task <- droplevels(fluency_select$task)
+
+rating_plot <- alldata_ext %>%
+  filter(task == "Translating") %>%
+  select(age, english_score,Aoa_E, HAWIE_T_Value, auditory_dprime, visual_dprime, cumTH_U, hpd_U, fluency_meanRater, accuracy_meanRater)
+
+#plot
+filename <- file.path(figureFolder,"rating_plot")
+png(filename,pointsize = 20,width=1000, height=600,units = "px")
+ggpairs(rating_plot, title = "Variable rating", cardinality_threshold = NULL) + theme_bw()
+dev.off()
 
 
 # stats
@@ -1106,3 +1249,16 @@ grande_results_accuracy <- accuracy_results_avgR %>%
 
 
 
+
+
+#### plot psychometrics and behavioral data ####
+
+ggpairs_plot <- alldata_ext %>%
+  mutate(percCharsErrors = charsErrors/charsTotal) %>%
+  select(age, english_score,Aoa_E, HAWIE_T_Value, auditory_dprime, visual_dprime, cumTH_U, hpd_U, charsTotal, percCharsErrors, perceivedDifficulty, percCQRes, avgReadingDuration, fluency_meanRater, accuracy_meanRater)
+
+#plot
+filename <- file.path(figureFolder,"ggpairs_plot.png")
+png(filename,pointsize = 20,width=1000, height=600,units = "px")
+ggpairs(ggpairs_plot, title = "Variable psychometrics and behavioral data", cardinality_threshold = NULL) + theme_bw()
+dev.off()
