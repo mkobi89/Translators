@@ -1,16 +1,23 @@
 ###########################################################
-##                      Behavioral Data                  ##
-##                    data preprocessing                 ##
+##                   Merging datasets                    ##
+###########################################################
+## Description :: gathers all data for analysis
+## Input :::::::: controlQuestions.csv, expControl.csv,
+##                perceivedDifficulty.csv, readingDuration.csv
+##                textOutput.csv, psychometrics, indices_nback
+##                hgf, fft, fluency_results, accuracy_results
+## Libraries :::: tidyverse
+## Output ::::::: alldata, alldata.Rdata
 ###########################################################
 
-
+# libraries
 library(tidyverse)
 
 # data path
 dataFolderRaw   <- file.path("data/rawdata")
 dataFolder   <- file.path("data")
 
-## read files
+# read files
 controlQuestions <- read.csv(file.path(dataFolderRaw,"controlQuestions.csv"), header = TRUE, sep = ";")
 expControl <- read.csv(file.path(dataFolderRaw,"expControl.csv"), header = TRUE, sep = ";")
 perceivedDifficulty <- read.csv(file.path(dataFolderRaw,"perceivedDifficulty.csv"), header = TRUE, sep = ";")
@@ -18,8 +25,7 @@ readingDuration <- read.csv(file.path(dataFolderRaw,"readingDuration.csv"), head
 textOutput <- read.csv(file.path(dataFolderRaw,"textOutput.csv"), header = TRUE, sep = ";")
 
 
-## include data from nback-task
-
+# convert data from nback-task to long format
 indices_nback_wide <- indices_nback %>%
   select(id, task, dprime) %>% 
   pivot_wider(names_from = task, values_from = dprime) %>% 
@@ -28,49 +34,46 @@ indices_nback_wide <- indices_nback %>%
 indices_nback_wide <- indices_nback_wide %>% 
   filter(id != "CF3")
 
+# join dataframes
 psychometrics <- full_join(psychometrics,indices_nback_wide, by = "id" )
-
-
 
 
 ## include language survey dataset
 hgf_used <- hgf %>% 
-#  filter(group != "IntPro", group != "IntMA", group != "IntBA") %>% 
   select(VPN_Code, cum_trainingh_DuU, Prozent_cumth_Life.x,hpd_DuU, hpw_letztesJahr_DE, hpw_letztesJahr_E, hpd_ALLE, Prozent_ALLE_pd, Alter_E)
 
+# rename column names hgf
 colnames(hgf_used) <- c("VPN_Code", "cumTH_U", "percCumTH_U_life", "hpd_U", "hpw_DE_lj", "hpw_E_lj", "hpd_all", "perchpd_all", "Aoa_E")
 
+# join dataframes
 psychometrics <- full_join(psychometrics,hgf_used, by = "VPN_Code")
 
+# remove empty rows
 psychometrics <- psychometrics %>% 
   filter(id != "NA")
 
+# redefine variables
 psychometrics$percCumTH_U_life <- as.numeric(psychometrics$percCumTH_U_life)
 psychometrics$hpd_U <- as.numeric(psychometrics$hpd_U)
 
-
+# remove participants with missing data
 psychometrics <- psychometrics %>% 
   filter(id != "CK0", id != "CU2")
 
+# remove unwanted levels
 psychometrics$id <- droplevels(psychometrics$id)
 psychometrics$gender <- droplevels(psychometrics$gender)
 
 
-## adding fft
-
+## join fft and psychometrics dataframe to alldata
 alldata <- full_join(psychometrics,fft, by = c("id"))
 
 
 ## adding perceived difficulty
-
-#perceivedDifficulty$task <- tolower(perceivedDifficulty$task)
-
 perceivedDifficulty <- perceivedDifficulty %>% 
   select(-timeTra)
 
 alldata <- full_join(alldata,perceivedDifficulty, by = c("id","group", "task", "text", "condition"))
-
-
 
 
 ## adding reading duration
@@ -78,9 +81,7 @@ readingDuration <- readingDuration %>%
   mutate(task = "Reading") %>% 
   select(1,2,8,3:7)
 
-
 alldata <- full_join(alldata,readingDuration, by = c("id","group","task","text","condition", "time"))
-
 
 
 ## adding control questions
@@ -92,11 +93,7 @@ CQRes <- controlQuestions %>%
 alldata <- full_join(alldata,CQRes, by = c("id","group", "condition", "task"))
 
 
-
-
 ## adding text output
-#textOutput$task <- tolower(textOutput$task)
-
 textOutput <- textOutput %>% 
   select(-timeTra)
 
@@ -106,19 +103,17 @@ alldata <- unite(alldata,time, time.x, time.y, na.rm = TRUE)
 alldata$time <- gsub("_First", "", alldata$time)
 alldata$time <- gsub("_Second", "", alldata$time)
 
-## adding results copy task
 
+## adding results copy task
 res_copy <- res_copy %>% 
   select(-cond) %>% 
   filter(!(is.na(copy_stringdist))) %>% 
   rename(cond = cond_new)
 
-
 alldata <- full_join(alldata,res_copy, by = c("id","cond"))
 
 
-## adding fluency results
-
+## adding fluency results, calculating mean rater from R1-3
 fluency_merging <- fluency_results %>%
   filter(!(is.na(fluency_R1))) %>%
   group_by(id, text, condition) %>% 
@@ -130,8 +125,7 @@ fluency_merging <- fluency_results %>%
 alldata <- full_join(alldata,fluency_merging, by = c("id","text", "task", "condition"))
 
 
-## adding accuracy results
-
+## adding accuracy results, calculating mean rater from R1-3
 accuracy_merging <- accuracy_results %>%
   filter(!(is.na(accuracy_R1))) %>%
   group_by(id, text, condition) %>% 
@@ -142,22 +136,18 @@ accuracy_merging <- accuracy_results %>%
 
 alldata <- full_join(alldata,accuracy_merging, by = c("id","text", "task", "condition"))
 
-
-
-
-
-
-
+# remove participants with missing data
 alldata <- alldata %>% 
   filter(id != "CK0", id != "CU2")
 
-
+# redefine variables
 alldata$cond <- as.factor(alldata$cond)
 alldata$task <- factor(alldata$task,  levels = c("Reading","Copying", "Translating", "Reading_post"))
 alldata$text <- as.factor(alldata$text)
 alldata$condition <- factor(alldata$condition,  levels = c("EdE","ELF"))
 alldata$time <- as.factor(alldata$time)
 
+# remove unwanted participants
 remove(readingDuration, controlQuestions,CQRes, perceivedDifficulty, res_copy, textOutput, expControl, dataFolder, dataFolderRaw, hgf, hgf_used, indices_nback, indices_nback_wide, fluency_merging, accuracy_merging)
 
 

@@ -2,17 +2,13 @@
 ##                         nBack                         ##
 ##                    data preprocessing                 ##
 ###########################################################
-## Description :: loads and merges psychometrics raw data
-## Input :::::::: csv data file 
+## Description :: loads and merges nBack raw data
+## Input :::::::: .log text files 
 ## Libraries :::: dplyr, readr, eeptools, lubridate
-## Output ::::::: psychometrics.Rdata
-##########################################################
+## Output ::::::: indices_nback dataframe
+###########################################################
 
-## libraries, packages, path ----
-if (!"tidyverse" %in% installed.packages()[, "Package"]) {
-  install.packages("tidyverse")
-}
-
+## libraries
 library(tidyverse)
 
 # data path
@@ -25,7 +21,7 @@ file_list <- list.files(dataFolder_nback)
 # matrix for results of loop
 res_nback <- matrix(nrow = 0, ncol = 0, byrow = FALSE, dimnames = NULL)
 
-# loop over all files
+# loop over all files to get results
 for (f in 1:length(file_list)){
 #  print(file_list[f])
   nBack <- read.csv(file=file.path(dataFolder_nback,file_list[f]), skip = 3, header = TRUE, sep="\t", na.strings = c("", "NA"))
@@ -79,7 +75,7 @@ res_nback$Task <- gsub("Sound", "auditory", res_nback$Task)
 
 
 
-#Recode for Stimulus (Data Mathias Lab)
+#Recode for Stimulus
 res_nback$Stimulus <- gsub("A50", "A", res_nback$Stimulus)
 res_nback$Stimulus <- gsub("E51", "E", res_nback$Stimulus)
 res_nback$Stimulus <- gsub("I52", "I", res_nback$Stimulus)

@@ -1,27 +1,28 @@
 
 ###########################################################
-##                         Translation rating            ##
-##                         collecting data              ##
+##                        Translation rating             ##
+##                         collecting data               ##
+###########################################################
+## Description :: gathers all fluency ratings
+## Input :::::::: Translation_rating_fluency*.txt
+## Libraries :::: tidyverse, readxl
+## Output ::::::: fluency_results
 ###########################################################
 
-## libraries, packages, path ----
-if (!"tidyverse" %in% installed.packages()[, "Package"]) {
-  install.packages("tidyverse")
-}
-
+## libraries
 library(tidyverse)
 library(readxl)
-library(irr)
 
 ## get data
-dataFolder <- file.path("data/translation_rating")
+dataFolder <- file.path("data/rawdata/translation_rating_results")
 
 
-# Rater 1
-fluency_R1 <- read_excel("data/translation_rating/results/Translation_rating_fluency_R1.xlsx",
+## Rater 1
+# read data (two different files because of missing data)
+fluency_R1 <- read_excel(paste(dataFolder, "Translation_rating_fluency_R1.xlsx", sep = "/"),
                          col_types = c("numeric", "numeric", "text", "numeric"))
 
-fluency_R1_2 <- read_excel("data/translation_rating/results/Translation_rating_fluency_3_R1.xlsx",
+fluency_R1_2 <- read_excel(paste(dataFolder, "Translation_rating_fluency_3_R1.xlsx", sep = "/"),
                          col_types = c("numeric", "numeric", "text", "numeric"))
 
 fluency_R1 <- full_join(fluency_R1,fluency_R1_2)
@@ -33,16 +34,15 @@ fluency_R1 <- fluency_R1 %>%
   select(-rand_index, -translation)
 
 
-# Rater 2
-
-fluency_R2 <- read_excel("data/translation_rating/results/Translation_rating_fluency_R2.xlsx",
+## Rater 2
+# read data
+fluency_R2 <- read_excel(paste(dataFolder, "Translation_rating_fluency_R2.xlsx", sep = "/"),
                          col_types = c("numeric", "numeric", "text", "numeric"))
 
-fluency_R2_2 <- read_excel("data/translation_rating/results/Translation_rating_fluency_3_R2.xlsx",
+fluency_R2_2 <- read_excel(paste(dataFolder, "Translation_rating_fluency_3_R2.xlsx", sep = "/"),
                            col_types = c("numeric", "numeric", "text", "numeric"))
 
 fluency_R2 <- full_join(fluency_R2,fluency_R2_2)
-
 
 fluency_R2 <- fluency_R2 %>% 
   rename(fluency_R2 = fluency)
@@ -50,36 +50,31 @@ fluency_R2 <- fluency_R2 %>%
 fluency_R2 <- fluency_R2 %>% 
   select(-rand_index, -translation)
 
-# Rater 3
-
-fluency_R3 <- read_excel("data/translation_rating/results/Translation_rating_fluency_R3.xlsx",
+## Rater 3
+# read data
+fluency_R3 <- read_excel(paste(dataFolder, "Translation_rating_fluency_R3.xlsx", sep = "/"),
                          col_types = c("numeric", "numeric", "text", "numeric"))
 
 
-fluency_R3_2 <- read_excel("data/translation_rating/results/Translation_rating_fluency_3_R3.xlsx",
+fluency_R3_2 <- read_excel(paste(dataFolder, "Translation_rating_fluency_3_R3.xlsx", sep = "/"),
                            col_types = c("numeric", "numeric", "text", "numeric"))
 
 fluency_R3 <- full_join(fluency_R3,fluency_R3_2)
 
-
 fluency_R3 <- fluency_R3 %>% 
   rename(fluency_R3 = fluency)
-
 
 fluency_R3 <- fluency_R3 %>% 
   select(-rand_index, -translation)
 
-## get initial list
-
-load("~/Translators/data/translation_rating/Translation_rating_fluency_original.RData")
+## get initial list to assign rating results to participants
+load(paste(dataFolder,"Translation_rating_fluency_original.RData", sep = "/"))
 
 tra_ra_fluency <- tra_ra_fluency %>% 
   select(-reference_translation, -control_number, -rand_index)
 
-
 # add missing participants
-load("~/Translators/data/translation_rating/Translation_rating_fluency_select2_original.RData")
-
+load(paste(dataFolder,"Translation_rating_fluency_select2_original.RData", sep = "/"))
 
 tra_ra_fluency_2 <- tra_ra_fluency_2_select %>% 
   select(-reference_translation, -control_number, -rand_index)
@@ -87,20 +82,16 @@ tra_ra_fluency_2 <- tra_ra_fluency_2_select %>%
 # join datasets
 trans_rat_fluency <- full_join(tra_ra_fluency,tra_ra_fluency_2)
 
+# redefine variables
 trans_rat_fluency$index <- as.numeric(trans_rat_fluency$index)
 trans_rat_fluency$translation <- as.character(trans_rat_fluency$translation)
-#trans_rat_fluency$sentences_nr <- as.numeric(trans_rat_fluency$sentences_nr)
 
-## remove unwanted data
+# remove unwanted variables
 remove(fluency_R1_2, fluency_R2_2, fluency_R3_2, tra_ra_fluency, tra_ra_fluency_2, tra_ra_fluency_2_select)
 
-
 # combine datasets
-
 trans_rat_fluency <- full_join(trans_rat_fluency,fluency_R1)
-
 trans_rat_fluency <- full_join(trans_rat_fluency,fluency_R2)
-
 trans_rat_fluency <- full_join(trans_rat_fluency,fluency_R3)
 
 fluency_results <- trans_rat_fluency %>% 
@@ -110,6 +101,7 @@ remove(trans_rat_fluency)
 
 fluency_results$condition <- as.character(fluency_results$condition)
 
+# set all raters to NA if one rater was NA, add condition as variable
 for (i in 1:nrow(fluency_results)){
   if(is.na(fluency_results$fluency_R1[i])){
     fluency_results$fluency_R2[i] = NA
@@ -130,4 +122,5 @@ for (i in 1:nrow(fluency_results)){
 
 fluency_results$condition <- as.factor(fluency_results$condition)
 
+# remove unwanted variables
 remove(fluency_R1, fluency_R2, fluency_R3)

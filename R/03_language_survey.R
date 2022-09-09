@@ -1,23 +1,16 @@
-############################
-#### Limesurvey Dataset ####
-############################
-## Description :: loads and merges psychometrics raw data
-## Input :::::::: csv data file 
+###########################################################
+##                Language Questionnaire                 ##
+##                 data preprocessing                    ##
+###########################################################
+## Description :: loads and preprocesses questionnaire raw 
+##                data detailed description in 
+##                R/Mastersheet_languagebackground.docx
+## Input :::::::: hintergrund.csv
 ## Libraries :::: dplyr, readr, eeptools, lubridate
-## Output ::::::: psychometrics.Rdata
-##########################################################
+## Output ::::::: hgf dataframe
+###########################################################
 
-## libraries, packages, path ----
-
-# install tidyverseif not installed already
-if (!"tidyverse" %in% installed.packages()[, "Package"]) {
-  install.packages("tidyverse")
-}
-if (!"readxl" %in% installed.packages()[, "Package"]) {
-  install.packages("readxl")
-}
-
-# load tidyverse
+## libraries
 library(tidyverse)
 library(readxl)
 
@@ -26,14 +19,8 @@ dataFolderRaw   <- file.path("data/rawdata")
 dataFolder   <- file.path("data")
 
 ## Read Dataset ----
-#hgf_raw <- read_excel(file.path(dataFolderRaw,"limesurvey.xlsx"), sheet = "Hintergrundfragebogen")
-
-
 hgf_raw <- read.csv(file.path(dataFolderRaw,"hintergrund.csv"), header = TRUE, sep = ";")
 hgf_raw <- subset(hgf_raw, select = c(1:256))
-
-# View(Hintergrundfragebogen_raw)
-
 
 ## Rename Variables ----
 
@@ -309,8 +296,6 @@ colnames(hgf_raw) <-
 
 ## Recode Group Variable ----
 hgf_raw$group <- gsub("\\(|)", "", hgf_raw$group)
-#hgf_raw$group <- gsub("ü", "ue", hgf_raw$group)
-#hgf_raw$group <- gsub("Ü", "Ue", hgf_raw$group)
 
 hgf_raw$group <- gsub("...als Konferenzdolmetscher/in arbeite", "IntPro", hgf_raw$group)
 hgf_raw$group <- gsub("...im Master Konferenzdolmetschen studiere", "IntMA", hgf_raw$group)
@@ -651,21 +636,6 @@ hgf <- hgf %>%
 
 ## Clean up workspace
 remove(age, Dol_def, Dol_select,Musik_def, Musik_select, Pers_def,Pers_select,Sprachen_def, Sprachen_select, hgf_incomplete, hgf_raw, dataFolder, dataFolderRaw, cum_train_h_Dol, cum_train_h_Musik)
-
-
-
-
-#doubles_df <- doubles_df %>% 
-#  as_tibble()
-#hgf_incomplete <- hgf_incomplete %>% 
-#  as_tibble()
-
-
-## Save Dataframes ----
-
-#save(hgf, file = file.path(dataFolder,"hgf.RData"))
-#save(hgf_incomplete, file = file.path(dataFolder,"hgf_incomplete.RData"))
-#save(doubles_df, file = file.path(dataFolder,"hgf_doubles.RData"))
 
 
 

@@ -1,15 +1,13 @@
-##########################################################
-##            COLLECT PREPROCESSED DATA                 ##
-##########################################################
-## Description :: gathers all preprocessed data (EEG, DDM
-##                and psychometrics) in long format
-##                for further analysis
-## Input :::::::: psychometrics (02_psychometrics.R)
-##                .txt file for DDM parameters (05_DDM_parameter_estimation.R)
-##                .txt files for Liesefeld parameters in data/erp
+###########################################################
+##                            FFT                        ##
+##                    data preprocessing                 ##
+###########################################################
+## Description :: gathers all EEG FFT data 
+## Input :::::::: theta_11_15.txt, theta_12_16.txt, 
+##                alpha_11_15.txt, alpha_12_16.txt
 ## Libraries :::: tidyverse
-## Output ::::::: all_tasks.Rdata
-##########################################################
+## Output ::::::: fft
+###########################################################
 
 ## libraries
 library(tidyverse)
@@ -17,42 +15,10 @@ library(tidyverse)
 ## data path
 FFTFolder    <- file.path("data/rawdata/fft")
 
-## read FFT theta parameters----
-#theta_11_15 <- read.table(paste(FFTFolder, "theta_avg_11_15_2.txt", sep = "/"), header = TRUE)
-
-#theta_11_15_long <- pivot_longer(
-#  theta_11_15,
-#  2:841,
-#  names_to = c("electrode","cond"),
-#  names_sep = 4,
-#  values_to = "theta"
-#  )
-
-#theta_11_15_long$File <- gsub("_all", "", theta_11_15_long$File)
-#theta_11_15_long$electrode <- gsub("REF","999",theta_11_15_long$electrode)
-#theta_11_15_long$electrode <- gsub("[^0-9-]","",theta_11_15_long$electrode)
-#theta_11_15_long$electrode <- gsub("999","REF",theta_11_15_long$electrode)
-#theta_11_15_long$cond <- gsub(".avg_", "", theta_11_15_long$cond)
-#theta_11_15_long$cond <- gsub("avg_", "", theta_11_15_long$cond)
-#theta_11_15_long$cond <- gsub("vg_", "", theta_11_15_long$cond)
-#theta_11_15_long$cond <- gsub("_2", "", theta_11_15_long$cond)
-
-
-#theta_11_15_ROI_frontal <- theta_11_15_long %>% 
-#  group_by(File,cond) %>% 
-#  filter(electrode == "24" | electrode == "19" | electrode == "11" | electrode == "4" | electrode == "124") %>% 
-#  summarise(frontal_theta = mean(theta))
-
-#theta_11_15_elec <- theta_11_15_long %>% 
-#  group_by(electrode, cond) %>% 
-#  summarise(mean_theta = mean(theta), sd_theta = sd(theta))%>% 
-#  filter(electrode == "11")
-
-
-#### read FFT theta reading task 5 min 11_15
-
+# read FFT theta 11_15 (abstract randomization 1)
 theta_11_15 <- read.table(paste(FFTFolder, "theta_11_15.txt", sep = "/"), header = TRUE)
 
+# convert to long format
 theta_11_15_long <- pivot_longer(
   theta_11_15,
   2:825,
@@ -61,7 +27,7 @@ theta_11_15_long <- pivot_longer(
   values_to = "theta"
 )
 
-
+# remove unwanted chars in dataframe
 theta_11_15_long$File <- gsub("_all_eog", "", theta_11_15_long$File)
 theta_11_15_long$electrode <- gsub("Cz","999",theta_11_15_long$electrode)
 theta_11_15_long$electrode <- gsub("[^0-9-]","",theta_11_15_long$electrode)
@@ -71,39 +37,16 @@ theta_11_15_long$cond <- gsub("avg_", "", theta_11_15_long$cond)
 theta_11_15_long$cond <- gsub("vg_", "", theta_11_15_long$cond)
 theta_11_15_long$cond <- gsub("_2", "", theta_11_15_long$cond)
 
-
+# calculate mean of 8 frontal electrodes as frontal theta
 theta_11_15_ROI_frontal <- theta_11_15_long %>% 
   group_by(File,cond) %>% 
   filter(electrode == "4" | electrode == "5" | electrode == "10" | electrode == "11" | electrode == "12" | electrode == "16" | electrode == "18" | electrode == "19") %>% 
   summarise(frontal_theta = mean(theta))
 
-
-
-
-#alpha_11_15 <- read.table(paste(FFTFolder, "alpha_avg_11_15_2.txt", sep = "/"), header = TRUE)
-
-#alpha_11_15_long <- pivot_longer(
-#  alpha_11_15,
-#  2:841,
-#  names_to = c("electrode","cond"),
-#  names_sep = 4,
-#  values_to = "alpha"
-#)
-
-#alpha_11_15_long$File <- gsub("_all", "", alpha_11_15_long$File)
-#alpha_11_15_long$electrode <- gsub("REF","999",alpha_11_15_long$electrode)
-#alpha_11_15_long$electrode <- gsub("[^0-9-]","",alpha_11_15_long$electrode)
-#alpha_11_15_long$electrode <- gsub("999","REF",alpha_11_15_long$electrode)
-#alpha_11_15_long$cond <- gsub(".avg_", "", alpha_11_15_long$cond)
-#alpha_11_15_long$cond <- gsub("avg_", "", alpha_11_15_long$cond)
-#alpha_11_15_long$cond <- gsub("vg_", "", alpha_11_15_long$cond)
-#alpha_11_15_long$cond <- gsub("_2", "", alpha_11_15_long$cond)
-
-
-#### read FFT alpha reading task 5 min 11_15
-
+# read FFT alpha 11_15 (abstract randomization 1)
 alpha_11_15 <- read.table(paste(FFTFolder, "alpha_11_15.txt", sep = "/"), header = TRUE)
 
+# convert to long format
 alpha_11_15_long <- pivot_longer(
   alpha_11_15,
   2:825,
@@ -112,6 +55,7 @@ alpha_11_15_long <- pivot_longer(
   values_to = "alpha"
 )
 
+# remove unwanted chars in dataframe
 alpha_11_15_long$File <- gsub("_all_eog", "", alpha_11_15_long$File)
 alpha_11_15_long$electrode <- gsub("Cz","999",alpha_11_15_long$electrode)
 alpha_11_15_long$electrode <- gsub("[^0-9-]","",alpha_11_15_long$electrode)
@@ -121,17 +65,16 @@ alpha_11_15_long$cond <- gsub("avg_", "", alpha_11_15_long$cond)
 alpha_11_15_long$cond <- gsub("vg_", "", alpha_11_15_long$cond)
 alpha_11_15_long$cond <- gsub("_2", "", alpha_11_15_long$cond)
 
-
+# calculate mean of 6 frontal electrodes as parietal alpha
 alpha_11_15_ROI_parietal <- alpha_11_15_long %>% 
   group_by(File,cond) %>% 
   filter(electrode == "61" | electrode == "62" | electrode == "67" | electrode == "72" | electrode == "76" | electrode == "78") %>% 
   summarise(parietal_alpha = mean(alpha))
 
 
-#### merge 11_15
+# merge theta and alpha and convert to long format for different conditions
 
 fft_11_15 <- full_join(theta_11_15_ROI_frontal, alpha_11_15_ROI_parietal)
-
 
 for(i in 1:nrow(fft_11_15)){
   if(fft_11_15$cond[i] == "11_15"){
@@ -180,11 +123,10 @@ fft_11_15 <- fft_11_15 %>%
   rename(id = File)
 
 
-#### read FFT theta reading task 5 min 12 16 ----
-
+# read FFT theta 12_16 (abstract randomization 2)
 theta_12_16 <- read.table(paste(FFTFolder, "theta_12_16.txt", sep = "/"), header = TRUE)
 
-
+# convert to long format
 theta_12_16_long <- pivot_longer(
   theta_12_16,
   2:825,
@@ -193,7 +135,7 @@ theta_12_16_long <- pivot_longer(
   values_to = "theta"
 )
 
-
+# remove unwanted chars in dataframe
 theta_12_16_long$File <- gsub("_all_eog", "", theta_12_16_long$File)
 theta_12_16_long$electrode <- gsub("Cz","999",theta_12_16_long$electrode)
 theta_12_16_long$electrode <- gsub("[^0-9-]","",theta_12_16_long$electrode)
@@ -203,17 +145,17 @@ theta_12_16_long$cond <- gsub("avg_", "", theta_12_16_long$cond)
 theta_12_16_long$cond <- gsub("vg_", "", theta_12_16_long$cond)
 theta_12_16_long$cond <- gsub("_2", "", theta_12_16_long$cond)
 
-
+# calculate mean of 8 frontal electrodes as frontal theta
 theta_12_16_ROI_frontal <- theta_12_16_long %>% 
   group_by(File,cond) %>% 
   filter(electrode == "4" | electrode == "5" | electrode == "10" | electrode == "11" | electrode == "12" | electrode == "16" | electrode == "18" | electrode == "19") %>% 
   summarise(frontal_theta = mean(theta))
 
 
-#### read FFT alpha reading task 5 min ----
-
+# read FFT alpha 12_16 (abstract randomization 2)
 alpha_12_16 <- read.table(paste(FFTFolder, "alpha_12_16.txt", sep = "/"), header = TRUE)
 
+# convert to long format
 alpha_12_16_long <- pivot_longer(
   alpha_12_16,
   2:825,
@@ -222,6 +164,7 @@ alpha_12_16_long <- pivot_longer(
   values_to = "alpha"
 )
 
+# remove unwanted chars in dataframe
 alpha_12_16_long$File <- gsub("_all_eog", "", alpha_12_16_long$File)
 alpha_12_16_long$electrode <- gsub("Cz","999",alpha_12_16_long$electrode)
 alpha_12_16_long$electrode <- gsub("[^0-9-]","",alpha_12_16_long$electrode)
@@ -231,15 +174,13 @@ alpha_12_16_long$cond <- gsub("avg_", "", alpha_12_16_long$cond)
 alpha_12_16_long$cond <- gsub("vg_", "", alpha_12_16_long$cond)
 alpha_12_16_long$cond <- gsub("_2", "", alpha_12_16_long$cond)
 
-
+# calculate mean of 6 frontal electrodes as parietal alpha
 alpha_12_16_ROI_parietal <- alpha_12_16_long %>% 
   group_by(File,cond) %>% 
   filter(electrode == "61" | electrode == "62" | electrode == "67" | electrode == "72" | electrode == "77" | electrode == "78") %>%   summarise(parietal_alpha = mean(alpha))
 
-
-
+# merge theta and alpha and convert to long format for different conditions
 fft_12_16 <- full_join(theta_12_16_ROI_frontal, alpha_12_16_ROI_parietal)
-
 
 for(i in 1:nrow(fft_12_16)){
   if(fft_12_16$cond[i] == "12_16"){
@@ -288,14 +229,14 @@ fft_12_16 <- fft_12_16 %>%
   rename(id = File)
 
 
-## join datasets
+# join datasets for both abstract randomisations
 fft <- full_join(fft_11_15,fft_12_16)
 
-## arrange variables
-
+# rearrange variables
 fft <- fft %>% 
   select(1,2,5,6,7,3,4)
 
+# redefine factor
 fft$id <- as.factor(fft$id)
 
 ## clean workspace

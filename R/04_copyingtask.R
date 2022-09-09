@@ -2,21 +2,16 @@
 ##                      Copying Task                     ##
 ##                    data preprocessing                 ##
 ###########################################################
-## Description :: loads and merges psychometrics raw data
-## Input :::::::: csv data file 
-## Libraries :::: dplyr, readr, eeptools, lubridate
+## Description :: loads results of copying task and 
+##                original stimuli to calculate string
+##                distance from result to stimuli
+## Input :::::::: csv data files
+## Libraries :::: dplyr, stringdist
 ## Output ::::::: psychometrics.Rdata
-##########################################################
+###########################################################
 
 
-## libraries, packages, path ----
-if (!"tidyverse" %in% installed.packages()[, "Package"]) {
-  install.packages("tidyverse")
-}
-if (!"stringdist" %in% installed.packages()[, "Package"]) {
-  install.packages("stringdist")
-}
-
+## libraries
 library(stringdist)
 library(tidyverse)
 
@@ -25,25 +20,31 @@ dataFolderRaw   <- file.path("data/rawdata/task")
 dataFolder   <- file.path("data")
 
 
-
+# get file list of results from all participants
 file_list <- list.files(file.path(dataFolderRaw,"/copying"))
 
+# get original stimuli of all 4 texts
 stimulus <- read.csv(file.path(dataFolderRaw,"stimulus.csv"),header = TRUE, sep = ";")
 
+# remove empty rows
 stimulus <- stimulus %>% 
   filter(T1_SE_copy_stimulus != "")
 
+# define varaible as char vectors
 as_char <- c(1:4)
 stimulus[, as_char] <- lapply(stimulus[, as_char], as.character)
 
-# matrix for results of loop
 
+# preallocate matrix for results
 res_copy <- matrix(nrow = length(file_list), ncol = 5, byrow = FALSE, dimnames = NULL)
 
+# loop through file list to calculate results
 for (f in 1:length(file_list)){
-#  print(file_list[f])
+
+  #  print(file_list[f])
   copy <- read.csv(file=file.path(dataFolderRaw,"/copying",file_list[f]), header = TRUE, sep=";",na.strings = c("", "NA"))
   
+  # start with second row as first row (title) was not shown in the experiment
   copy = copy[2:nrow(copy),]
   copy[, as_char] <- lapply(copy[, as_char], as.character)
 
@@ -62,7 +63,7 @@ for (f in 1:length(file_list)){
       
     }
   }  
-
+ # calculate results using stringdist
   for (t in 1:ncol(copy)){
     for (s in 1:nrow(copy)){
       if (!is.na(copy[s,t])){
@@ -76,7 +77,7 @@ for (f in 1:length(file_list)){
     }
   }
 
-  # fill matrix with files
+  # fill matrix with results
   for (t in 2:5){
     if (max_row[t-1] != 0){
       res_copy[f,t] <- colSums(res_copy_sub, na.rm = TRUE)[t-1]
@@ -86,10 +87,13 @@ for (f in 1:length(file_list)){
   }
 }
 
+# add participant names
 res_copy[,1] <- substr(file_list,1,3)
 
+# change column names
 colnames(res_copy) <- c("id", "T1_SE_copy", "T1_ELF_copy", "T2_SE_copy", "T2_ELF_copy")
 
+# define data frame as tibble and factors
 res_copy <- res_copy %>% 
   as_tibble()
 
