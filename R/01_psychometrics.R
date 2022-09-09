@@ -5,30 +5,12 @@
 ## Description :: loads and merges psychometrics raw data
 ## Input :::::::: csv data file 
 ## Libraries :::: dplyr, readr, eeptools, lubridate
-## Output ::::::: psychometrics.Rdata
-##########################################################
+## Output ::::::: psychometrics dataframe
+###########################################################
 
-## libraries, packages, path ----
-if (!"tidyverse" %in% installed.packages()[, "Package"]) {
-  install.packages("tidyverse")
-}
-
-if (!"lubridate" %in% installed.packages()[, "Package"]) {
-  install.packages("lubridate")
-}
-
-if(!"gtsummary" %in% installed.packages()[ ,"Package"]) {
-  install.packages("gtsummary")
-}
-
-if(!"webshot" %in% installed.packages()[ ,"Package"]) {
-  install.packages("webshot")
-}
-
+## libraries
 library(tidyverse)
 library(lubridate)
-library(gtsummary)
-library(webshot)
 
 # data path
 dataFolderRaw   <- file.path("data/rawdata")
