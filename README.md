@@ -5,30 +5,14 @@ For more information: matthias.kobi@gmail.com / matthias.kobi@uzh.ch
 
 Folders with content description:
 
-Task:
-- a detailed task description can be found in the Manuskript_LDT.docx
-- Stimulus material: 2 abstracts in two versions (ELF vs EdE) result in 4 texts, that can be found in "CLINT experiment"
-	Text 1: 'ABS_Social_Info_SE.csv' --> SI_EdE
-	Text 2: 'ABS_Social_Info_ELF.csv' --> SI_ELF
-	Text 3: 'ABS_Energy_Advisors_SE.csv' --> EA_SE
-	Text 4: 'ABS_Energy_Advisors_ELF.csv' --> EA_ELF
-- For both abstracts (E1 and E2): 3 tasks, a reading task, a copying task (5 minutes), a translation task (5 minutes), (then LDT as described in other project), and E3 --> reading post (reading the texts in the other version, ELF or EdE)
-- CLINT_MAIN.m in "CLINT experiment" was used to control experiment with Psychtoolbox 3
-- Randomization: order of both text and version for first part (E1), but then other text in other version was used for E2 --> therefore, if SI_ELF was Exp1, EA_EdE was Exp2, EA_ELF was then reading_post 1 and EA_EdE was reading_post 2
-		 reading task was always first, order of copying / translation task was randomized, but changed from E1 to E2
-- files_new.m in "CLINT experiment" was used to read in stimulus material to Matlab, insert double spacing and double lines
-- verst_fragen.csv in "CLINT experiment" contains control questions for both abstracts
-
 Translators/data/rawdata:
-- fft: contains exports from BVA for theta (4-7 Hz) and alpha (8-12 Hz)
+- fft: contains exports (.txt) from BVA for theta (4-7 Hz) and alpha (8-12 Hz) and their log files
 - matlab_rawdata: contains all MATLAB answer files from CLINT task
 - nback_logs: contains .txt logfiles from auditory and visual nback task
 - task: "task/copying": contains answers of copying task from all participant in .csv, 
         "task/translation": contains answers of translation task from all participant in .csv, 
 	"task/textfiles": contains answers of copying and translation task from all participant in .txt
-	stimulus.csv: contains stimulus material used CLINT task, used for analysis of stringdist.R
-	translation_rating_t1.csv: contains randomized answers from text 1 (SI_EdE and SI_ELF) translation task from all participants for rating of fluency and accuracy
-	translation_rating_t2.csv: contains randomized answers from text 2 (EA_EdE and EA_ELF) translation task from all participants for rating of fluency and accuracy
+	stimulus.csv: contains original stimulus material used in CLINT task, used for analysis of "04_copyingtask.R"
 - controlQuestions.csv: contains answers for control questions
 - expControl.csv: contains experimental control variables (i.e., randomizations) for all participants
 - hintergrund.csv: contains answers from language background questionaires for all CLINT participants (including simultaneous interpreters)
@@ -38,32 +22,16 @@ Translators/data/rawdata:
 - readingFixations.csv: contains fixations from eyetracking for all participants
 - textOutput.csv: contains keyboard data from copying and translation task 
 - psychometrics.csv: psychometrics rawdata for participants in LDT
+- translation_rating_results: ratings from all 3 raters (R1-R3) for fluency and accuracy. .RData files are used to reestablish, which rating belonged to which participant after randomization
 
-Translators/data/translation_rating:
-- I know its a bit a mess, because we added more participants after initial attempt to rate all participants
-- in "data/translation_rating/results" ratings from all 3 raters can be found (R1-R3)
-
-Translators/data/alldata_translators.csv: contains all data from CLINT translator project used in the manuscript
-
-All_data/C*/
-- contains all data from CLINT translator project
-- *_EEG.mat: EEG data from E1, E2, E3, LDT, Instructions and EEG resting state (_RS_EEG.mat)
-- *_ET.mat: ET data from E1, E2, E3, LDT, Instructions and EEG resting state (_RS_EEG.mat)
-- Fullresults*.mat: important variables from CLINT task
-- Allvariables*.mat: all variables collected through Matlab / Psychtoolbox
-- .GAIN: channel gains measured before Experiment
-- .HIST: EEG history files with recording information and events
-- .IMP: channel impedances (a total of 5 times optimized and measured)
-- EEG raw file --> Netstation binary raw file
+Translators/data/alldata_translators.csv: contains all data from CLINT translator project used in the manuscript, produced by "master.R"
 
 figures: contains all figures used for manuscript
 
 Translators/Matlab:
 - Translators_EEG_01_taskwise_segmentation_for_automagic.m: prepare raw EEG data of CLINT translator project ("All_data/C*/C*_E*T*_(SE/EFL)_EEG.mat", and "All_data/C*/C*_E3_EEG.mat") and split them into separate files per task for automagic preprocessing
 - Translators_EEG_02_convert_to_BVA.m: merge preprocessed EEEG data and convert them to BVA
-- BHD_preparing.m: copy all Fullanswers*.mat in "All_Data" to "Translators/data/rawdata/matlab_rawdata", collect all behavioral data from CLINT translator project and write .csv files found in "data/rawdata"
-- Translators_eyetracker_analysis.m: collects fixations from reading task eyetracker files ("All_data/C*/C*_E*T*_(SE/EFL)_ET.mat") and compare them to word boundaries of presented stimulus material (variable wordbounds_reading in "Translators/data/rawdata/matlab_rawdata/Fullresults_ELF_C*.mat")
-
+- BHD_preparing.m: copy all Fullanswers*.mat in "All_Data" to "Translators/data/rawdata/matlab_rawdata", collects all behavioral data from CLINT translator project and write .csv files found in "data/rawdata"
 
 Translators/R: contains all RSkripts
 - master.R: controls all R files, gets and organises data, excludes unwanted participants, produces table summaries, and calculates statistics
@@ -72,12 +40,12 @@ Translators/R: contains all RSkripts
 - 03_language_survey.R: processes hintergrund.csv in "Translators/data/rawdata" to collect information about language background and translation experience. Additional information can be found in "Translators/Mastersheet_languagebackground.docx" (line numbers might have changed slightly)
 - 04_copyingtask.R: compares answers in copying task from "Translators/data/rawdata/task/copying" (.csv) with stimulus material using R package "stringdist"
 - 05_fft.R: collects fft data from "Translators/data/rawdata/fft", and calculates frontal theta and parietal alpha
-- 07_fluency.R: collects fluency rating data of translation task from all 3 raters in "Translators/data/translation_rating", and calculates a mean Rater (averaged for each text/version) and calculates icc
-- 08_accuracy.R: collects accuracy rating data of translation task from all 3 raters in "Translators/data/translation_rating", and calculates a mean Rater (averaged for each text/version) and calculates icc
-- 09_merging_data.R: collects and merges all data from previous R scripts and all other .csv files in "Translators/data/rawdata"
-- translation_rating_randomisation.R: randomizes answers from translation task in "Translators/data/translation_rating/translation_rating_t*.csv" for rating of fluency and accuracy
+- 06_fluency.R: collects fluency rating data of translation task from all 3 raters in "Translators/data/translation_rating", and (new in "master.R" -->) calculates a mean Rater (averaged for each text/version) and calculates icc
+- 07_accuracy.R: collects accuracy rating data of translation task from all 3 raters in "Translators/data/translation_rating", and (new in "master.R" -->) calculates a mean Rater (averaged for each text/version) and calculates icc
+- 08_merging_data.R: collects and merges all data from previous R scripts and all other .csv files in "Translators/data/rawdata"
+- Mastersheet_languagebackground.docx: provides information about the processing in "03_language_survey.R". Be aware that line numbers might have changed a little and apologies for the explanations in German.
 
-Probandenauswahl.xlsx: contains information to exclude participants based on psychometrics and difficulties with CLINT task (translated instead of copyied)
+participant_selection.xlsx: contains information to exclude participants based on psychometrics and difficulties with CLINT task (participants translated instead of copyied, recognized by "04_copyingtask.R")
 
 EEG: EGI geodesics
 - sampling rate: 500 Hz
@@ -132,11 +100,3 @@ Trigger:
  - par.trigger.recalibration_end=121; end EEG and ET recalibration
  - par.trigger.instructions_start=122; start instructions
  - par.trigger.instructions_end=123; end instructions
-
-# Futher infos for repository and paths
-
-GitHub Commands:
-git remote add origin https://github.com/mkobi89/Translators.git
-git clone https://github.com/mkobi89/Translators.git
-git push -u origin master
-
