@@ -1,0 +1,30 @@
+Text 2, Satz 1
+The influence of social information on behaviour has been demonstrated in a variety of settings.
+
+Text 2, Satz 2
+Research shows that telling people how their actions compare with those of similar others leads them to modify their energy and water consumption. their contributions to charitable causes, and their saving decisions.
+
+Text 2, Satz 3
+Despite growing interest in social comparison research, several open questions remain.
+
+Text 2, Satz 4
+In particular, realtively little is known about the sources of heterogeneity in the effect of a well-known experiment of social comparison, such as the one provided by the Opower program through the Home Electricity Report.
+
+Text 2, Satz 5
+In our paper we speculate that environmental values represent an importat source of heterogeneity in the effect of the Opower peer
+
+Text 3, Satz 5
+It does so by implementing a series of pilot actions with a group of advisors called HEAs (Home Energy Advisors)
+
+Text 3, Satz 6
+These advisors have been specifically trained to implement the pilot actions by educating vulnerable consumers to optimize, and possibly reduce, their energy consumption, mostly through behavioural changes.
+
+Text 3, Satz 7
+In this project, the Energy Consumptions Research Institute is responsible for the technical training of HEAs and for planning the pilot actions.
+
+Text 3, Satz 8
+This paper presents the initial results of these two tasks.
+
+Text 3, Satz 9
+The first part of the paper summarizes the results of a statistical analysis performed in order to define "energy-poor
+
