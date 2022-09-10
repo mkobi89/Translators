@@ -1,0 +1,51 @@
+Text 1, Satz 1
+The influence of social information on behaviour has been demonstrated in a variety of settings.
+
+Text 1, Satz 2
+For example, research indicates that telling people how their actions compare with those of other, similar people encourages them to modify their energy and water consumption, their contributions to charitable causes, and their savings decisions.
+
+Text 1, Satz 3
+Despite a growing interest in social comparison research, though, several questions remain open. 
+
+Text 1, Satz 4
+In particular, relatively little is known about the sources of the heterogeneity observed in the effects of classic social comparison experiments, such as Opower's Home Electricity Report (HER) program.
+
+Text 1, Satz 5
+In our paper, we hypothesize that an important source of the heterogenous effects observed in the Opower peer comparison might be consumers' environmental values.
+
+Text 1, Satz 6
+While the conservation behaviour of people with high biospheric values has been well-documented in the literature, little is known about these consumers' responses to peer comparison.
+
+Text 1, Satz 7
+In this paper, we test whether there is an effect of social comparison on energy conservation and whether this effect depends on the extent to which individuals endorse high environmental values.
+
+Text 1, Satz 8
+Another important gap in research is the understandig of the mechanisms behind individuals' reactions to Opower's HER with regard to their energy use.
+
+Text 1, Satz 9
+The HER contains different elements, including a static neighbour comparison of ener
+
+Text 4, Satz 5
+Such advisors are specifically trained to implement the pilot actions by educating energy vulnerable consumers (VCs) to optimize (and, possibly, reduce) their energy consumption, mostly through behavioural changes.
+
+Text 4, Satz 6
+In the project, Energy Consumption Research Institute is responsible of the technical training of HEAs and the pilot actions planning.
+
+Text 4, Satz 7
+This paper collects the first results of the above mentioned tasks.
+
+Text 4, Satz 8
+The first part of the paper summarizes the results of a statistical analysis performed to understand how to define an "energy poor" or "energy vulnerable" consumer, as  a common European definition does not exist.
+
+Text 4, Satz 9
+The main obstacle in performing this analysis is that the data often used for standard indicators (e.g. Low-Income High-Costs) are not available in many countries, so new ways to understand what is an "energy vulnerable consumer" have to be explored.
+
+Text 4, Satz 10
+Moreover, the availability of different data in the EU countries leads to a fragmented and often "not compatible segmentation in different Member States.
+
+Text 4, Satz 11
+To overcome this barrier, it is necessary to define the background in which the pilot actions shall be inserted (the situation in the analysed MS) and to perform an on-purpose segmentation, by analysing and elaborating existing statistics databases to which apply similar indicators, compatible with the available information.
+
+Text 4, Satz 12
+The second part of the paper briefly introduces the training that will be proposed to the HEAs, in order to show which competences are required to an HEA who wants to approach a vulnerable consumer
+

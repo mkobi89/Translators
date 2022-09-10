@@ -1,0 +1,36 @@
+Text 2, Satz 3
+Depite growing interest innoiial coe,several open quesiorri.
+
+Text 2, Satz 5
+Oope w speculte thatenenennironmmal vlreesseioso oeettiitheeff thee coparn
+
+Text 2, Satz 6
+Whethrioo behaviour of people with high biosperic valus has been lgelyselitle, is nwout the response of these indviduals to per commpio.
+
+Text 2, Satz 7
+Inthis pap we testthe efect oalegycoedpeo teeetowhiinividuals endo
+
+Text 3, Satz 5
+It does so by implementing a series of pilot actions with a group of advisors called HEAs (Home Energy Advisors).
+
+Text 3, Satz 6
+These advisors have been specifically trained to implement the pilot actions by educating vulnerable consumers to optimize, and possibly reduce, their energy consumption, mostly through behavioural changes.
+
+Text 3, Satz 7
+In ths project, the Energy Consumption Reserch Institute is responsible for the technical training of HEAs and for planning the pilot actions.
+
+Text 3, Satz 8
+This paper presents the initial results of these two tasks.
+
+Text 3, Satz 9
+The frst part of the paper summarizes the results of a statistical analysis performed in order to define "energy-poor" or "energy-vulnerable" consumers, as a common European definition does not exist.
+
+Text 3, Satz 10
+The main obstacle in performing this analysis is that the data often used for standard indicators (e.g. Low Income High Costs) are not available in many countries, so new ways to define energy-vulnerable consumers have to be explored.
+
+Text 3, Satz 11
+Moreover, the differences in the data available in EU countries lead to fragmented and often incompatible consumer segmntation in the member states.
+
+Text 3, Satz 12
+To overcome this barrier, it is necessary to define the background against which the pi
+

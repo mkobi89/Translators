@@ -1,0 +1,33 @@
+Text 2, Satz 9
+Der HER umfasst verschiedene Elemente, von einem statischen Vergleich mit Nachbarn im Hinblick auf den Energieverbrauch (deskriptive Norm) bis hin zu Rückmeldungen, wie gut Einzelne abschneiden (injunktive Norm), und Tipps zum Energiesparen.
+
+Text 2, Satz 10
+Ein zweites Ziel dieses Papers ist das Testen möglicher Mechanismen, die den HER effektiv machen.
+
+Text 2, Satz 11
+Zuerst testen wir, ob der HER die individuelle Wahrnehmung der Norm auf dem Gebiet des Energiesparens beeinflusst.
+
+Text 2, Satz 12
+Eine stärkere Wahrnehmung der Norm in Richtung Energiesparen hat möglicherweise einen Einfluss auf den Energieverbrauch.
+
+Text 2, Satz 13
+Zweitens, während äussere Werte im Lauf des Lebens meist stabil bleiben, kann die umweltbezogene Selbstidentität beeinflusst werden, zum Beispiel durch Informationen zum Energiesparen.
+
+Text 2, Satz 14
+Ein zweiter Mechanismus ist also vielleicht, dass die im HER gelieferten Informationen die umweltbezogene Selbst-Identität erh
+
+Text 3, Satz 8
+Dieses Paper präsentiert die ersten Ergebnisse dieser beiden Aufgaben.
+
+Text 3, Satz 9
+Der erste Teil der Arbeit fasst die Ergebnisse einer statistischen Analyse zusammen, die durchgeführt wurde, um "energiearm" oder "energie-vulnerable" VerbraucherInnen zu definieren, da es keine europäische Definition gibt.
+
+Text 3, Satz 10
+Das Haupthdernis bei dieser Analyse besteht darin, dass die Daten, die oft für Standard-Indkatoren (z.B. niedriges Einkommen - hohe Kosten) für viele Länder nicht zur Verfügung stehen, daher mussten neue Wege erkundet werden, um energie-vulnerable KonsumentInnen zu definieren.
+
+Text 3, Satz 11
+Darüber hinaus führen die Unterschiede in den jeweis in den EU-Staaten verfügbaren Daten zu bruchstückhaften und oft inkompatiblen Verbrauchersegmentationen in den Mitgliedsstaaten.
+
+Text 3, Satz 12
+Um diese Hürde zu beseitigen, ist es notwendig, den Hintergrund, vor dem die Pilotprojekte umgesetzt werden sollen (die Situation in den jeweiligen 
+

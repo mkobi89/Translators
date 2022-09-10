@@ -1,0 +1,24 @@
+Text 1, Satz 1
+Die Wirkung von sozialer Information auf das Verhalten wurde in unterschiedlichsten Settings nachgewiesen.
+
+Text 1, Satz 2
+Beispielsweise zeigen Untersuchungen, dass Menschen ermutigt werden, ihren Energie- und Wasserverbrauch, ihre Spenden für wohltätige Zwecke und ihre Sparentscheidungen zu verändern, wenn ihnen gesagt wird, wie sie im Vergleich zu anderen, ähnlichen Menschen abschneiden.
+
+Text 1, Satz 3
+Obwohl das Interesse an der Forschung im Bereich des sozialen Vergleichs zunimmt, bleiben mehrere Fragen offen.
+
+Text 1, Satz 4
+Im Besonderen ist relativ wenig bekannt über die Ursachen der Heterogenität der Wirkung 
+
+Text 4, Satz 1
+Energiearmut ist eines der grössten sozialen, technischen und gesetzgeberischen Probleme der heutigen Zeit in Europa. Das Problem betrifft zwischen  50 und 125 Millionen Menschen.
+
+Text 4, Satz 2
+Die Europäische Kommission (EK) hat grosse Anstrengungen unternommen, um das Problem zu lösen, wie zum Beispiel das im Januar 2018 lancierte Programm EU Energy Poverty Observatory.
+
+Text 4, Satz 3
+Einer der von der EK betonten Punkte ist die Wichtigkeit, von den  Erfahrungen und Best Practices in den verschiedenen Mitgliedsstaaten (MS) zu lernen.
+
+Text 4, Satz 4
+Vor diesem Hintergrund zielt das Projekt (finanziert durch die EK unter dem Grant Agreement Nr. 12345) darauf ab
+

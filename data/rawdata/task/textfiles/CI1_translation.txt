@@ -1,0 +1,12 @@
+Text 2, Satz 1
+Der Einfluss sozialer Informationen auf das Verhalten wurde in einer Reihe verschiedener Settings aufgezeigt.
+
+Text 2, Satz 2
+Forschungsstudien wiesen nach, dass Menschen, wenn ihre Handlungsweisen mit denen ähnlicher Personen verglichen werden, zu einer Aenderung ihres Energie- und Wasserverbrauchs, 
+
+Text 3, Satz 4
+Vor diesem Hintergrund verfolgt das (von der EU Commission im Sinne des Grant Agreement Nr. 12345 finanzierte) Projekt, an dem das Energy Consumption Research Institute beteiligt ist, das Ziel, Best Practices und Empfehlungen zur Minderung der Energiearmut bekanntzugeben.
+
+Text 3, Satz 5
+Hierfür wird gemeinsam mit einer Beratergruppe, den sogenannten HEAs (Home Energy Advisors
+
