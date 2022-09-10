@@ -1,0 +1,18 @@
+Text 1, Satz 7
+In dieser Arbeit testen wir ob es Auswirkungen gibt aufgrund sozialer Vergleiche zum Thema Energiekonsum und ob diese Auswirkungen davon anhängig sind, inwiefern diese Individuen hohe umweltbezogene Werte haben. 
+
+Text 1, Satz 8
+Eine andere, wichtige Lücke in der Forschung is das verstehen von Mechanismen welche hinter den Reaktionen zu Opower's HER stehen, im Zusammenhang mit deren Energieverbrauch.
+
+Text 1, Satz 9
+Das HER beinhaltet verschiedene Elemente, dazu gehören statische Vergleiche mit Nachbarn
+
+Text 4, Satz 6
+Im Projekt ist Energy Consumption Research Institute verantwortlich für das technische Training der HEAs und für die Planung der Pilotaktionen.
+
+Text 4, Satz 7
+Diese Arbeit sammelt die ersten Resultate der obig erwähnten Aufgabenstellungen. 
+
+Text 4, Satz 8
+Der erste Teil dieser Arbeit fasst die Resultate der statistischen Analyse zusammen, welches dazu dient einen "energiearmen" oder einen "energieverletzlichen" Konsumenten zu definieren, da eine gängige europäische Definition dieser n
+

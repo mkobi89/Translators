@@ -1,0 +1,24 @@
+Text 2, Satz 1
+Die Influenz von sozialen Informationen auf Verhalten wurde in verschiedenen Umgebungen dargestellt.
+
+Text 2, Satz 2
+Die Ermittlung weist auf, dass die Mitteilung zu den Personen wie ihre Handlung  mit anderen ähnlichen Personen 
+
+Text 3, Satz 1
+Energy poverty is one of the main social, technical and legislative issues at the present time in Europe, with the estimated number of people who are affected ranging from  50 to 125 million.
+
+Text 3, Satz 2
+The European Commission (EC) has put a great deal of effort into solving this issue, as shown, for example, by the recent launch of the EU Energy Poverty Observatory in January 2018.
+
+Text 3, Satz 3
+One of the points stressed by the Ec is the importance of learning form experience and from the best practics being carried out in various member states (MS).
+
+Text 3, Satz 4
+With this in mind, the project reported here (funded by the EUCommission under Grant Agreement no. 12345), of which the Energy Consumption Research Institute is a partner, aims to uncover best practices and recommendations to address energy poverty.
+
+Text 3, Satz 5
+It does so by implementing a series of pilot actions with a group of advisors called HEAs (Home Energy Advisors).
+
+Text 3, Satz 6
+Th
+

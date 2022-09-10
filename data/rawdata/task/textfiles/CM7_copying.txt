@@ -1,0 +1,45 @@
+Text 2, Satz 6
+While the conservation behaviour of people with high biospheric values has been largely studied in literature, little is known about the response of these individual to peer comparison
+
+Text 2, Satz 7
+In this paper we test the effect of social comparison on energy conservation and whether this depends on the extent to which individuals endorse high environment values
+
+Text 2, Satz 8
+Another important gap in research is the understanding of the mchanisms behind individualsreaction to the Opower Home Energy Report (HER) in the field of energy use
+
+Text 2, Satz 9
+The HER delivers different elements, from a static neighbour comparison on energy consumption (descriptive norm), to feedbacks on how well an individual is performing (injunctive norm), as well as energy saving tips
+
+Text 2, Satz 10
+A second objective of this paper is to test possible mechanisms that make the HER effective
+
+Text 2, Satz 11
+First, we test the HER shapes individuals perceptions of the norm in the domain of energy consevation
+
+Text 2, Satz 12
+A stronger perception of the norm in the direction of energy consercatoin may then influence energy consumption
+
+Text 2, Satz 13
+Second, 
+
+Text 3, Satz 5
+It does so by implementing a series of pilotactions with a group of advisors calles HEAs (Home Energy Advisors)
+
+Text 3, Satz 6
+These advisors have been specifically trained to implement the pilot actions by educating vulnerable consumers to optimize, and possibly reduc, their energy consumption, mostly through behavioural changes
+
+Text 3, Satz 7
+In this project, the Energy consumption research Insitute is responsible for the technical training og HEAs and for planning the pilot actions. 
+
+Text 3, Satz 8
+This paper presents the initial results of these two tasks
+
+Text 3, Satz 9
+The first part of the paer summarizes the results of a statistical analysis performed in order to define "energy-poor" or "energy-vulnerable" consumers, as a common European definition does not exist.
+
+Text 3, Satz 10
+The main obstacle in performing this analysis is that the data often used for standard indicators (e.g. Low Income High Costs) are not available in many countries, so new ways to define energy-vulnerable consumes have to be explored
+
+Text 3, Satz 11
+Moreover, the differences in the data available 
+

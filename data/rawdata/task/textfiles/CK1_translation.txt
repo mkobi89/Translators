@@ -1,0 +1,24 @@
+Text 1, Satz 10
+Ein weiteres Ziel dieser Studie ist, mögliche Mechanismen zu untersuchen, die HER effizenter gestalten.
+
+Text 1, Satz 11
+Zuerst untersuchen wir, ob HER die Wahrnehmung der Auffassung der Normen im Bereich des Energeverbrauchs bei den Testpersonen beeinflusst.
+
+Text 1, Satz 12
+Eine stärkere Auffassung der Norm, Energie zu sparen, kann den Energieverbrauch beeinflussen.
+
+Text 1, Satz 13
+Während Werteeinstellungen einer Person meist ein Leben lang gleich bleiben, kann das umweltbezogene Verhalten beeinflusst werden, beispielsweise durch Informationen über das Energiesparen.
+
+Text 4, Satz 1
+Energiearmut ist eines der grössten sozialen, technischen und gesetzgeberischen Probleme in Europa derzeit, mit einer geschätzten Anzahl Betroffener von 50 bis 125 Millionen Menschen.
+
+Text 4, Satz 2
+Die Europäische Kommission (EK) hat sich sehr bemüht, dieses Problem zu lösen, was beispielsweise durch die kürzliche Lancierung des EU Energy Poverty Obersvatory im Januar 2018 offensichtlich wird.
+
+Text 4, Satz 3
+Einer, der von der EK hervorgehobenen Punkte, ist die Bedeutung, aus Erfahrungen zu lernen und bewährte Praktiken aus verschiedenen Mitgliedsstaaten (MS).
+
+Text 4, Satz 4
+Vor diesem Hintergund zielt das Projekt (
+

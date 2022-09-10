@@ -1,0 +1,33 @@
+Text 1, Satz 1
+The influence of social information on behaviour has been demonstrated in a variety of settings.
+
+Text 1, Satz 2
+For example, research indicates that telling people how their actions compare with those of other, similar people encourages them to modify their energy and water consumption, their contributions to charitable causes, and their savings decisions. 
+
+Text 1, Satz 3
+Despite a growing interest in social comparison research, though, several questions remain open. 
+
+Text 1, Satz 4
+In particular, relatively little is known about the sources of the heterogeneity observed in the effects of classic social comparison experiments, such as Oopower's Home Electricity Report (HER) program. 
+
+Text 1, Satz 5
+In our paper, we hypothesize that an important source of the heterogenous effects observed in the Opower peer comparison might be consumer's environmental values.
+
+Text 1, Satz 6
+While the conservation behaviour of people with high biospheric values has been well-documented in
+
+Text 4, Satz 1
+Energy Poverty is one of the main social, technical and legislative issues of the present time in Europe, with an estimated number of affected people ranging from  50 to 125 million.
+
+Text 4, Satz 2
+The European Comission (EC) has put a lot of effort to solve this issue, as shown, for example, by the recent launch of the EU Energy Poverty Observatory in January 2018.
+
+Text 4, Satz 3
+One the points stressed by EC is the importance to learn from the experiences and best practices carried out in the different Members states (MS). 
+
+Text 4, Satz 4
+With this in mind, the project (funded by EU Comission under Grant Agreement n. 12345), of which Energy Consumption Research Institute is a partner, aims to find some best practices and recommendations to address Energy Poverty from the implementation of a series of pilot actions with a group of advisors (called HEAs - Home Energy Advisors). 
+
+Text 4, Satz 5
+Such advisors are specifically 
+

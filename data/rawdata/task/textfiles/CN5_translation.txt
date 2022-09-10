@@ -1,0 +1,24 @@
+Text 1, Satz 1
+Die Influenz von sozialen Informationen auf das Verhalten wurde in verschiedenen Einstellungen demonstriert.
+
+Text 1, Satz 2
+Zum Beispiel indizieren Versuche, dass bei Leuten denen gesagt wird, wie sie sich mit vergleichbaren Menschen schlagen, die Leute ihre Energie und Wasserkonsum, ihre Kontribution zu Spende-Zwecken und Ihre Spar-Entscheidungen verbessernn.
+
+Text 1, Satz 3
+Trotz einem wachsendem Interesse in Sozialen Vergleich Versuchen, bleiben aber viele Fragen offen.
+
+Text 1, Satz 4
+Speziell ist relativ wenig
+
+Text 4, Satz 7
+Diese Arbeit sammelt die ersten Resultate von den oben genannten Aufgaben.
+
+Text 4, Satz 8
+Der erste Teil dieser Arbeit fasst die Resultate einer statistischen Analyse, die ausgefuert wurde um zu verstehen wie ein EnergieArmer oder Energie-verletzbarer Konsument definiert wird, zusammen, da keine geminsame Europaeische Defintion besteht.
+
+Text 4, Satz 9
+Der Hauptteil bei dieser Analyse ist, dass Daten, die oft fuer standard Indikatoren genommen werden (z.B. tiefes Einkommen, Hohe Kosten) in vielen Ländern nicht erhältlich sind, also müssen neue Wege, wie ein "energie-verletzlicher Konsument" zu verstehen ist, untersucht werden.
+
+Text 4, Satz 10
+Zusätzlich führt die Erhältlichkeit von verschiedenen Daten in den EU Ländern zu einer r
+

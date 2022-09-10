@@ -1,0 +1,42 @@
+Text 1, Satz 6
+While the conservation behavior of people with high biospheric values has been well- documented in the literature, little is known about these consumers' responses to peer comparison.
+
+Text 1, Satz 7
+In this paper, we test whether there is an effect of social comparison on energy conservation and whether this effect depends on the extent to which individuals endorse high environmental values.
+
+Text 1, Satz 8
+Another important gap in research is the understanding of the mechanisms behind individuals' reactions to Opower's HER with regard to their energy use.
+
+Text 1, Satz 9
+The HER contains different elements, including a static neighbour comparison of energy consumption levels (a descriptive norm), feedback on individual performance (an injunctive norm), as well as energy saving tips.
+
+Text 1, Satz 10
+A further objective of this paper is to assess possible mechanisms to make the HER more effective.
+
+Text 1, Satz 11
+First, we test whether the HER shapes individuals' perceptions of norms in the domain of energy conservation.
+
+Text 1, Satz 12
+A stronger perception of the norm to conserve energy may then influence energy consumption.
+
+Text 1, Satz 13
+While environmental values tend to be stable throughout people's lives, environmental self-identity can be influenced, for example by information regarding energy conservation.
+
+Text 1, Satz 14
+A second mechanism could therefore be that the information delivered wi
+
+Text 4, Satz 5
+Such advisorsare specifically trained to implement the pilot actions by educating enrgy vulnerable cnsumers( Vcs) to optimize (and , possibly, reduce) their energ consumtion, mostly through behavioural changes.
+
+Text 4, Satz 6
+in the project, Energy Consumption Research Institute is responsible of the technica training of HEas and the pilot actions planning.
+
+Text 4, Satz 7
+this paper collects the first results of the above mentioned tasks.
+
+Text 4, Satz 8
+the first part of the paper summarizes the results of a statistical analysis performed to understand how to define an "energy poor" or "energy vulnerable" consumer, as a common European definition does not exist.
+
+Text 4, Satz 9
+The main obstacle in performing this analysis is that the data often used for standard indicators (e.g. Low-Income High-Costs) are not available in many countries, so new ways to understand wat is an 
+
